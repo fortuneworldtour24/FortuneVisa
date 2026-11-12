@@ -15,9 +15,10 @@ type SelectFieldProps = {
   placeholder: string;
   disabled?: boolean;
   id?: string;
+  name?: string;
 };
 
-export function SelectField({ label, value, onChange, options, placeholder, disabled = false, id }: SelectFieldProps) {
+export function SelectField({ label, value, onChange, options, placeholder, disabled = false, id, name }: SelectFieldProps) {
   const generatedId = useId();
   const selectId = id ?? generatedId;
 
@@ -31,6 +32,7 @@ export function SelectField({ label, value, onChange, options, placeholder, disa
       <div className="relative">
         <select
           id={selectId}
+          name={name}
           value={value}
           onChange={handleChange}
           disabled={disabled}

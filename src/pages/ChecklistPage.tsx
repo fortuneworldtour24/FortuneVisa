@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useMemo, useState } from 'react';
 import { ArrowRight, CheckCircle2, ClipboardCheck, Info, LifeBuoy, Printer } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Link, useSearchParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { PageHero } from '@/components/PageHero';
 import { EmptyState } from '@/components/EmptyState';
@@ -36,7 +36,17 @@ export function ChecklistPage() {
     title: 'Visa Document Checklist',
     description: 'Build your visa document checklist interactively. Tick items off, save progress, and print or save as PDF.',
   });
-  const [selection, setSelection] = useState<ChecklistSelection>({ destinationSlug: '', visaType: '' });
+  const [searchParams] = useSearchParams();
+  const [selection, setSelection] = useState<ChecklistSelection>(() => {
+    const dest = searchParams.get('destination') ?? '';
+    const visa = searchParams.get('visaType') ?? '';
+    const destination = findDestination(dest);
+    const validVisa = destination && destination.visaTypes.some((v) => v.type === visa) ? visa : '';
+    return {
+      destinationSlug: destination ? dest : '',
+      visaType: validVisa,
+    };
+  });
   const [progress, setProgress] = useState<ProgressMap>(() => loadProgress());
 
   useEffect(() => {
@@ -98,8 +108,8 @@ export function ChecklistPage() {
         description={t('checklist.description')}
       />
 
-      <section className="mx-auto grid max-w-7xl gap-8 px-4 py-12 sm:px-6 lg:grid-cols-12 lg:gap-10 lg:px-8 lg:py-16">
-        <div className="lg:col-span-5">
+      <section className="mx-auto grid max-w-7xl gap-8 px-4 py-12 sm:px-6 lg:grid-cols-12 lg:gap-10 lg:px-8 lg:py-16 print:block print:p-0">
+        <div className="lg:col-span-5 print:hidden">
           <div className="space-y-6 rounded-3xl border border-slate-200/80 bg-white p-6 shadow-card sm:p-8 lg:sticky lg:top-28">
             <SelectField
               id="checklist-destination"
@@ -127,7 +137,7 @@ export function ChecklistPage() {
           </div>
         </div>
 
-        <div className="lg:col-span-7">
+        <div className="lg:col-span-7 print:w-full">
           <ChecklistContent
             selection={selection}
             flag={flag}
@@ -189,7 +199,7 @@ function ChecklistContent({ selection, flag, checklist, progress, onToggle, onPr
   const percent = total > 0 ? Math.round((done / total) * 100) : 0;
 
   return (
-    <article className="rounded-3xl border border-slate-200/80 bg-white p-6 shadow-card sm:p-8">
+    <article className="rounded-3xl border border-slate-200/80 bg-white p-6 shadow-card sm:p-8 print:border-none print:p-0 print:shadow-none">
       <div className="flex flex-wrap items-center justify-between gap-4">
         <div>
           <p className="text-xs font-bold uppercase tracking-[0.14em] text-primary-700">
@@ -252,7 +262,7 @@ function ChecklistContent({ selection, flag, checklist, progress, onToggle, onPr
         })}
       </ul>
 
-      <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+      <div className="mt-8 flex flex-col gap-3 sm:flex-row print:hidden">
         <button
           type="button"
           onClick={onPrint}

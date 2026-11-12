@@ -1,4 +1,4 @@
-import { BookOpen, ClipboardCheck, FileText, Globe2, Mail, ShieldCheck, Stamp } from 'lucide-react';
+import { BookOpen, ClipboardCheck, FileText, Globe2, Mail, ShieldCheck, Stamp, Users } from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
 
 export type NavItem = {
@@ -12,6 +12,7 @@ export const NAV_LINKS: NavItem[] = [
   { to: '/checker', labelKey: 'nav.visaChecker', icon: ShieldCheck },
   { to: '/services', labelKey: 'nav.services', icon: Stamp },
   { to: '/checklist', labelKey: 'nav.checklist', icon: ClipboardCheck },
+  { to: '/about', labelKey: 'nav.about', icon: Users },
   { to: '/blog', labelKey: 'nav.blog', icon: BookOpen },
   { to: '/contact', labelKey: 'nav.contact', icon: Mail },
 ];

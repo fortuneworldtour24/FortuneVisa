@@ -42,6 +42,7 @@ FortuneVisa/
 ├── .bolt/                             # Bolt.new platform metadata
 ├── .git/                              # Git version control
 ├── supabase/
+│   ├── seed_posts.sql                 # Seed SQL with 3 Australian visa tip articles
 │   └── migrations/
 │       ├── 20261110085845_create_enquiries_table.sql
 │       ├── 20261112041634_20261112000000_add_travel_date_and_consent_to_enquiries.sql.sql
@@ -140,22 +141,29 @@ FortuneVisa/
    - Dedicated Visa Checker (`/checker`) providing indicative visa status, fees, and processing times by nationality and destination.
    - Cross-links directly to prefilled enquiry forms.
 3. **Interactive Document Checklist (`/checklist`):**
-   - Filters by destination country and visa type.
-   - Ticking checklist items saves state to `window.localStorage`.
-   - Includes print-friendly styles for exporting/printing as PDF.
+   - Interactive destination and visa category selectors with URL query parameter support (`?destination=...&visaType=...`).
+   - Dynamic checklist requirement loading from `src/data/checklists.json`.
+   - Real-time progress bar tracking completed items with percentage and accessible aria metrics.
+   - Persistence of checked items across sessions in `window.localStorage` under `fortune-checklist-progress`.
+   - "Print / Save as PDF" button with dedicated `@media print` styles (hiding navbars, hero banners, floating buttons, and non-printable elements).
+   - "Get help with these documents" CTA button directing to prefilled enquiry form.
+   - Active in desktop navigation and mobile navigation drawer.
 4. **Services Showcase (`/services`):**
-   - 7 visa categories (Tourist, Student, Skilled Work, Family, Business, Pathways, Documents).
-   - "Enquire Now" links with pre-filled category parameters.
+   - 7 visa categories (Tourist, Student, Work/Skilled, Partner/Family, Business, Migration pathways, Document support) presented as responsive cards with icons and descriptions.
+   - Direct "Enquire" button per category linking to the enquiry form with relevant prefilled parameters.
+   - Teaser banner linking to the interactive Document Checklist.
 5. **Blog System (`/blog`, `/blog/:slug`):**
    - Integrated with Supabase `posts` table.
    - Filter by category, reading time calculation, sanitized markdown rendering with DOMPurify.
    - Related articles recommendation engine.
 6. **Enquiry Form (`/contact`):**
-   - Built with React Hook Form and Zod validation.
+   - Built with React Hook Form and Zod validation, with robust browser autofill and DOM sync handling.
+   - Guaranteed empty string default values for all fields (or URL-prefilled parameters).
+   - Tolerant optional fields accepting empty strings, null, or undefined without triggering type errors.
    - Captures name, email, phone, passport nationality, destination, visa category, travel date, message, and consent.
    - Honeypot anti-spam field (`company`).
    - Inserts directly into Supabase `enquiries` table with row-level security.
-7. **SEO Management:** Dynamic `<title>` and `<meta name="description">` updates via `useSeo` hook.
+7. **SEO Management:** Dynamic `<title>` and `<meta name="description">` updates via `useSeo` hook active across every route (home, destinations, destination detail, checker, services, checklist, blog list, blog post, contact, legal sections).
 8. **Internationalization scaffolding:** `react-i18next` integrated with centralized English strings in `src/i18n/locales/en.json`.
 
 ---
@@ -230,7 +238,22 @@ Previously failed with 5 unused-variable/import errors (`@typescript-eslint/no-u
 
 `npm run lint` now exits with **code 0** (0 problems).
 
-### D. Other Non-Code Issues
+### D. Enquiry Form Autofill & Validation Fix (RESOLVED)
+- **Issue:** Chrome autofill filled the full name input without dispatching standard change events, resulting in Zod receiving `undefined` and throwing `"Invalid input: expected string, received undefined"`.
+- **Fix:**
+  - Initialized `defaultValues` for every form field to empty strings (or URL-prefilled parameters) and `consent: false`.
+  - Updated Zod schema with explicit error messages on `z.string({ message: ... })` so unexpected `undefined` displays localized messages.
+  - Made optional fields (`phone`, `passport`, `destination`, `visaType`, `travelDate`, `message`, `company`) accept empty strings, `null`, and `undefined` via `.nullish().or(z.literal(''))`.
+  - Added DOM sync on form submit (`handleFormSubmit`) to extract direct DOM element values (capturing Chrome autofill even if no synthetic input event fired) into React Hook Form before running validation and submit.
+  - Added `name` attribute to `SelectField` and consent checkbox.
+  - Added synchronization handlers on `onChange` and `onBlur` for text inputs.
+- **Verification:** Verified successful submission for:
+  1. Browser autofilled inputs.
+  2. Manual keyboard inputs.
+  3. URL-prefilled values (`?passport=...&destination=...&visaType=...&travelDate=...`).
+  4. Empty optional fields (safely converted to `null` on Supabase insert).
+
+### E. Other Non-Code Issues
 1. **Migration Filename Redundancy:**
    - In `supabase/migrations/`:
      - `20261112041634_20261112000000_add_travel_date_and_consent_to_enquiries.sql.sql`

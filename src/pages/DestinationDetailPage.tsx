@@ -5,6 +5,7 @@ import { EmptyState } from '@/components/EmptyState';
 import { PageHero } from '@/components/PageHero';
 import { RequirementBadge } from '@/components/visa/RequirementBadge';
 import { VisaDetails } from '@/components/visa/VisaDetails';
+import { useSeo } from '@/hooks/useSeo';
 import { buildEnquiryPath, findDestination } from '@/lib/visaData';
 import type { Destination, VisaTypeInfo } from '@/lib/visaData';
 
@@ -12,6 +13,13 @@ export function DestinationDetailPage() {
   const { t } = useTranslation();
   const { country } = useParams<{ country: string }>();
   const destination = country ? findDestination(country) : undefined;
+
+  useSeo({
+    title: destination ? `${destination.country} Visa Guide` : 'Destination Not Found',
+    description: destination
+      ? `Indicative visa requirements, fees, processing times and validity for ${destination.country} from Fortune Visa Services.`
+      : undefined,
+  });
 
   if (!destination) {
     return (

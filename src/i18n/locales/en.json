@@ -5,6 +5,7 @@
     "services": "Services",
     "blog": "Blog",
     "checklist": "Checklist",
+    "about": "About",
     "contact": "Contact",
     "freeEnquiry": "Free Enquiry",
     "openMenu": "Open menu",
@@ -28,7 +29,7 @@
     "email": "Email",
     "whatsapp": "WhatsApp us",
     "disclaimerTitle": "Disclaimer",
-    "disclaimer": "The information on this website is general in nature and does not constitute migration or legal advice. Visa eligibility and outcomes depend on individual circumstances and may change without notice. Please contact us for advice specific to your situation.",
+    "disclaimer": "Fortune Visa Services provides document preparation and general information only. We are not registered migration agents and do not provide immigration advice.",
     "copyright": "{{year}} {{name}}. All rights reserved."
   },
   "home": {
@@ -399,5 +400,28 @@
     "whatsappTitle": "Message on WhatsApp",
     "whatsappBody": "Prefer a quick chat? Message our team on WhatsApp.",
     "hours": "Monday to Friday, 9:00am to 5:30pm AEST"
+  },
+  "about": {
+    "eyebrow": "About Fortune",
+    "title": "Visas made simple. Journeys made certain.",
+    "description": "Based in Parramatta, NSW, Fortune Visa Services delivers thorough document preparation and administrative pathway guidance with integrity, clarity, and care.",
+    "missionBadge": "Our Mission",
+    "missionTitle": "Navigating Australian visa pathways with clarity and confidence",
+    "missionBody": "Australian immigration procedures are notoriously demanding, with strict evidentiary thresholds and zero tolerance for omissions. Our mission is to take the stress and guesswork out of your application through meticulous document checking, honest eligibility evaluations, and responsive human support at every stage.",
+    "valuesBadge": "Our Core Values",
+    "valuesTitle": "The principles that guide our work",
+    "valuesSubtitle": "Every document review and client interaction is held to these non-negotiable standards.",
+    "teamBadge": "Our Team",
+    "teamTitle": "Dedicated document specialists in your corner",
+    "teamSubtitle": "Experienced coordinators committed to presenting your visa documentation at its best.",
+    "disclaimerTitle": "Regulatory Status & Scope",
+    "disclaimerBody": "Fortune Visa Services provides administrative document preparation, translation coordination, and general procedural guidance. We are not registered migration agents (MARA) and do not provide legal migration advice. When formal legal advice is required, we direct clients to registered legal practitioners."
+  },
+  "cookie": {
+    "title": "Cookie and Privacy Choices",
+    "description": "We use essential cookies to maintain site security and functionality, and analytics cookies to understand how visitors engage with our guides. See our",
+    "privacyLink": "Privacy Policy",
+    "acceptAll": "Accept all",
+    "essentialOnly": "Essential only"
   }
 }

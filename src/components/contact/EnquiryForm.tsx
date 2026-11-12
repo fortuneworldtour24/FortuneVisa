@@ -1,5 +1,5 @@
 import { zodResolver } from '@hookform/resolvers/zod';
-import { useEffect, useState } from 'react';
+import { useMemo, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { CheckCircle2, Loader2, Send } from 'lucide-react';
 import { Link, useSearchParams } from 'react-router-dom';
@@ -23,22 +23,43 @@ const textareaClass =
 
 function buildSchema(t: (key: string) => string) {
   return z.object({
-    fullName: z.string().trim().min(1, { message: t('enquiry.errors.name') }).max(120, { message: t('enquiry.errors.name') }),
-    email: z.string().trim().min(3, { message: t('enquiry.errors.email') }).max(254, { message: t('enquiry.errors.email') }).regex(EMAIL_PATTERN, { message: t('enquiry.errors.email') }),
-    phone: z.string().trim().max(30, { message: t('enquiry.errors.phone') }).optional().or(z.literal('')),
-    passport: z.string().optional().or(z.literal('')),
-    destination: z.string().optional().or(z.literal('')),
-    visaType: z.string().optional().or(z.literal('')),
-    travelDate: z.string().optional().or(z.literal('')),
-    message: z.string().trim().max(2000, { message: t('enquiry.errors.message') }).optional().or(z.literal('')),
-    consent: z.literal(true, { message: t('enquiry.errors.consent') }),
-    company: z.string().optional(),
+    fullName: z
+      .string({ message: t('enquiry.errors.name') })
+      .trim()
+      .min(1, { message: t('enquiry.errors.name') })
+      .max(120, { message: t('enquiry.errors.name') }),
+    email: z
+      .string({ message: t('enquiry.errors.email') })
+      .trim()
+      .min(3, { message: t('enquiry.errors.email') })
+      .max(254, { message: t('enquiry.errors.email') })
+      .regex(EMAIL_PATTERN, { message: t('enquiry.errors.email') }),
+    phone: z
+      .string()
+      .trim()
+      .max(30, { message: t('enquiry.errors.phone') })
+      .nullish()
+      .or(z.literal('')),
+    passport: z.string().nullish().or(z.literal('')),
+    destination: z.string().max(80).nullish().or(z.literal('')),
+    visaType: z.string().max(40).nullish().or(z.literal('')),
+    travelDate: z.string().nullish().or(z.literal('')),
+    message: z
+      .string()
+      .trim()
+      .max(2000, { message: t('enquiry.errors.message') })
+      .nullish()
+      .or(z.literal('')),
+    consent: z
+      .boolean({ message: t('enquiry.errors.consent') })
+      .refine((val) => val === true, { message: t('enquiry.errors.consent') }),
+    company: z.string().nullish().or(z.literal('')),
   });
 }
 
-type EnquiryValues = z.infer<ReturnType<typeof buildSchema>>;
+type FormValues = z.infer<ReturnType<typeof buildSchema>>;
 
-function readPrefill(searchParams: URLSearchParams): Partial<EnquiryValues> {
+function readPrefill(searchParams: URLSearchParams): FormValues {
   const passport = searchParams.get('passport') ?? '';
   const destination = searchParams.get('destination') ?? '';
   const visaType = searchParams.get('visaType') ?? '';
@@ -53,7 +74,7 @@ function readPrefill(searchParams: URLSearchParams): Partial<EnquiryValues> {
     visaType: isVisaType(visaType) ? visaType : '',
     travelDate: travelDate || '',
     message: '',
-    consent: false as unknown as true,
+    consent: false,
     company: '',
   };
 }
@@ -64,8 +85,7 @@ export function EnquiryForm() {
   const passportOptions = usePassportOptions();
   const [status, setStatus] = useState<SubmitStatus>('idle');
 
-  const schema = buildSchema(t);
-  type FormValues = EnquiryValues;
+  const schema = useMemo(() => buildSchema(t), [t]);
 
   const {
     register,
@@ -80,11 +100,6 @@ export function EnquiryForm() {
     mode: 'onBlur',
   });
 
-  // keep resolver in sync when language changes
-  useEffect(() => {
-    // no-op; resolver is rebuilt on render via closure
-  }, [t]);
-
   const watchedPassport = watch('passport');
   const watchedDestination = watch('destination');
   const watchedVisaType = watch('visaType');
@@ -96,6 +111,58 @@ export function EnquiryForm() {
     label: `${destination.flag}  ${destination.country}`,
   }));
   const visaOptions = VISA_TYPES.map((type) => ({ value: type, label: t(`visaTypes.${type}`) }));
+
+  const registerWithSync = (
+    name: 'fullName' | 'email' | 'phone' | 'travelDate' | 'message' | 'company',
+    validateOnBlur = false,
+  ) => {
+    return register(name, {
+      onChange: (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+        setValue(name, event.target.value, { shouldValidate: false });
+      },
+      onBlur: (event: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+        setValue(name, event.target.value, { shouldValidate: validateOnBlur });
+      },
+    });
+  };
+
+  const handleFormSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    const form = event.currentTarget;
+
+    const getFieldValue = (name: string): string => {
+      const el = form.elements.namedItem(name);
+      if (!el) return '';
+      if (el instanceof HTMLInputElement || el instanceof HTMLTextAreaElement || el instanceof HTMLSelectElement) {
+        return el.value;
+      }
+      return '';
+    };
+
+    // Read directly from DOM to ensure browser autofill values are captured
+    setValue('fullName', getFieldValue('fullName'), { shouldValidate: true });
+    setValue('email', getFieldValue('email'), { shouldValidate: true });
+    setValue('phone', getFieldValue('phone'), { shouldValidate: false });
+    setValue('travelDate', getFieldValue('travelDate'), { shouldValidate: false });
+    setValue('message', getFieldValue('message'), { shouldValidate: false });
+    setValue('company', getFieldValue('company'), { shouldValidate: false });
+
+    const passportVal = getFieldValue('passport');
+    setValue('passport', passportVal, { shouldValidate: false });
+
+    const destinationVal = getFieldValue('destination');
+    setValue('destination', destinationVal, { shouldValidate: false });
+
+    const visaTypeVal = getFieldValue('visaType');
+    setValue('visaType', visaTypeVal, { shouldValidate: false });
+
+    const consentEl = form.elements.namedItem('consent') as HTMLInputElement | null;
+    if (consentEl) {
+      setValue('consent', consentEl.checked, { shouldValidate: true });
+    }
+
+    return handleSubmit(onSubmit)(event);
+  };
 
   const onSubmit = async (values: FormValues) => {
     if (values.company) {
@@ -139,7 +206,7 @@ export function EnquiryForm() {
         <button
           type="button"
           onClick={() => {
-            reset({ ...readPrefill(new URLSearchParams()) });
+            reset(readPrefill(new URLSearchParams()));
             setStatus('idle');
           }}
           className="mt-6 inline-flex h-12 items-center rounded-full border border-slate-200 bg-white px-6 text-sm font-semibold text-ink transition-colors hover:bg-slate-50"
@@ -154,7 +221,7 @@ export function EnquiryForm() {
 
   return (
     <form
-      onSubmit={handleSubmit(onSubmit)}
+      onSubmit={handleFormSubmit}
       noValidate
       className="space-y-6 rounded-3xl border border-slate-200/80 bg-white p-6 shadow-card sm:p-8"
     >
@@ -171,7 +238,7 @@ export function EnquiryForm() {
           type="text"
           tabIndex={-1}
           autoComplete="off"
-          {...register('company')}
+          {...registerWithSync('company')}
         />
       </div>
 
@@ -182,7 +249,7 @@ export function EnquiryForm() {
           error={errors.fullName?.message}
           autoComplete="name"
           required
-          {...register('fullName')}
+          {...registerWithSync('fullName', true)}
         />
         <TextField
           id="enquiry-email"
@@ -191,7 +258,7 @@ export function EnquiryForm() {
           error={errors.email?.message}
           autoComplete="email"
           required
-          {...register('email')}
+          {...registerWithSync('email', true)}
         />
         <TextField
           id="enquiry-phone"
@@ -199,17 +266,18 @@ export function EnquiryForm() {
           type="tel"
           error={errors.phone?.message}
           autoComplete="tel"
-          {...register('phone')}
+          {...registerWithSync('phone')}
         />
         <TextField
           id="enquiry-travel-date"
           label={t('enquiry.travelDate')}
           type="date"
           error={errors.travelDate?.message}
-          {...register('travelDate')}
+          {...registerWithSync('travelDate')}
         />
         <SelectField
           id="enquiry-passport"
+          name="passport"
           label={t('enquiry.passport')}
           value={watchedPassport ?? ''}
           onChange={(value) => setValue('passport', value, { shouldValidate: false })}
@@ -218,6 +286,7 @@ export function EnquiryForm() {
         />
         <SelectField
           id="enquiry-destination"
+          name="destination"
           label={t('enquiry.destination')}
           value={watchedDestination ?? ''}
           onChange={(value) => setValue('destination', value, { shouldValidate: false })}
@@ -226,6 +295,7 @@ export function EnquiryForm() {
         />
         <SelectField
           id="enquiry-visa"
+          name="visaType"
           label={t('enquiry.visaType')}
           value={watchedVisaType ?? ''}
           onChange={(value) => setValue('visaType', value, { shouldValidate: false })}
@@ -243,7 +313,7 @@ export function EnquiryForm() {
           rows={5}
           className={textareaClass}
           aria-invalid={Boolean(errors.message)}
-          {...register('message')}
+          {...registerWithSync('message')}
         />
         {errors.message && <p className="text-sm text-error-700">{errors.message.message}</p>}
       </div>
@@ -252,10 +322,12 @@ export function EnquiryForm() {
         <label className="flex items-start gap-3 text-sm leading-relaxed text-muted">
           <input
             type="checkbox"
+            id="enquiry-consent"
+            name="consent"
             className="mt-0.5 h-5 w-5 shrink-0 rounded-md border-slate-300 text-primary-700 focus:ring-primary-500"
             aria-invalid={Boolean(errors.consent)}
             checked={Boolean(watchedConsent)}
-            onChange={(event) => setValue('consent', event.target.checked as true, { shouldValidate: true })}
+            onChange={(event) => setValue('consent', event.target.checked, { shouldValidate: true })}
           />
           <span>
             {t('enquiry.consent').split('Privacy Policy')[0]}

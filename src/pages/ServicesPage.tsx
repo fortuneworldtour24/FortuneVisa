@@ -10,7 +10,7 @@ import { useSeo } from '@/hooks/useSeo';
 
 type ServiceCategory = {
   key: string;
-  visaType: VisaType;
+  visaType?: VisaType;
   icon: LucideIcon;
 };
 
@@ -20,8 +20,8 @@ const CATEGORIES: ServiceCategory[] = [
   { key: 'skilled', visaType: 'work', icon: Briefcase },
   { key: 'family', visaType: 'family', icon: Users },
   { key: 'business', visaType: 'work', icon: Briefcase },
-  { key: 'pathways', visaType: 'work', icon: Map },
-  { key: 'documents', visaType: 'tourist', icon: Wrench },
+  { key: 'pathways', icon: Map },
+  { key: 'documents', icon: Wrench },
 ];
 
 export function ServicesPage() {
@@ -53,7 +53,7 @@ export function ServicesPage() {
               <p className="mt-2 flex-1 text-sm leading-relaxed text-muted">{t(`services.categories.${key}.body`)}</p>
               <div className="mt-6">
                 <Link
-                  to={buildEnquiryPath({ visaType })}
+                  to={buildEnquiryPath(visaType ? { visaType } : {})}
                   className="inline-flex min-h-12 items-center gap-2 rounded-full bg-primary-700 px-5 py-2.5 text-sm font-semibold text-white shadow-card transition-all duration-200 hover:-translate-y-0.5 hover:bg-primary-800"
                 >
                   {t('services.enquire')}

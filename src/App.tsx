@@ -1,6 +1,7 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { Layout } from '@/components/Layout';
 import { HomePage } from '@/pages/HomePage';
+import { AboutPage } from '@/pages/AboutPage';
 import { ContactPage } from '@/pages/ContactPage';
 import { ServicesPage } from '@/pages/ServicesPage';
 import { DestinationsPage } from '@/pages/DestinationsPage';
@@ -9,7 +10,8 @@ import { CheckerPage } from '@/pages/CheckerPage';
 import { ChecklistPage } from '@/pages/ChecklistPage';
 import { BlogListPage } from '@/pages/BlogListPage';
 import { BlogPostPage } from '@/pages/BlogPostPage';
-import { SectionPage } from '@/pages/SectionPage';
+import { PrivacyPage } from '@/pages/PrivacyPage';
+import { TermsPage } from '@/pages/TermsPage';
 
 function App() {
   return (
@@ -22,11 +24,12 @@ function App() {
           <Route path="checker" element={<CheckerPage />} />
           <Route path="services" element={<ServicesPage />} />
           <Route path="checklist" element={<ChecklistPage />} />
+          <Route path="about" element={<AboutPage />} />
           <Route path="blog" element={<BlogListPage />} />
           <Route path="blog/:slug" element={<BlogPostPage />} />
           <Route path="contact" element={<ContactPage />} />
-          <Route path="privacy" element={<SectionPage section="privacy" />} />
-          <Route path="terms" element={<SectionPage section="terms" />} />
+          <Route path="privacy" element={<PrivacyPage />} />
+          <Route path="terms" element={<TermsPage />} />
         </Route>
       </Routes>
     </BrowserRouter>

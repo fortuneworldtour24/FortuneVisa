@@ -10,7 +10,7 @@ export function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="bg-ink text-slate-300">
+    <footer className="bg-ink text-slate-300 print:hidden">
       <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
           <div className="space-y-5">
@@ -92,7 +92,12 @@ export function Footer() {
         </div>
 
         <div className="mt-12 border-t border-white/10 pt-6 text-xs text-slate-400">
-          {t('footer.copyright', { year, name: siteConfig.name })}
+          <p className="text-xs leading-relaxed text-slate-300">
+            Fortune Visa Services provides document preparation and general information only. We are not registered migration agents and do not provide immigration advice.
+          </p>
+          <p className="mt-2 text-[11px] text-slate-500">
+            {t('footer.copyright', { year, name: siteConfig.name })}
+          </p>
         </div>
       </div>
     </footer>
