@@ -1,0 +1,403 @@
+{
+  "nav": {
+    "destinations": "Destinations",
+    "visaChecker": "Visa Checker",
+    "services": "Services",
+    "blog": "Blog",
+    "checklist": "Checklist",
+    "contact": "Contact",
+    "freeEnquiry": "Free Enquiry",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "mainNavigation": "Main navigation",
+    "mobileNavigation": "Mobile navigation",
+    "language": "Language"
+  },
+  "languages": {
+    "en": "English"
+  },
+  "footer": {
+    "description": "Licensed guidance for Australian visas, from first enquiry to final grant. Clear advice, honest timelines, and a team that stays with you.",
+    "quickLinks": "Quick links",
+    "contactDetails": "Contact details",
+    "legal": "Legal",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Use",
+    "address": "Address",
+    "phone": "Phone",
+    "email": "Email",
+    "whatsapp": "WhatsApp us",
+    "disclaimerTitle": "Disclaimer",
+    "disclaimer": "The information on this website is general in nature and does not constitute migration or legal advice. Visa eligibility and outcomes depend on individual circumstances and may change without notice. Please contact us for advice specific to your situation.",
+    "copyright": "{{year}} {{name}}. All rights reserved."
+  },
+  "home": {
+    "hero": {
+      "title": "Your visa, sorted.",
+      "subtitle": "Tell us where you're going. We guide you through the visa, step by step.",
+      "imageAlt": "Sydney skyline across the harbour",
+      "passportLabel": "Passport country",
+      "passportPlaceholder": "Select your passport country",
+      "destinationLabel": "Travelling to",
+      "destinationPlaceholder": "Select your visa type",
+      "destinationOption": "{{country}}, {{visa}}",
+      "checkCta": "Check visa requirements",
+      "checkHint": "Choose both options to continue.",
+      "chips": {
+        "consultation": "Free consultation",
+        "documents": "Document checking",
+        "support": "Real human support"
+      }
+    },
+    "trust": {
+      "expert": {
+        "title": "Expert guidance",
+        "body": "Practical advice focused on Australian visas and migration."
+      },
+      "documents": {
+        "title": "Document review",
+        "body": "Every form and supporting document checked before lodgement."
+      },
+      "application": {
+        "title": "Application support",
+        "body": "Help preparing, lodging and tracking your application."
+      },
+      "friendly": {
+        "title": "Friendly support",
+        "body": "Clear answers from people who respond when you need them."
+      }
+    },
+    "destinations": {
+      "title": "Popular visa pathways",
+      "subtitle": "The Australian visas our clients ask about most.",
+      "viewDetails": "View details"
+    },
+    "steps": {
+      "title": "How it works",
+      "subtitle": "Three simple steps from first conversation to submission.",
+      "one": {
+        "title": "Tell us your plan",
+        "body": "Share your goals, timing and background in a free consultation."
+      },
+      "two": {
+        "title": "Share your documents",
+        "body": "Upload what you have and we tell you exactly what is still needed."
+      },
+      "three": {
+        "title": "We guide you to submission",
+        "body": "We review your application with you and support you until it is lodged."
+      }
+    },
+    "why": {
+      "title": "Why Fortune",
+      "subtitle": "Careful, honest advice that puts your situation first.",
+      "clarity": {
+        "title": "Plain-English advice",
+        "body": "No jargon. You will always know what each step means and why it matters."
+      },
+      "checks": {
+        "title": "Thorough checks",
+        "body": "Our review process catches gaps early, so your application is complete the first time."
+      },
+      "transparent": {
+        "title": "Transparent fees",
+        "body": "You receive a clear breakdown of costs before you decide to go ahead."
+      },
+      "personal": {
+        "title": "A team that stays with you",
+        "body": "One consultant follows your case from first enquiry through to the final decision."
+      }
+    },
+    "testimonials": {
+      "title": "What our clients say",
+      "subtitle": "Client stories will be published here once they are approved.",
+      "placeholderBadge": "Placeholder",
+      "quote": "Client testimonial to be supplied.",
+      "name": "Client name",
+      "visa": "Visa type"
+    },
+    "faq": {
+      "title": "Frequently asked questions",
+      "subtitle": "Quick answers before you get in touch.",
+      "q1": {
+        "question": "What does the free consultation include?",
+        "answer": "A conversation about your goals, your background and the visa options that may suit you. We explain the next steps and any costs before you commit to anything."
+      },
+      "q2": {
+        "question": "What documents will I need?",
+        "answer": "It depends on your visa. Typical documents include your passport, identity records, evidence of relationships or qualifications, and financial or employment records. We give you a personal checklist after your consultation."
+      },
+      "q3": {
+        "question": "How long does a visa application take?",
+        "answer": "Processing times vary by visa type, country and how complete your application is. We set out realistic timelines for your visa during the consultation."
+      },
+      "q4": {
+        "question": "Can you guarantee a visa outcome?",
+        "answer": "No consultant can guarantee a visa outcome, because decisions rest with the Department of Home Affairs. We aim to make your application as strong and complete as possible."
+      },
+      "q5": {
+        "question": "Do I need to be in Australia to apply?",
+        "answer": "Some visas can be applied for from overseas and others from within Australia. Tell us your location and we will confirm which options are available to you."
+      },
+      "q6": {
+        "question": "How is my personal information handled?",
+        "answer": "Your information is used only to assess and manage your enquiry and application. Read our Privacy Policy for full details on how it is collected, stored and protected."
+      }
+    },
+    "cta": {
+      "title": "Not sure where to start?",
+      "body": "Book a free consultation and get a straightforward view of your visa options.",
+      "button": "Book a free consultation"
+    }
+  },
+  "visas": {
+    "student": { "name": "Student visa", "subclass": "Subclass 500" },
+    "visitor": { "name": "Visitor visa", "subclass": "Subclass 600" },
+    "skilled": { "name": "Skilled Independent visa", "subclass": "Subclass 189" },
+    "nominated": { "name": "Skilled Nominated visa", "subclass": "Subclass 190" },
+    "partner": { "name": "Partner visa", "subclass": "Subclass 820 / 801" },
+    "workingHoliday": { "name": "Working Holiday visa", "subclass": "Subclass 417" }
+  },
+  "countries": {
+    "AU": "Australia",
+    "BR": "Brazil",
+    "CA": "Canada",
+    "CN": "China",
+    "DE": "Germany",
+    "FR": "France",
+    "GB": "United Kingdom",
+    "ID": "Indonesia",
+    "IE": "Ireland",
+    "IN": "India",
+    "JP": "Japan",
+    "KR": "South Korea",
+    "LK": "Sri Lanka",
+    "MY": "Malaysia",
+    "NG": "Nigeria",
+    "NP": "Nepal",
+    "NZ": "New Zealand",
+    "PH": "Philippines",
+    "PK": "Pakistan",
+    "SG": "Singapore",
+    "US": "United States",
+    "VN": "Vietnam",
+    "ZA": "South Africa"
+  },
+  "visaTypes": {
+    "tourist": "Tourist",
+    "student": "Student",
+    "work": "Work",
+    "family": "Family"
+  },
+  "destinations": {
+    "eyebrow": "Destinations",
+    "title": "Explore visa destinations",
+    "description": "Browse indicative visa information for popular destinations, then open a destination to see each visa type.",
+    "searchLabel": "Search destinations",
+    "searchPlaceholder": "Search by country",
+    "filterLabel": "Filter by visa type",
+    "filterAll": "All visa types",
+    "resultsCount": "{{count}} destinations",
+    "visaCount": "{{count}} visa types",
+    "viewDetails": "View details",
+    "empty": {
+      "title": "No destinations match your search",
+      "body": "Try a different country name or choose another visa type.",
+      "clear": "Clear search and filter"
+    }
+  },
+  "destinationDetail": {
+    "back": "All destinations",
+    "visaTypesHeading": "Visa types",
+    "visaRequired": "Visa required",
+    "visaNotRequired": "Visa not required",
+    "enquire": "Enquire about this visa",
+    "noVisaTypes": "We don't have visa information for this destination yet.",
+    "notFoundTitle": "We couldn't find that destination",
+    "notFoundBody": "The link may be out of date. Browse all destinations to find what you need.",
+    "notFoundCta": "Browse destinations"
+  },
+  "visaDetails": {
+    "fee": "Indicative fee (AUD)",
+    "processing": "Typical processing time",
+    "validity": "Validity",
+    "notes": "Notes"
+  },
+  "checker": {
+    "eyebrow": "Visa Checker",
+    "title": "Check whether you need a visa",
+    "description": "Choose your passport, destination and visa type to see an indicative result.",
+    "passportLabel": "Passport country",
+    "passportPlaceholder": "Select your passport country",
+    "destinationLabel": "Destination",
+    "destinationPlaceholder": "Select a destination",
+    "visaTypeLabel": "Visa type",
+    "visaTypePlaceholder": "Select a visa type",
+    "incomplete": "Complete all three selections to see your result.",
+    "resultTitle": "Your indicative result",
+    "disclaimer": "Indicative only. Confirm with us before applying.",
+    "enquireNow": "Enquire now",
+    "noVisaTypes": "No visa types are listed for this destination yet.",
+    "empty": {
+      "title": "No visa information yet",
+      "body": "We don't have details for this combination yet. Send us an enquiry and a consultant will get back to you.",
+      "cta": "Send an enquiry"
+    }
+  },
+  "enquiry": {
+    "formTitle": "Send an enquiry",
+    "prefilled": "We've filled in your selections from the visa checker. Change anything you like.",
+    "name": "Full name",
+    "email": "Email address",
+    "phone": "Phone (optional)",
+    "passport": "Passport country (optional)",
+    "destination": "Destination (optional)",
+    "visaType": "Visa type (optional)",
+    "travelDate": "Intended travel date (optional)",
+    "message": "Message (optional)",
+    "consent": "I agree to the Privacy Policy and consent to Fortune Visa Services contacting me about my enquiry.",
+    "optionalPlaceholder": "Not selected",
+    "submit": "Send enquiry",
+    "submitting": "Sending...",
+    "successTitle": "Thank you, your enquiry is in",
+    "successBody": "A member of the Fortune team will contact you at the email address you provided.",
+    "sendAnother": "Send another enquiry",
+    "errorGeneric": "We couldn't send your enquiry just now. Please try again, or call us on the number above.",
+    "errors": {
+      "name": "Please enter your full name.",
+      "email": "Please enter a valid email address.",
+      "phone": "Phone numbers must be 30 characters or fewer.",
+      "message": "Your message must be 2000 characters or fewer.",
+      "consent": "Please accept the Privacy Policy to send your enquiry."
+    }
+  },
+  "placeholder": {
+    "comingSoon": "Coming soon",
+    "body": "This section is being prepared. In the meantime, reach out to our team and we will answer your questions directly.",
+    "backHome": "Back to home",
+    "contactUs": "Contact us"
+  },
+  "services": {
+    "eyebrow": "Services",
+    "title": "Migration services built around you",
+    "description": "From first enquiry to final grant, we prepare, lodge and support your visa application at every stage.",
+    "enquire": "Enquire",
+    "categories": {
+      "tourist": {
+        "title": "Tourist visas",
+        "body": "Short-stay visitor visas for holidays, family visits and tourism, including electronic travel authorities."
+      },
+      "student": {
+        "title": "Student visas",
+        "body": "Student visa applications tied to a confirmed course, with genuine study advice and document checks."
+      },
+      "skilled": {
+        "title": "Work and skilled visas",
+        "body": "Points-based and employer-sponsored skilled pathways, including skills assessments and nominations."
+      },
+      "family": {
+        "title": "Partner and family visas",
+        "body": "Partner, parent and family reunion visas with relationship evidence and sponsorship support."
+      },
+      "business": {
+        "title": "Business visas",
+        "body": "Business and investor visa pathways for owners and entrepreneurs looking to operate in Australia."
+      },
+      "pathways": {
+        "title": "Migration pathways",
+        "body": "End-to-end planning across visa subclasses, from provisional to permanent residence strategies."
+      },
+      "documents": {
+        "title": "Document support",
+        "body": "Document preparation, certified translations and a full review before your application is lodged."
+      }
+    }
+  },
+  "checklist": {
+    "eyebrow": "Checklist",
+    "title": "Your visa document checklist",
+    "description": "Pick your destination and visa type to see an interactive checklist. Tick items off as you go; your progress is saved on this device.",
+    "destinationLabel": "Destination",
+    "destinationPlaceholder": "Select a destination",
+    "visaTypeLabel": "Visa type",
+    "visaTypePlaceholder": "Select a visa type",
+    "noCombination": "Select a destination and visa type to view a checklist.",
+    "notAvailable": "We don't have a checklist for this combination yet. Send us an enquiry and we'll prepare one for you.",
+    "notAvailableCta": "Enquire about this visa",
+    "progressLabel": "Progress",
+    "progressAria": "{{done}} of {{total}} items complete",
+    "complete": "All items checked",
+    "print": "Print / Save as PDF",
+    "getHelp": "Get help with these documents",
+    "disclaimer": "Indicative only. Confirm the full checklist with us before applying."
+  },
+  "pages": {
+    "services": {
+      "eyebrow": "Services",
+      "title": "Migration services built around you",
+      "description": "Lodgement, document preparation, appeals and ongoing support, delivered by experienced consultants."
+    },
+    "blog": {
+      "eyebrow": "Blog",
+      "title": "Visa news and practical guides",
+      "description": "Plain-English updates on policy changes, application tips and life in Australia."
+    },
+    "privacy": {
+      "eyebrow": "Legal",
+      "title": "Privacy Policy",
+      "description": "How we collect, use and protect your personal information."
+    },
+    "terms": {
+      "eyebrow": "Legal",
+      "title": "Terms of Use",
+      "description": "The terms that apply when you use this website and our services."
+    }
+  },
+  "consultation": {
+    "title": "Book a free consultation",
+    "body": "Talk through your visa options with a registered consultant. No obligation, no jargon.",
+    "cta": "Book a free consultation"
+  },
+  "whatsapp": {
+    "ariaLabel": "Chat with us on WhatsApp",
+    "tooltip": "Chat on WhatsApp"
+  },
+  "blog": {
+    "featured": "Featured",
+    "allCategories": "All",
+    "readArticle": "Read article",
+    "minRead": "{{minutes}} min read",
+    "publishedOn": "Published on {{date}}",
+    "share": "Share",
+    "shareFacebook": "Share on Facebook",
+    "shareX": "Share on X",
+    "shareLinkedIn": "Share on LinkedIn",
+    "copyLink": "Copy link",
+    "linkCopied": "Link copied",
+    "relatedPosts": "Related articles",
+    "noRelated": "No related articles yet.",
+    "backToBlog": "All articles",
+    "notFoundTitle": "We couldn't find that article",
+    "notFoundBody": "The link may be out of date. Browse all articles to find what you need.",
+    "notFoundCta": "Browse articles",
+    "loadingTitle": "Loading articles...",
+    "loadingBody": "Please wait while we fetch the latest posts.",
+    "errorTitle": "We couldn't load the blog",
+    "errorBody": "Something went wrong. Please try again later.",
+    "emptyTitle": "No articles yet",
+    "emptyBody": "We're preparing visa tips and guides. Check back soon.",
+    "errorPostTitle": "We couldn't load this article",
+    "errorPostBody": "Something went wrong. Please try again later."
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "title": "Talk to a Fortune consultant",
+    "description": "Call the office, send us an email or message our team on WhatsApp. Every enquiry is a free conversation about your options.",
+    "visitTitle": "Visit our office",
+    "callTitle": "Call us",
+    "emailTitle": "Email us",
+    "whatsappTitle": "Message on WhatsApp",
+    "whatsappBody": "Prefer a quick chat? Message our team on WhatsApp.",
+    "hours": "Monday to Friday, 9:00am to 5:30pm AEST"
+  }
+}

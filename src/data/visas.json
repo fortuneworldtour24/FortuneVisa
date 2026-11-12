@@ -1,0 +1,349 @@
+{
+  "_notice": "SAMPLE DATA - verify before launch. Every fee, processing time, validity period and requirement below is a placeholder and must be checked against official government sources.",
+  "countries": [
+    {
+      "_comment": "sample data, verify before launch",
+      "slug": "australia",
+      "country": "Australia",
+      "flag": "🇦🇺",
+      "visaTypes": [
+        {
+          "type": "tourist",
+          "required": true,
+          "indicativeFee": 190,
+          "processingTime": "1 to 4 weeks",
+          "validity": "Up to 12 months, multiple entry",
+          "notes": "Some nationalities use an electronic travel authority instead of a visa."
+        },
+        {
+          "type": "student",
+          "required": true,
+          "indicativeFee": 1600,
+          "processingTime": "4 to 8 weeks",
+          "validity": "Length of course plus 2 months",
+          "notes": "Requires an offer from a registered course and evidence of genuine study intent."
+        },
+        {
+          "type": "work",
+          "required": true,
+          "indicativeFee": 4500,
+          "processingTime": "3 to 12 months",
+          "validity": "Up to 4 years",
+          "notes": "Skilled pathways are points-based or employer sponsored. Eligibility changes often."
+        },
+        {
+          "type": "family",
+          "required": true,
+          "indicativeFee": 9000,
+          "processingTime": "12 to 24 months",
+          "validity": "Provisional, then permanent",
+          "notes": "Requires evidence of a genuine relationship and a sponsor who meets the criteria."
+        }
+      ]
+    },
+    {
+      "_comment": "sample data, verify before launch",
+      "slug": "united-states",
+      "country": "United States",
+      "flag": "🇺🇸",
+      "visaTypes": [
+        {
+          "type": "tourist",
+          "required": true,
+          "indicativeFee": 285,
+          "processingTime": "2 to 12 weeks, subject to interview wait times",
+          "validity": "Up to 10 years, multiple entry",
+          "notes": "An in-person interview is usually required. Some travellers may use the visa waiver program."
+        },
+        {
+          "type": "student",
+          "required": true,
+          "indicativeFee": 650,
+          "processingTime": "4 to 16 weeks",
+          "validity": "Duration of study",
+          "notes": "Requires a university acceptance and proof of funds for the full course."
+        },
+        {
+          "type": "work",
+          "required": true,
+          "indicativeFee": 2100,
+          "processingTime": "Varies by category, often several months",
+          "validity": "Typically 3 years, renewable",
+          "notes": "Most work visas need an employer petition. Annual caps apply to some categories."
+        }
+      ]
+    },
+    {
+      "_comment": "sample data, verify before launch",
+      "slug": "united-kingdom",
+      "country": "United Kingdom",
+      "flag": "🇬🇧",
+      "visaTypes": [
+        {
+          "type": "tourist",
+          "required": true,
+          "indicativeFee": 330,
+          "processingTime": "3 to 6 weeks",
+          "validity": "Up to 6 months per visit",
+          "notes": "Visitors may not work or study. Some nationalities need an electronic travel authorisation."
+        },
+        {
+          "type": "student",
+          "required": true,
+          "indicativeFee": 1200,
+          "processingTime": "3 to 8 weeks",
+          "validity": "Length of course plus 4 months",
+          "notes": "Requires a confirmed place with a licensed sponsor and proof of funds."
+        },
+        {
+          "type": "work",
+          "required": true,
+          "indicativeFee": 3400,
+          "processingTime": "3 to 8 weeks",
+          "validity": "Up to 5 years",
+          "notes": "Skilled Worker routes need a job offer from a licensed sponsor that meets salary thresholds."
+        },
+        {
+          "type": "family",
+          "required": true,
+          "indicativeFee": 2900,
+          "processingTime": "12 to 24 weeks",
+          "validity": "30 months, then extendable",
+          "notes": "Financial requirements and English language evidence apply."
+        }
+      ]
+    },
+    {
+      "_comment": "sample data, verify before launch",
+      "slug": "canada",
+      "country": "Canada",
+      "flag": "🇨🇦",
+      "visaTypes": [
+        {
+          "type": "tourist",
+          "required": true,
+          "indicativeFee": 180,
+          "processingTime": "2 to 8 weeks",
+          "validity": "Up to 10 years, multiple entry",
+          "notes": "Some travellers may need an electronic travel authorisation instead of a visa."
+        },
+        {
+          "type": "student",
+          "required": true,
+          "indicativeFee": 170,
+          "processingTime": "6 to 12 weeks",
+          "validity": "Length of study programme",
+          "notes": "Requires a letter of acceptance from a designated learning institution."
+        },
+        {
+          "type": "work",
+          "required": true,
+          "indicativeFee": 220,
+          "processingTime": "Varies widely by programme",
+          "validity": "Up to 3 years",
+          "notes": "Many programmes require a job offer or a labour market assessment."
+        },
+        {
+          "type": "family",
+          "required": true,
+          "indicativeFee": 1000,
+          "processingTime": "12 months or more",
+          "validity": "Permanent residence pathway",
+          "notes": "Sponsorship requirements apply to the sponsoring partner."
+        }
+      ]
+    },
+    {
+      "_comment": "sample data, verify before launch",
+      "slug": "new-zealand",
+      "country": "New Zealand",
+      "flag": "🇳🇿",
+      "visaTypes": [
+        {
+          "type": "tourist",
+          "required": false,
+          "indicativeFee": 25,
+          "processingTime": "Usually instant once submitted online",
+          "validity": "Up to 3 months per visit",
+          "notes": "Many nationalities are visa waiver eligible but still need an electronic travel authority."
+        },
+        {
+          "type": "student",
+          "required": true,
+          "indicativeFee": 450,
+          "processingTime": "4 to 10 weeks",
+          "validity": "Length of course",
+          "notes": "Requires an offer from an approved provider and evidence of tuition funds."
+        },
+        {
+          "type": "work",
+          "required": true,
+          "indicativeFee": 380,
+          "processingTime": "1 to 6 months",
+          "validity": "Up to 3 years",
+          "notes": "Employer accreditation may be required before applying."
+        }
+      ]
+    },
+    {
+      "_comment": "sample data, verify before launch",
+      "slug": "schengen-area",
+      "country": "Schengen Area",
+      "flag": "🇪🇺",
+      "visaTypes": [
+        {
+          "type": "tourist",
+          "required": true,
+          "indicativeFee": 150,
+          "processingTime": "Up to 15 days",
+          "validity": "Up to 90 days in any 180-day period",
+          "notes": "Applies to the common visa for short stays across member countries."
+        },
+        {
+          "type": "student",
+          "required": true,
+          "indicativeFee": 190,
+          "processingTime": "4 to 12 weeks",
+          "validity": "Length of study, national rules apply",
+          "notes": "Each member country sets its own student rules after the initial short-stay decision."
+        },
+        {
+          "type": "work",
+          "required": true,
+          "indicativeFee": 420,
+          "processingTime": "1 to 3 months",
+          "validity": "Typically 1 to 2 years",
+          "notes": "Work visas are issued by individual member countries, so requirements vary."
+        },
+        {
+          "type": "family",
+          "required": true,
+          "indicativeFee": 280,
+          "processingTime": "2 to 6 months",
+          "validity": "Typically 1 year, renewable",
+          "notes": "Family reunification rules depend on the member country where you settle."
+        }
+      ]
+    },
+    {
+      "_comment": "sample data, verify before launch",
+      "slug": "uae",
+      "country": "United Arab Emirates",
+      "flag": "🇦🇪",
+      "visaTypes": [
+        {
+          "type": "tourist",
+          "required": false,
+          "indicativeFee": 0,
+          "processingTime": "Usually on arrival",
+          "validity": "30 to 90 days depending on entry",
+          "notes": "Many nationalities receive a visa on arrival. Others must apply in advance."
+        },
+        {
+          "type": "work",
+          "required": true,
+          "indicativeFee": 550,
+          "processingTime": "1 to 4 weeks",
+          "validity": "Usually tied to the employment contract",
+          "notes": "Usually sponsored by an employer, who manages the application."
+        }
+      ]
+    },
+    {
+      "_comment": "sample data, verify before launch",
+      "slug": "singapore",
+      "country": "Singapore",
+      "flag": "🇸🇬",
+      "visaTypes": [
+        {
+          "type": "tourist",
+          "required": false,
+          "indicativeFee": 0,
+          "processingTime": "Not applicable for visa-exempt travellers",
+          "validity": "Usually 30 days on arrival",
+          "notes": "Visa-exempt for many nationalities. Some travellers must apply in advance."
+        },
+        {
+          "type": "student",
+          "required": true,
+          "indicativeFee": 230,
+          "processingTime": "2 to 4 weeks",
+          "validity": "Length of course",
+          "notes": "Requires an offer from an approved institution. Your school usually submits the application."
+        },
+        {
+          "type": "work",
+          "required": true,
+          "indicativeFee": 390,
+          "processingTime": "3 to 6 weeks",
+          "validity": "Up to 2 years",
+          "notes": "Requires a qualifying salary and a job offer from a Singapore employer."
+        }
+      ]
+    },
+    {
+      "_comment": "sample data, verify before launch",
+      "slug": "japan",
+      "country": "Japan",
+      "flag": "🇯🇵",
+      "visaTypes": [
+        {
+          "type": "tourist",
+          "required": true,
+          "indicativeFee": 90,
+          "processingTime": "5 working days",
+          "validity": "Up to 90 days per visit",
+          "notes": "Visa exemption applies to some nationalities. Check before you travel."
+        },
+        {
+          "type": "student",
+          "required": true,
+          "indicativeFee": 90,
+          "processingTime": "1 to 3 months, including certificate of eligibility",
+          "validity": "Length of course, up to 4 years",
+          "notes": "The school applies for a certificate of eligibility on your behalf."
+        },
+        {
+          "type": "work",
+          "required": true,
+          "indicativeFee": 90,
+          "processingTime": "1 to 3 months",
+          "validity": "Up to 5 years depending on category",
+          "notes": "Work visas are category specific and need a qualifying job offer."
+        }
+      ]
+    },
+    {
+      "_comment": "sample data, verify before launch",
+      "slug": "india",
+      "country": "India",
+      "flag": "🇮🇳",
+      "visaTypes": [
+        {
+          "type": "tourist",
+          "required": true,
+          "indicativeFee": 70,
+          "processingTime": "3 to 5 working days for e-Visa",
+          "validity": "Up to 1 year, multiple entry, depending on eligibility",
+          "notes": "Most applications are made online. Passport validity requirements apply."
+        },
+        {
+          "type": "student",
+          "required": true,
+          "indicativeFee": 110,
+          "processingTime": "2 to 6 weeks",
+          "validity": "Length of course, up to 5 years",
+          "notes": "Requires an admission letter from a recognised institution."
+        },
+        {
+          "type": "work",
+          "required": true,
+          "indicativeFee": 330,
+          "processingTime": "4 to 8 weeks",
+          "validity": "Length of employment contract, up to 5 years",
+          "notes": "Requires a job offer and approval from the relevant authority."
+        }
+      ]
+    }
+  ]
+}

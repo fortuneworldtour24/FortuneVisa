@@ -1,0 +1,238 @@
+{
+  "_notice": "SAMPLE DATA - verify before launch. Checklist items below are indicative and do not cover every requirement. Always confirm the current checklist with official sources or a registered adviser.",
+  "items": [
+    {
+      "destinationSlug": "australia",
+      "visaType": "tourist",
+      "_comment": "sample data, verify before launch",
+      "requirements": [
+        { "id": "passport-validity", "label": "Passport valid for at least six months beyond your travel dates" },
+        { "id": "passport-copy", "label": "Clear copy of your passport bio page" },
+        { "id": "photos", "label": "Recent passport-size photograph meeting the specification" },
+        { "id": "financial-proof", "label": "Evidence of funds to cover your stay (bank statements or payslips)" },
+        { "id": "itinerary", "label": "Travel itinerary or flight booking details" },
+        { "id": "accommodation", "label": "Proof of accommodation or hotel bookings" },
+        { "id": "health-insurance", "label": "Overseas visitor health cover for the visit period" },
+        { "id": "gfc", "label": "Completed visitor visa application form" }
+      ]
+    },
+    {
+      "destinationSlug": "australia",
+      "visaType": "student",
+      "_comment": "sample data, verify before launch",
+      "requirements": [
+        { "id": "passport-validity", "label": "Passport valid for the length of your course plus a margin" },
+        { "id": "passport-copy", "label": "Clear copy of your passport bio page" },
+        { "id": "photos", "label": "Recent passport-size photograph meeting the specification" },
+        { "id": "coe", "label": "Confirmation of Enrolment from a registered course" },
+        { "id": "financial-proof", "label": "Evidence of funds for tuition, travel and living costs" },
+        { "id": "oshc", "label": "Overseas Student Health Cover for the course duration" },
+        { "id": "gs", "label": "Genuine Student statement addressing study intent" },
+        { "id": "english", "label": "English language test result meeting course requirements" }
+      ]
+    },
+    {
+      "destinationSlug": "australia",
+      "visaType": "work",
+      "_comment": "sample data, verify before launch",
+      "requirements": [
+        { "id": "passport-validity", "label": "Passport valid for the proposed visa period" },
+        { "id": "passport-copy", "label": "Clear copy of your passport bio page" },
+        { "id": "photos", "label": "Recent passport-size photograph meeting the specification" },
+        { "id": "skills-assessment", "label": "Positive skills assessment for your nominated occupation" },
+        { "id": "english", "label": "Competent English language test result" },
+        { "id": "employment-evidence", "label": "Evidence of skilled employment history" },
+        { "id": "financial-proof", "label": "Evidence of funds to support settlement" },
+        { "id": "health-character", "label": "Health and character check documentation" }
+      ]
+    },
+    {
+      "destinationSlug": "australia",
+      "visaType": "family",
+      "_comment": "sample data, verify before launch",
+      "requirements": [
+        { "id": "passport-validity", "label": "Passport valid for the visa period" },
+        { "id": "passport-copy", "label": "Clear copy of your passport bio page" },
+        { "id": "photos", "label": "Recent passport-size photographs of applicant and sponsor" },
+        { "id": "relationship-evidence", "label": "Evidence of a genuine and continuing relationship" },
+        { "id": "financial-proof", "label": "Sponsor evidence of ability to support the applicant" },
+        { "id": "health-character", "label": "Health and character check documentation" },
+        { "id": "stat-declarations", "label": "Statutory declarations from supporting witnesses" },
+        { "id": "cohabitation", "label": "Evidence of shared finances or cohabitation" }
+      ]
+    },
+    {
+      "destinationSlug": "united-states",
+      "visaType": "tourist",
+      "_comment": "sample data, verify before launch",
+      "requirements": [
+        { "id": "passport-validity", "label": "Passport valid for at least six months beyond your travel dates" },
+        { "id": "ds-160", "label": "Completed DS-160 nonimmigrant visa application form" },
+        { "id": "photo-ds160", "label": "Digital photograph meeting DS-160 specification" },
+        { "id": "fee-receipt", "label": "Visa application fee payment receipt" },
+        { "id": "appointment-confirmation", "label": "Interview appointment confirmation" },
+        { "id": "financial-proof", "label": "Evidence of funds to cover your stay" },
+        { "id": "ties", "label": "Evidence of ties to your home country" },
+        { "id": "itinerary", "label": "Travel itinerary or flight booking details" }
+      ]
+    },
+    {
+      "destinationSlug": "united-states",
+      "visaType": "student",
+      "_comment": "sample data, verify before launch",
+      "requirements": [
+        { "id": "passport-validity", "label": "Passport valid for at least six months beyond your course start" },
+        { "id": "i-20", "label": "Form I-20 issued by your university" },
+        { "id": "ds-160", "label": "Completed DS-160 nonimmigrant visa application form" },
+        { "id": "sevis-fee", "label": "SEVIS I-901 fee payment receipt" },
+        { "id": "fee-receipt", "label": "Visa application fee payment receipt" },
+        { "id": "financial-proof", "label": "Proof of funds for tuition and living costs" },
+        { "id": "appointment-confirmation", "label": "Interview appointment confirmation" },
+        { "id": "academic-records", "label": "Academic transcripts and test scores" }
+      ]
+    },
+    {
+      "destinationSlug": "united-kingdom",
+      "visaType": "tourist",
+      "_comment": "sample data, verify before launch",
+      "requirements": [
+        { "id": "passport-validity", "label": "Passport valid for the full visit period" },
+        { "id": "passport-copy", "label": "Clear copy of your passport bio page" },
+        { "id": "application-form", "label": "Completed UK visitor visa application form" },
+        { "id": "financial-proof", "label": "Bank statements showing funds for your stay" },
+        { "id": "itinerary", "label": "Travel itinerary or flight booking details" },
+        { "id": "accommodation", "label": "Proof of accommodation or hotel bookings" },
+        { "id": "ties", "label": "Evidence of ties to your home country" },
+        { "id": "tuberculosis", "label": "Tuberculosis test result if required for your country" }
+      ]
+    },
+    {
+      "destinationSlug": "united-kingdom",
+      "visaType": "student",
+      "_comment": "sample data, verify before launch",
+      "requirements": [
+        { "id": "passport-validity", "label": "Passport valid for the length of your course" },
+        { "id": "cas", "label": "Confirmation of Acceptance for Studies from your sponsor" },
+        { "id": "financial-proof", "label": "Evidence of funds for tuition and living costs" },
+        { "id": "english", "label": "Approved English language test result" },
+        { "id": "atb-certificate", "label": "Academic Technology Approval Scheme certificate if required" },
+        { "id": "health-surcharge", "label": "Immigration Health Surcharge payment receipt" },
+        { "id": "application-form", "label": "Completed UK student visa application form" },
+        { "id": "tuberculosis", "label": "Tuberculosis test result if required for your country" }
+      ]
+    },
+    {
+      "destinationSlug": "canada",
+      "visaType": "tourist",
+      "_comment": "sample data, verify before launch",
+      "requirements": [
+        { "id": "passport-validity", "label": "Passport valid for at least six months beyond your travel dates" },
+        { "id": "application-form", "label": "Completed Canadian visitor visa application form" },
+        { "id": "photos", "label": "Two recent passport-size photographs meeting the specification" },
+        { "id": "financial-proof", "label": "Evidence of funds to cover your stay" },
+        { "id": "itinerary", "label": "Travel itinerary or flight booking details" },
+        { "id": "accommodation", "label": "Proof of accommodation or hotel bookings" },
+        { "id": "ties", "label": "Evidence of ties to your home country" },
+        { "id": "invitation", "label": "Letter of invitation if visiting family or friends" }
+      ]
+    },
+    {
+      "destinationSlug": "canada",
+      "visaType": "student",
+      "_comment": "sample data, verify before launch",
+      "requirements": [
+        { "id": "passport-validity", "label": "Passport valid for the length of your study permit" },
+        { "id": "loi", "label": "Letter of acceptance from a designated learning institution" },
+        { "id": "financial-proof", "label": "Proof of funds for tuition, fees and living costs" },
+        { "id": "application-form", "label": "Completed study permit application form" },
+        { "id": "pal", "label": "Provincial attestation letter if required by your province" },
+        { "id": "photos", "label": "Two recent passport-size photographs meeting the specification" },
+        { "id": "purpose-statement", "label": "Statement of purpose explaining your study plan" },
+        { "id": "medical", "label": "Medical examination result if required" }
+      ]
+    },
+    {
+      "destinationSlug": "new-zealand",
+      "visaType": "tourist",
+      "_comment": "sample data, verify before launch",
+      "requirements": [
+        { "id": "passport-validity", "label": "Passport valid for at least three months beyond your departure" },
+        { "id": "nztv", "label": "Completed NZ visitor visa application form" },
+        { "id": "financial-proof", "label": "Evidence of funds for your stay" },
+        { "id": "itinerary", "label": "Travel itinerary or flight booking details" },
+        { "id": "accommodation", "label": "Proof of accommodation or hotel bookings" },
+        { "id": "health-character", "label": "Health and character evidence if requested" }
+      ]
+    },
+    {
+      "destinationSlug": "schengen-area",
+      "visaType": "tourist",
+      "_comment": "sample data, verify before launch",
+      "requirements": [
+        { "id": "passport-validity", "label": "Passport valid for at least three months beyond your departure, issued within the last ten years" },
+        { "id": "application-form", "label": "Completed Schengen visa application form" },
+        { "id": "photos", "label": "Two recent passport-size photographs meeting the specification" },
+        { "id": "financial-proof", "label": "Evidence of funds for your stay" },
+        { "id": "itinerary", "label": "Flight reservation and day-by-day itinerary" },
+        { "id": "accommodation", "label": "Proof of accommodation for each night" },
+        { "id": "travel-insurance", "label": "Travel medical insurance covering at least 30,000 EUR" },
+        { "id": "ties", "label": "Evidence of ties to your home country" }
+      ]
+    },
+    {
+      "destinationSlug": "uae",
+      "visaType": "tourist",
+      "_comment": "sample data, verify before launch",
+      "requirements": [
+        { "id": "passport-validity", "label": "Passport valid for at least six months beyond your travel dates" },
+        { "id": "passport-copy", "label": "Clear copy of your passport bio page" },
+        { "id": "photos", "label": "Recent passport-size photograph with white background" },
+        { "id": "application-form", "label": "Completed UAE tourist visa application form" },
+        { "id": "financial-proof", "label": "Evidence of funds for your stay" },
+        { "id": "itinerary", "label": "Return flight booking confirmation" },
+        { "id": "accommodation", "label": "Hotel booking or sponsor accommodation proof" }
+      ]
+    },
+    {
+      "destinationSlug": "singapore",
+      "visaType": "tourist",
+      "_comment": "sample data, verify before launch",
+      "requirements": [
+        { "id": "passport-validity", "label": "Passport valid for at least six months beyond your travel dates" },
+        { "id": "form-14a", "label": "Completed Form 14A visa application" },
+        { "id": "photos", "label": "Recent passport-size photograph meeting the specification" },
+        { "id": "financial-proof", "label": "Evidence of funds for your stay" },
+        { "id": "itinerary", "label": "Flight booking confirmation" },
+        { "id": "accommodation", "label": "Hotel booking or sponsor letter" }
+      ]
+    },
+    {
+      "destinationSlug": "japan",
+      "visaType": "tourist",
+      "_comment": "sample data, verify before launch",
+      "requirements": [
+        { "id": "passport-validity", "label": "Passport valid for the duration of your stay" },
+        { "id": "application-form", "label": "Completed Japan visa application form" },
+        { "id": "photos", "label": "Recent passport-size photograph meeting the specification" },
+        { "id": "itinerary", "label": "Detailed daily itinerary for your visit" },
+        { "id": "financial-proof", "label": "Bank statements showing funds for your stay" },
+        { "id": "employment-letter", "label": "Employment letter or leave approval" },
+        { "id": "guarantor", "label": "Letter of reason for visit or guarantor documents if required" }
+      ]
+    },
+    {
+      "destinationSlug": "india",
+      "visaType": "tourist",
+      "_comment": "sample data, verify before launch",
+      "requirements": [
+        { "id": "passport-validity", "label": "Passport valid for at least six months beyond your travel dates" },
+        { "id": "passport-copy", "label": "Clear copy of your passport bio page" },
+        { "id": "photo-evisa", "label": "Recent passport-size photograph with white background" },
+        { "id": "evisa-application", "label": "Completed e-Visa application online" },
+        { "id": "fee-payment", "label": "Visa fee payment receipt" },
+        { "id": "itinerary", "label": "Return flight booking confirmation" },
+        { "id": "accommodation", "label": "Hotel booking or address of stay" }
+      ]
+    }
+  ]
+}
