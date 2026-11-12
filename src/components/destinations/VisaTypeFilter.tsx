@@ -1,5 +1,3 @@
-import { ArrowRight } from 'lucide-react';
-import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { VISA_TYPES } from '@/lib/visaData';
 import type { VisaType } from '@/lib/visaData';

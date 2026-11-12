@@ -2,14 +2,12 @@ import { useEffect, useState } from 'react';
 import { ArrowLeft, ArrowRight, CalendarDays, Clock, Link2, Linkedin, Loader2, Share2 } from 'lucide-react';
 import { Link, useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { PageHero } from '@/components/PageHero';
 import { EmptyState } from '@/components/EmptyState';
 import { ConsultationCta } from '@/components/ConsultationCta';
 import { useSeo } from '@/hooks/useSeo';
 import { fetchPostBySlug, fetchRelatedPosts } from '@/lib/posts';
 import type { Post } from '@/lib/posts';
 import { estimateReadingTime, renderMarkdown } from '@/lib/markdown';
-import { siteConfig } from '@/config/siteConfig';
 
 type LoadState = 'loading' | 'success' | 'error' | 'not-found';
 

@@ -106,7 +106,7 @@ export function ChecklistPage() {
               label={t('checklist.destinationLabel')}
               value={selection.destinationSlug}
               onChange={(value) =>
-                setSelection((current) => ({ destinationSlug: value, visaType: '' }))
+                setSelection({ destinationSlug: value, visaType: '' })
               }
               options={destinationOptions}
               placeholder={t('checklist.destinationPlaceholder')}
