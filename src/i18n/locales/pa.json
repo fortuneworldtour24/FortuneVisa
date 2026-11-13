@@ -1,0 +1,59 @@
+{
+  "nav": {
+    "destinations": "ਗੰਤਵਾਂ",
+    "visaChecker": "ਵੀਜ਼ਾ ਚੈਕਰ",
+    "services": "ਸੇਵਾਵਾਂ",
+    "blog": "ਬਲੌਗ",
+    "checklist": "ਚੈੱਕਲਿਸਟ",
+    "about": "ਸਾਡੇ ਬਾਰੇ",
+    "contact": "ਸੰਪਰਕ",
+    "freeEnquiry": "ਮੁਫ਼ਤ ਪੁੱਛਗਿੱਛ",
+    "openMenu": "ਮੇਨੂ ਖੋਲ੍ਹੋ",
+    "closeMenu": "ਮੇਨੂ ਬੰਦ ਕਰੋ",
+    "mainNavigation": "ਮੁੱਖ ਨੇਵਿਗੇਸ਼ਨ",
+    "mobileNavigation": "ਮੋਬਾਇਲ ਨੇਵਿਗੇਸ਼ਨ",
+    "language": "ਭਾਸ਼ਾ"
+  },
+  "languages": {
+    "en": "ਅੰਗਰੇਜ਼ੀ",
+    "hi": "ਹਿੰਦੀ",
+    "zh": "ਚੀਨੀ",
+    "pa": "ਪੰਜਾਬੀ"
+  },
+  "footer": {
+    "description": "ਆਸਟਰੇਲੀਆ ਵੀਜ਼ਿਆਂ ਲਈ ਲਾਇਸੰਸਡ ਗਾਈਡੈਂਸ, ਪਹਿਲੀ ਪੁੱਛਗਿੱਛ ਤੋਂ ਅੰਤਮ ਗਰਾਂਟ ਤੱਕ। ਸਾਫ਼ ਸਲਾਹ, ਇਮਾਂਦਾਰ ਟਾਈਮਲਾਈਨਾਂ, ਅਤੇ ਇੱਕ ਟੀਮ ਜੋ ਤੁਹਾਡੇ ਨਾਲ ਰਹਿੰਦੀ ਹੈ।",
+    "quickLinks": "ਤੇਜ਼ ਲਿੰਕ",
+    "contactDetails": " ਸੰਪਰਕ ਵਿਸਥਾਰ",
+    "legal": "ਕਾਨੂੰਨੀ",
+    "privacy": "ਪ੍ਰਾਈਵੇਸੀ ਨੀਤੀ",
+    "terms": "ਉਪਯੋਗ ਦੀਆਂ ਸ਼ਰਤਾਂ",
+    "address": "ਪਤਾ",
+    "phone": "ਫੋਨ",
+    "email": "ਈਮੇਲ",
+    "whatsapp": "ਸਾਨੂੰ WhatsApp ਕਰੋ",
+    "disclaimerTitle": "ਅਸਵੀਕਾਰੀ",
+    "disclaimer": "Fortune Visa Services ਸਿਰਫ਼ ਦਸਤਾਵੇਜ਼ ਤਿਆਰੀ ਅਤੇ ਆਮ ਜਾਣਕਾਰੀ ਪ੍ਰਦਾਨ ਕਰਦਾ ਹੈ। ਅਸੀਂ ਰਜਿਸਟਰਡ ਇਮੀਗ੍ਰੇਸ਼ਨ ਏਜੰਟ ਨਹੀਂ ਹਾਂ ਅਤੇ ਇਮੀਗ੍ਰੇਸ਼ਨ ਸਲਾਹ ਨਹੀਂ ਦਿੰਦੇ।",
+    "copyright": "{{year}} {{name}}। ਸਭ ਹੱਕ ਰੱਖੇ ਗਏ ਹਨ।"
+  },
+  "destinationCard": {
+    "imageAlt": "{{country}} ਯਾਤਰਾ ਮੰਜ਼ਿਲ",
+    "type": "ਕਿਸਮ",
+    "valid": "ਵੈਧਤਾ",
+    "fees": "ਫੀਸ (AUD)",
+    "processing": "ਆਮ ਪ੍ਰੋਸੈਸਿੰਗ"
+  },
+  "destinations": {
+    "gridView": "ਗ੍ਰਿੱਡ ਵਿਊ",
+    "mapView": "ਨਕਸ਼ਾ ਵਿਊ",
+    "viewToggle": "ਵਿਊ ਟੌਗਲ",
+    "mapPlaceholder": "ਇੰਟਰੈਕਟਿਵ ਨਕਸ਼ਾ ਜਲਦ ਆ ਰਿਹਾ ਹੈ",
+    "filters": {
+      "processingLabel": "ਪ੍ਰੋਸੈਸਿੰਗ ਸਮਾਂ",
+      "anyProcessing": "ਕੋਈ ਵੀ ਪ੍ਰੋਸੈਸਿੰਗ ਸਮਾਂ",
+      "under4weeks": "4 ਹਫ਼ਤਿਆਂ ਤੋਂ ਘੱਟ",
+      "1to3months": "1 ਤੋਂ 3 ਮਹੀਨੇ",
+      "over3months": "3 ਮਹੀਨਿਆਂ ਤੋਂ ਵੱਧ"
+    }
+  }
+}
+

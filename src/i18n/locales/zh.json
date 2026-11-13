@@ -1,0 +1,59 @@
+{
+  "nav": {
+    "destinations": "目的地",
+    "visaChecker": "签证检查",
+    "services": "服务",
+    "blog": "博客",
+    "checklist": "清单",
+    "about": "关于我们",
+    "contact": "联系",
+    "freeEnquiry": "免费咨询",
+    "openMenu": "打开菜单",
+    "closeMenu": "关闭菜单",
+    "mainNavigation": "主导航",
+    "mobileNavigation": "移动导航",
+    "language": "语言"
+  },
+  "languages": {
+    "en": "英语",
+    "hi": "印地语",
+    "zh": "中文",
+    "pa": "旁遮普语"
+  },
+  "footer": {
+    "description": "为澳大利亚签证提供授权指导，从首次查询到最终批准。清晰的建议，诚实的时间安排，以及始终陪伴您的团队。",
+    "quickLinks": "快速链接",
+    "contactDetails": "联系详情",
+    "legal": "法律信息",
+    "privacy": "隐私政策",
+    "terms": "使用条款",
+    "address": "地址",
+    "phone": "电话",
+    "email": "电子邮件",
+    "whatsapp": "WhatsApp联系我们",
+    "disclaimerTitle": "免责声明",
+    "disclaimer": "Fortune Visa Services仅提供文件准备和一般信息。我们未注册为移民代理，也不提供移民建议。",
+    "copyright": "{{year}} {{name}}。保留所有权利。"
+  },
+  "destinationCard": {
+    "imageAlt": "{{country}}旅行目的地",
+    "type": "类型",
+    "valid": "有效期",
+    "fees": "费用 (AUD)",
+    "processing": "常规处理时间"
+  },
+  "destinations": {
+    "gridView": "网格视图",
+    "mapView": "地图视图",
+    "viewToggle": "视图切换",
+    "mapPlaceholder": "交互式地图即将推出",
+    "filters": {
+      "processingLabel": "处理时间",
+      "anyProcessing": "任何处理时间",
+      "under4weeks": "4周以内",
+      "1to3months": "1至3个月",
+      "over3months": "超过3个月"
+    }
+  }
+}
+

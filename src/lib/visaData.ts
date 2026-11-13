@@ -17,6 +17,7 @@ export type Destination = {
   slug: string;
   country: string;
   flag: string;
+  imageUrl: string;
   visaTypes: VisaTypeInfo[];
 };
 

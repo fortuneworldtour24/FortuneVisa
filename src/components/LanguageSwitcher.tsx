@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { Check, ChevronDown, Globe } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
-const LANGUAGE_CODES = ['en'] as const;
+const LANGUAGE_CODES = ['en', 'hi', 'zh', 'pa'] as const;
 
 export function LanguageSwitcher() {
   const { t, i18n } = useTranslation();

@@ -205,7 +205,25 @@
       "title": "No destinations match your search",
       "body": "Try a different country name or choose another visa type.",
       "clear": "Clear search and filter"
+    },
+    "gridView": "Grid view",
+    "mapView": "Map view",
+    "viewToggle": "View toggle",
+    "mapPlaceholder": "Interactive map coming soon",
+    "filters": {
+      "processingLabel": "Processing time",
+      "anyProcessing": "Any processing time",
+      "under4weeks": "Under 4 weeks",
+      "1to3months": "1 to 3 months",
+      "over3months": "Over 3 months"
     }
+  },
+  "destinationCard": {
+    "imageAlt": "{{country}} travel destination",
+    "type": "TYPE",
+    "valid": "VALID",
+    "fees": "FEES (AUD)",
+    "processing": "Typical processing"
   },
   "destinationDetail": {
     "back": "All destinations",

@@ -1,4 +1,4 @@
-import { ArrowRight } from 'lucide-react';
+import { Clock } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import type { Destination } from '@/lib/visaData';
@@ -9,41 +9,70 @@ type DestinationCardProps = {
 
 export function DestinationCard({ destination }: DestinationCardProps) {
   const { t } = useTranslation();
-  const { slug, country, flag, visaTypes } = destination;
+  const { slug, country, flag, imageUrl, visaTypes } = destination;
+  const primary = visaTypes[0];
 
   return (
-    <article className="group flex h-full flex-col rounded-3xl border border-slate-200/80 bg-white p-7 shadow-card transition-all duration-300 hover:-translate-y-1 hover:shadow-lift">
-      <div className="flex items-start justify-between gap-4">
-        <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-slate-50 text-3xl" aria-hidden="true">
-          {flag}
-        </span>
-        <span className="rounded-full bg-primary-50 px-3 py-1 text-xs font-bold text-primary-700">
-          {t('destinations.visaCount', { count: visaTypes.length })}
-        </span>
-      </div>
+    <Link
+      to={`/destinations/${slug}`}
+      className="group relative flex flex-col justify-end overflow-hidden rounded-3xl shadow-card transition-all duration-300 hover:-translate-y-1 hover:shadow-lift focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-primary-200"
+      style={{ minHeight: '26rem' }}
+    >
+      {/* Background image */}
+      <img
+        src={imageUrl}
+        alt={t('destinationCard.imageAlt', { country })}
+        loading="lazy"
+        className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+      />
+      {/* Gradient overlay */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
 
-      <h2 className="mt-6 text-xl font-bold leading-snug text-ink">{country}</h2>
-
-      <ul className="mt-4 flex flex-wrap gap-2">
-        {visaTypes.map((visa) => (
-          <li
-            key={visa.type}
-            className="rounded-full border border-slate-200 px-2.5 py-1 text-xs font-semibold text-muted"
+      {/* Content */}
+      <div className="relative z-10 p-5 sm:p-6">
+        {/* Flag + Country name */}
+        <div className="flex items-center gap-2.5">
+          <span
+            className="flex h-10 w-10 items-center justify-center rounded-full bg-white/20 text-xl backdrop-blur-sm"
+            aria-hidden="true"
           >
-            {t(`visaTypes.${visa.type}`)}
-          </li>
-        ))}
-      </ul>
+            {flag}
+          </span>
+          <h2 className="text-base font-extrabold uppercase tracking-wide text-white sm:text-lg">
+            {country}
+          </h2>
+        </div>
 
-      <div className="mt-auto pt-6">
-        <Link
-          to={`/destinations/${slug}`}
-          className="inline-flex min-h-12 items-center gap-2 rounded-full text-sm font-semibold text-primary-700 transition-colors hover:text-primary-800"
-        >
-          {t('destinations.viewDetails')}
-          <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" aria-hidden="true" />
-        </Link>
+        {/* Stats row */}
+        {primary && (
+          <div className="mt-4 flex items-center gap-4 text-[11px] font-semibold uppercase tracking-wider text-white/90 sm:text-xs">
+            <div className="min-w-0">
+              <span className="block text-[10px] text-white/60">{t('destinationCard.type')}</span>
+              <span className="truncate">{t(`visaTypes.${primary.type}`)}</span>
+            </div>
+            <span className="h-6 w-px shrink-0 bg-white/25" aria-hidden="true" />
+            <div className="min-w-0">
+              <span className="block text-[10px] text-white/60">{t('destinationCard.valid')}</span>
+              <span className="truncate">{primary.validity}</span>
+            </div>
+            <span className="h-6 w-px shrink-0 bg-white/25" aria-hidden="true" />
+            <div className="min-w-0">
+              <span className="block text-[10px] text-white/60">{t('destinationCard.fees')}</span>
+              <span>${primary.indicativeFee.toLocaleString()}</span>
+            </div>
+          </div>
+        )}
+
+        {/* Processing time */}
+        {primary && (
+          <div className="mt-3 flex items-center gap-1.5 text-[11px] font-medium text-white/70 sm:text-xs">
+            <Clock className="h-3.5 w-3.5 shrink-0" aria-hidden="true" />
+            <span>
+              {t('destinationCard.processing')}: {primary.processingTime}
+            </span>
+          </div>
+        )}
       </div>
-    </article>
+    </Link>
   );
 }

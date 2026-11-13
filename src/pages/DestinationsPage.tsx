@@ -1,14 +1,36 @@
 import { useMemo, useState } from 'react';
-import { Globe2, Search, X } from 'lucide-react';
+import { Globe2, Grid3x3, Map, Search, X } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { PageHero } from '@/components/PageHero';
 import { EmptyState } from '@/components/EmptyState';
 import { DestinationCard } from '@/components/destinations/DestinationCard';
-import { VisaTypeFilter } from '@/components/destinations/VisaTypeFilter';
 import { ConsultationCta } from '@/components/ConsultationCta';
 import { useSeo } from '@/hooks/useSeo';
-import { DESTINATIONS } from '@/lib/visaData';
+import { DESTINATIONS, VISA_TYPES } from '@/lib/visaData';
 import type { VisaType } from '@/lib/visaData';
+
+const PROCESSING_OPTIONS = [
+  { value: 'all', labelKey: 'destinations.filters.anyProcessing' },
+  { value: 'fast', labelKey: 'destinations.filters.under4weeks' },
+  { value: 'medium', labelKey: 'destinations.filters.1to3months' },
+  { value: 'slow', labelKey: 'destinations.filters.over3months' },
+] as const;
+
+type ProcessingSpeed = (typeof PROCESSING_OPTIONS)[number]['value'];
+type ViewMode = 'grid' | 'map';
+
+function matchesProcessing(time: string, speed: ProcessingSpeed): boolean {
+  if (speed === 'all') return true;
+  const lower = time.toLowerCase();
+  const hasDays = /\d+\s*(day|working day)/i.test(lower);
+  const weekMatch = lower.match(/(\d+)\s*(?:to\s*(\d+)\s*)?week/i);
+  const monthMatch = lower.match(/(\d+)\s*(?:to\s*(\d+)\s*)?month/i);
+  const maxWeeks = weekMatch ? Number(weekMatch[2] ?? weekMatch[1]) : null;
+  const maxMonths = monthMatch ? Number(monthMatch[2] ?? monthMatch[1]) : null;
+  if (speed === 'fast') return hasDays || (maxWeeks !== null && maxWeeks <= 4 && !monthMatch);
+  if (speed === 'medium') return (maxMonths !== null && maxMonths <= 3) || (maxWeeks !== null && maxWeeks <= 12);
+  /* slow */ return (maxMonths !== null && maxMonths > 3) || (maxWeeks !== null && maxWeeks > 12);
+}
 
 export function DestinationsPage() {
   const { t } = useTranslation();
@@ -16,22 +38,29 @@ export function DestinationsPage() {
     title: 'Explore Visa Destinations',
     description: 'Browse indicative visa information for popular destinations including Australia, the USA, UK, Canada and more.',
   });
+
   const [query, setQuery] = useState('');
   const [visaFilter, setVisaFilter] = useState<VisaType | 'all'>('all');
+  const [processingFilter, setProcessingFilter] = useState<ProcessingSpeed>('all');
+  const [view, setView] = useState<ViewMode>('grid');
 
   const filtered = useMemo(() => {
     const term = query.trim().toLowerCase();
-    return DESTINATIONS.filter((destination) => {
-      const matchesQuery = term === '' || destination.country.toLowerCase().includes(term);
-      const matchesVisa =
-        visaFilter === 'all' || destination.visaTypes.some((visa) => visa.type === visaFilter);
-      return matchesQuery && matchesVisa;
+    return DESTINATIONS.filter((d) => {
+      if (term && !d.country.toLowerCase().includes(term)) return false;
+      if (visaFilter !== 'all' && !d.visaTypes.some((v) => v.type === visaFilter)) return false;
+      if (processingFilter !== 'all') {
+        const matchesAny = d.visaTypes.some((v) => matchesProcessing(v.processingTime, processingFilter));
+        if (!matchesAny) return false;
+      }
+      return true;
     });
-  }, [query, visaFilter]);
+  }, [query, visaFilter, processingFilter]);
 
   const clearAll = () => {
     setQuery('');
     setVisaFilter('all');
+    setProcessingFilter('all');
   };
 
   return (
@@ -42,31 +71,89 @@ export function DestinationsPage() {
         description={t('destinations.description')}
       />
 
-      <section className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
-        <div className="flex flex-col gap-6 rounded-3xl border border-slate-200/80 bg-white p-5 shadow-card sm:p-6 lg:flex-row lg:items-center lg:justify-between">
-          <div className="relative w-full lg:max-w-md">
-            <label htmlFor="destination-search" className="sr-only">
-              {t('destinations.searchLabel')}
-            </label>
-            <Search className="pointer-events-none absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-muted" aria-hidden="true" />
+      {/* Sticky filter bar */}
+      <div className="sticky top-20 z-30 border-b border-slate-200/70 bg-white/90 backdrop-blur-md">
+        <div className="mx-auto flex max-w-7xl flex-wrap items-center gap-3 px-4 py-3 sm:px-6 lg:px-8">
+          {/* Search */}
+          <div className="relative w-full sm:w-56">
+            <label htmlFor="dest-search" className="sr-only">{t('destinations.searchLabel')}</label>
+            <Search className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted" aria-hidden="true" />
             <input
-              id="destination-search"
+              id="dest-search"
               type="search"
               value={query}
-              onChange={(event) => setQuery(event.target.value)}
+              onChange={(e) => setQuery(e.target.value)}
               placeholder={t('destinations.searchPlaceholder')}
-              className="h-14 w-full rounded-2xl border border-slate-200 bg-background pl-12 pr-4 text-base text-ink placeholder:text-slate-400 transition-colors hover:border-primary-200 focus:border-primary-500 focus:bg-white focus:outline-none focus:ring-4 focus:ring-primary-100"
+              className="h-11 w-full rounded-xl border border-slate-200 bg-background pl-10 pr-3 text-sm text-ink placeholder:text-slate-400 transition-colors hover:border-primary-200 focus:border-primary-500 focus:outline-none focus:ring-4 focus:ring-primary-100"
             />
           </div>
-          <VisaTypeFilter value={visaFilter} onChange={setVisaFilter} />
-        </div>
 
-        <p className="mt-6 text-sm font-semibold text-muted" aria-live="polite">
+          {/* Visa type dropdown */}
+          <select
+            value={visaFilter}
+            onChange={(e) => setVisaFilter(e.target.value as VisaType | 'all')}
+            aria-label={t('destinations.filterLabel')}
+            className="h-11 rounded-xl border border-slate-200 bg-white px-3 text-sm font-medium text-ink transition-colors hover:border-primary-200 focus:border-primary-500 focus:outline-none focus:ring-4 focus:ring-primary-100"
+          >
+            <option value="all">{t('destinations.filterAll')}</option>
+            {VISA_TYPES.map((vt) => (
+              <option key={vt} value={vt}>{t(`visaTypes.${vt}`)}</option>
+            ))}
+          </select>
+
+          {/* Processing time dropdown */}
+          <select
+            value={processingFilter}
+            onChange={(e) => setProcessingFilter(e.target.value as ProcessingSpeed)}
+            aria-label={t('destinations.filters.processingLabel')}
+            className="h-11 rounded-xl border border-slate-200 bg-white px-3 text-sm font-medium text-ink transition-colors hover:border-primary-200 focus:border-primary-500 focus:outline-none focus:ring-4 focus:ring-primary-100"
+          >
+            {PROCESSING_OPTIONS.map((opt) => (
+              <option key={opt.value} value={opt.value}>{t(opt.labelKey)}</option>
+            ))}
+          </select>
+
+          {/* Spacer */}
+          <div className="flex-1" />
+
+          {/* Grid / Map toggle */}
+          <div className="flex rounded-xl border border-slate-200 bg-white p-0.5" role="group" aria-label={t('destinations.viewToggle')}>
+            <button
+              type="button"
+              onClick={() => setView('grid')}
+              aria-pressed={view === 'grid'}
+              className={`inline-flex h-10 w-10 items-center justify-center rounded-lg text-sm transition-colors ${view === 'grid' ? 'bg-primary-700 text-white shadow-sm' : 'text-muted hover:text-ink'}`}
+            >
+              <Grid3x3 className="h-4 w-4" aria-hidden="true" />
+              <span className="sr-only">{t('destinations.gridView')}</span>
+            </button>
+            <button
+              type="button"
+              onClick={() => setView('map')}
+              aria-pressed={view === 'map'}
+              className={`inline-flex h-10 w-10 items-center justify-center rounded-lg text-sm transition-colors ${view === 'map' ? 'bg-primary-700 text-white shadow-sm' : 'text-muted hover:text-ink'}`}
+            >
+              <Map className="h-4 w-4" aria-hidden="true" />
+              <span className="sr-only">{t('destinations.mapView')}</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <section className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
+        <p className="text-sm font-semibold text-muted" aria-live="polite">
           {t('destinations.resultsCount', { count: filtered.length })}
         </p>
 
-        {filtered.length > 0 ? (
-          <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        {view === 'map' ? (
+          <div className="mt-6 flex h-96 items-center justify-center rounded-3xl border-2 border-dashed border-slate-300 bg-slate-50 text-center">
+            <div>
+              <Map className="mx-auto h-10 w-10 text-slate-400" aria-hidden="true" />
+              <p className="mt-3 text-sm font-semibold text-muted">{t('destinations.mapPlaceholder')}</p>
+            </div>
+          </div>
+        ) : filtered.length > 0 ? (
+          <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {filtered.map((destination) => (
               <DestinationCard key={destination.slug} destination={destination} />
             ))}

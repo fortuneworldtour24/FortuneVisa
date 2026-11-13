@@ -1,0 +1,59 @@
+{
+  "nav": {
+    "destinations": "गंतव्य",
+    "visaChecker": "वीज़ा चेकर",
+    "services": "सेवाएं",
+    "blog": "ब्लॉग",
+    "checklist": "चेकलिस्ट",
+    "about": "हमारे बारे में",
+    "contact": "संपर्क",
+    "freeEnquiry": "नि:शुल्क पूछताछ",
+    "openMenu": "मेनू खोलें",
+    "closeMenu": "मेनू बंद करें",
+    "mainNavigation": "मुख्य नेविगेशन",
+    "mobileNavigation": "मोबाइल नेविगेशन",
+    "language": "भाषा"
+  },
+  "languages": {
+    "en": "अंग्रेज़ी",
+    "hi": "हिंदी",
+    "zh": "चीनी",
+    "pa": "पंजाबी"
+  },
+  "footer": {
+    "description": "ऑस्ट्रेलिया वीज़ा के लिए लाइसेंसधारी मार्गदर्शन, प्रथम पूछताछ से अंतिम अनुदान तक। स्पष्ट सलाह, ईमानदार समयसीमा, और एक टीम जो आपके साथ रहती है।",
+    "quickLinks": "त्वरित लिंक",
+    "contactDetails": "संपर्क विवरण",
+    "legal": "कानूनी",
+    "privacy": "गोपनीयता नीति",
+    "terms": "उपयोग शर्तें",
+    "address": "पता",
+    "phone": "फ़ोन",
+    "email": "ईमेल",
+    "whatsapp": "हमें व्हाट्सऐप्प करें",
+    "disclaimerTitle": "अस्वीकृति",
+    "disclaimer": "Fortune Visa Services केवल दस्तावेज़ तैयार करने और सामान्य जानकारी प्रदान करता है। हम पंजीकृत प्रवास एजेंट नहीं हैं और इमीग्रेशन सलाह नहीं देते हैं।",
+    "copyright": "{{year}} {{name}}. सभी अधिकार सुरक्षित।"
+  },
+  "destinationCard": {
+    "imageAlt": "{{country}} यात्रा गंतव्य",
+    "type": "प्रकार",
+    "valid": "वैधता",
+    "fees": "शुल्क (AUD)",
+    "processing": "सामान्य प्रसंस्करण"
+  },
+  "destinations": {
+    "gridView": "ग्रिड दृश्य",
+    "mapView": "मानचित्र दृश्य",
+    "viewToggle": "दृश्य टॉगल",
+    "mapPlaceholder": "इंटरैक्टिव मानचित्र जल्द आ रहा है",
+    "filters": {
+      "processingLabel": "प्रसंस्करण समय",
+      "anyProcessing": "कोई भी प्रसंस्करण समय",
+      "under4weeks": "4 सप्ताह से कम",
+      "1to3months": "1 से 3 महीने",
+      "over3months": "3 महीने से अधिक"
+    }
+  }
+}
+
