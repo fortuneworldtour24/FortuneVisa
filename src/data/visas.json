@@ -6,7 +6,7 @@
       "slug": "australia",
       "country": "Australia",
       "flag": "🇦🇺",
-      "imageUrl": "https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?w=800&q=80",
+      "imageUrl": "https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?w=800&q=70",
       "visaTypes": [
         {
           "type": "tourist",
@@ -40,6 +40,15 @@
           "validity": "Provisional, then permanent",
           "notes": "Requires evidence of a genuine relationship and a sponsor who meets the criteria."
         }
+      ],
+      "highlights": [
+        "World-class reefs and marine life",
+        "Iconic beaches and outdoor life",
+        "Abundant wildlife and nature"
+      ],
+      "relatedDestinations": [
+        "new-zealand",
+        "singapore"
       ]
     },
     {
@@ -47,7 +56,7 @@
       "slug": "united-states",
       "country": "United States",
       "flag": "🇺🇸",
-      "imageUrl": "https://images.unsplash.com/photo-1485738422979-f5c462d49f04?w=800&q=80",
+      "imageUrl": "https://images.unsplash.com/photo-1485738422979-f5c462d49f04?w=800&q=70",
       "visaTypes": [
         {
           "type": "tourist",
@@ -73,6 +82,15 @@
           "validity": "Typically 3 years, renewable",
           "notes": "Most work visas need an employer petition. Annual caps apply to some categories."
         }
+      ],
+      "highlights": [
+        "Diverse landscapes from coasts to deserts",
+        "Major global cities and culture",
+        "Rich history and iconic landmarks"
+      ],
+      "relatedDestinations": [
+        "united-kingdom",
+        "canada"
       ]
     },
     {
@@ -80,7 +98,7 @@
       "slug": "united-kingdom",
       "country": "United Kingdom",
       "flag": "🇬🇧",
-      "imageUrl": "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=800&q=80",
+      "imageUrl": "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=800&q=70",
       "visaTypes": [
         {
           "type": "tourist",
@@ -114,6 +132,15 @@
           "validity": "30 months, then extendable",
           "notes": "Financial requirements and English language evidence apply."
         }
+      ],
+      "highlights": [
+        "Historic castles and royal palaces",
+        "World-renowned museums and art",
+        "Mix of rural countryside and big cities"
+      ],
+      "relatedDestinations": [
+        "united-states",
+        "france"
       ]
     },
     {
@@ -121,7 +148,7 @@
       "slug": "canada",
       "country": "Canada",
       "flag": "🇨🇦",
-      "imageUrl": "https://images.unsplash.com/photo-1517935706615-2717063c2225?w=800&q=80",
+      "imageUrl": "https://images.unsplash.com/photo-1517935706615-2717063c2225?w=800&q=70",
       "visaTypes": [
         {
           "type": "tourist",
@@ -155,6 +182,15 @@
           "validity": "Permanent residence pathway",
           "notes": "Sponsorship requirements apply to the sponsoring partner."
         }
+      ],
+      "highlights": [
+        "Vast wilderness and National Parks",
+        "Multicultural cities and Indigenous culture",
+        "Comfortable winter sports and outdoors"
+      ],
+      "relatedDestinations": [
+        "united-states",
+        "australia"
       ]
     },
     {
@@ -162,7 +198,7 @@
       "slug": "new-zealand",
       "country": "New Zealand",
       "flag": "🇳🇿",
-      "imageUrl": "https://images.unsplash.com/photo-1507699622108-4be3abd695ad?w=800&q=80",
+      "imageUrl": "https://images.unsplash.com/photo-1507699622108-4be3abd695ad?w=800&q=70",
       "visaTypes": [
         {
           "type": "tourist",
@@ -188,6 +224,15 @@
           "validity": "Up to 3 years",
           "notes": "Employer accreditation may be required before applying."
         }
+      ],
+      "highlights": [
+        "Glacier-carved fiords and mountains",
+        "Adventure sports and wildlife",
+        "Stunning landscapes and Maori culture"
+      ],
+      "relatedDestinations": [
+        "australia",
+        "singapore"
       ]
     },
     {
@@ -195,7 +240,7 @@
       "slug": "schengen-area",
       "country": "Schengen Area",
       "flag": "🇪🇺",
-      "imageUrl": "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=800&q=80",
+      "imageUrl": "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=800&q=70",
       "visaTypes": [
         {
           "type": "tourist",
@@ -229,6 +274,15 @@
           "validity": "Typically 1 year, renewable",
           "notes": "Family reunification rules depend on the member country where you settle."
         }
+      ],
+      "highlights": [
+        "One visa, 27 European countries",
+        "World-class art, food and history",
+        "Perfect base for slow travel"
+      ],
+      "relatedDestinations": [
+        "france",
+        "italy"
       ]
     },
     {
@@ -236,7 +290,7 @@
       "slug": "uae",
       "country": "United Arab Emirates",
       "flag": "🇦🇪",
-      "imageUrl": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&q=80",
+      "imageUrl": "https://images.unsplash.com/photo-1593884249754-627f99f629a8?w=800&q=70",
       "visaTypes": [
         {
           "type": "tourist",
@@ -254,6 +308,15 @@
           "validity": "Usually tied to the employment contract",
           "notes": "Usually sponsored by an employer, who manages the application."
         }
+      ],
+      "highlights": [
+        "Glitzy skyline and desert landscapes",
+        "Luxury cities and melting-pot culture",
+        "Luxury shopping and extreme weather"
+      ],
+      "relatedDestinations": [
+        "dubai",
+        "abu-dhabi"
       ]
     },
     {
@@ -261,7 +324,7 @@
       "slug": "singapore",
       "country": "Singapore",
       "flag": "🇸🇬",
-      "imageUrl": "https://images.unsplash.com/photo-1525625293386-3f8f99389edd?w=800&q=80",
+      "imageUrl": "https://images.unsplash.com/photo-1592595890984-390013aa16nb?w=800&q=70",
       "visaTypes": [
         {
           "type": "tourist",
@@ -287,6 +350,15 @@
           "validity": "Up to 2 years",
           "notes": "Requires a qualifying salary and a job offer from a Singapore employer."
         }
+      ],
+      "highlights": [
+        "Ultimate food hub and multicultural cities",
+        "Clean, green and highly liveable",
+        "Tiny island with easy regional access"
+      ],
+      "relatedDestinations": [
+        "malaysia",
+        "thailand"
       ]
     },
     {
@@ -294,7 +366,7 @@
       "slug": "japan",
       "country": "Japan",
       "flag": "🇯🇵",
-      "imageUrl": "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=800&q=80",
+      "imageUrl": "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=800&q=70",
       "visaTypes": [
         {
           "type": "tourist",
@@ -320,6 +392,15 @@
           "validity": "Up to 5 years depending on category",
           "notes": "Work visas are category specific and need a qualifying job offer."
         }
+      ],
+      "highlights": [
+        "Ancient temples and hyper-modern cities",
+        "Meticulously planned transport and culture",
+        "Season-driven beauty and cuisine"
+      ],
+      "relatedDestinations": [
+        "korea",
+        "china"
       ]
     },
     {
@@ -327,7 +408,7 @@
       "slug": "india",
       "country": "India",
       "flag": "🇮🇳",
-      "imageUrl": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=800&q=80",
+      "imageUrl": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=800&q=70",
       "visaTypes": [
         {
           "type": "tourist",
@@ -353,6 +434,15 @@
           "validity": "Length of employment contract, up to 5 years",
           "notes": "Requires a job offer and approval from the relevant authority."
         }
+      ],
+      "highlights": [
+        "Rich heritage and vibrant festivals",
+        "Diverse landscapes from Himalayas to coasts",
+        "Culinary capital and spiritual heritage"
+      ],
+      "relatedDestinations": [
+        "thailand",
+        "china"
       ]
     }
   ]

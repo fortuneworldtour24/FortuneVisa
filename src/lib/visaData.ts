@@ -18,6 +18,8 @@ export type Destination = {
   country: string;
   flag: string;
   imageUrl: string;
+  highlights: string[];
+  relatedDestinations: string[];
   visaTypes: VisaTypeInfo[];
 };
 
