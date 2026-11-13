@@ -10,6 +10,12 @@ export type VisaTypeInfo = {
   indicativeFee: number;
   processingTime: string;
   validity: string;
+  maximumStay: string;
+  typicalProcessing: string;
+  purpose: string;
+  stayFor: string;
+  steps: { title: string; duration: string }[];
+  faqs: { question: string; answer: string }[];
   notes: string;
 };
 

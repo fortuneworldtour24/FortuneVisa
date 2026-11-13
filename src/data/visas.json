@@ -14,7 +14,47 @@
           "indicativeFee": 190,
           "processingTime": "1 to 4 weeks",
           "validity": "Up to 12 months, multiple entry",
-          "notes": "Some nationalities use an electronic travel authority instead of a visa."
+          "notes": "Some nationalities use an electronic travel authority instead of a visa.",
+          "maximumStay": "Up to 90 days",
+          "typicalProcessing": "1 to 4 weeks",
+          "purpose": "Tourism, visiting family and friends, short business trips",
+          "stayFor": "Short-term visits, tourism, and leisure",
+          "steps": [
+            {
+              "title": "Submit application",
+              "duration": "1 week"
+            },
+            {
+              "title": "Biometrics and interview",
+              "duration": "2 days"
+            },
+            {
+              "title": "Decision",
+              "duration": "2 to 4 weeks"
+            }
+          ],
+          "faqs": [
+            {
+              "question": "Do I need a visa?",
+              "answer": "Most travelers require a visa, but some nationalities may be visa-exempt."
+            },
+            {
+              "question": "How long does it take?",
+              "answer": "Processing typically takes 1 to 4 weeks."
+            },
+            {
+              "question": "Can I extend my stay?",
+              "answer": "Extensions may be possible. Apply before your current visa expires."
+            },
+            {
+              "question": "What documents are required?",
+              "answer": "Passport, photos, proof of funds, and supporting documents specific to your visa type."
+            },
+            {
+              "question": "Can I apply online?",
+              "answer": "Most applications can be submitted online through the official government portal."
+            }
+          ]
         },
         {
           "type": "student",
@@ -22,7 +62,47 @@
           "indicativeFee": 1600,
           "processingTime": "4 to 8 weeks",
           "validity": "Length of course plus 2 months",
-          "notes": "Requires an offer from a registered course and evidence of genuine study intent."
+          "notes": "Requires an offer from a registered course and evidence of genuine study intent.",
+          "maximumStay": "Length of course plus 2 months",
+          "typicalProcessing": "4 to 8 weeks",
+          "purpose": "Study at a recognized educational institution",
+          "stayFor": "Length of course",
+          "steps": [
+            {
+              "title": "Get acceptance letter",
+              "duration": "2 to 4 weeks"
+            },
+            {
+              "title": "Submit visa application",
+              "duration": "1 week"
+            },
+            {
+              "title": "Decision",
+              "duration": "4 to 8 weeks"
+            }
+          ],
+          "faqs": [
+            {
+              "question": "Do I need a visa?",
+              "answer": "Most international students require a student visa."
+            },
+            {
+              "question": "Can I work while studying?",
+              "answer": "Work rights vary by country and visa type."
+            },
+            {
+              "question": "Can I bring family?",
+              "answer": "Some student visas allow dependent family members."
+            },
+            {
+              "question": "What documents are required?",
+              "answer": "Passport, photos, proof of funds, and supporting documents specific to your visa type."
+            },
+            {
+              "question": "Can I apply online?",
+              "answer": "Most applications can be submitted online through the official government portal."
+            }
+          ]
         },
         {
           "type": "work",
@@ -30,7 +110,47 @@
           "indicativeFee": 4500,
           "processingTime": "3 to 12 months",
           "validity": "Up to 4 years",
-          "notes": "Skilled pathways are points-based or employer sponsored. Eligibility changes often."
+          "notes": "Skilled pathways are points-based or employer sponsored. Eligibility changes often.",
+          "maximumStay": "Up to 3 years, renewable",
+          "typicalProcessing": "1 to 3 months",
+          "purpose": "Employment with a local employer",
+          "stayFor": "Length of employment contract",
+          "steps": [
+            {
+              "title": "Get job offer",
+              "duration": "Varies"
+            },
+            {
+              "title": "Submit visa application",
+              "duration": "1 week"
+            },
+            {
+              "title": "Decision",
+              "duration": "1 to 3 months"
+            }
+          ],
+          "faqs": [
+            {
+              "question": "Do I need a visa?",
+              "answer": "Most employment requires a work visa or permit."
+            },
+            {
+              "question": "Can I bring family?",
+              "answer": "Some work visas allow dependent family members."
+            },
+            {
+              "question": "Can I change employers?",
+              "answer": "Changing employers may require a new visa application."
+            },
+            {
+              "question": "What documents are required?",
+              "answer": "Passport, photos, proof of funds, and supporting documents specific to your visa type."
+            },
+            {
+              "question": "Can I apply online?",
+              "answer": "Most applications can be submitted online through the official government portal."
+            }
+          ]
         },
         {
           "type": "family",
@@ -38,7 +158,47 @@
           "indicativeFee": 9000,
           "processingTime": "12 to 24 months",
           "validity": "Provisional, then permanent",
-          "notes": "Requires evidence of a genuine relationship and a sponsor who meets the criteria."
+          "notes": "Requires evidence of a genuine relationship and a sponsor who meets the criteria.",
+          "maximumStay": "Provisional, then permanent",
+          "typicalProcessing": "12 to 24 months",
+          "purpose": "Join family members who are citizens or residents",
+          "stayFor": "Permanent residence pathway",
+          "steps": [
+            {
+              "title": "Submit sponsorship application",
+              "duration": "4 to 8 weeks"
+            },
+            {
+              "title": "Submit visa application",
+              "duration": "1 week"
+            },
+            {
+              "title": "Decision",
+              "duration": "12 to 24 months"
+            }
+          ],
+          "faqs": [
+            {
+              "question": "Who can sponsor me?",
+              "answer": "Spouses, partners, parents, or children who are citizens or permanent residents."
+            },
+            {
+              "question": "Can I work?",
+              "answer": "Work rights depend on the specific family visa type."
+            },
+            {
+              "question": "Can I study?",
+              "answer": "Study is generally permitted on family visas."
+            },
+            {
+              "question": "What documents are required?",
+              "answer": "Passport, photos, proof of funds, and supporting documents specific to your visa type."
+            },
+            {
+              "question": "Can I apply online?",
+              "answer": "Most applications can be submitted online through the official government portal."
+            }
+          ]
         }
       ],
       "highlights": [
@@ -64,7 +224,47 @@
           "indicativeFee": 285,
           "processingTime": "2 to 12 weeks, subject to interview wait times",
           "validity": "Up to 10 years, multiple entry",
-          "notes": "An in-person interview is usually required. Some travellers may use the visa waiver program."
+          "notes": "An in-person interview is usually required. Some travellers may use the visa waiver program.",
+          "maximumStay": "Up to 90 days",
+          "typicalProcessing": "1 to 4 weeks",
+          "purpose": "Tourism, visiting family and friends, short business trips",
+          "stayFor": "Short-term visits, tourism, and leisure",
+          "steps": [
+            {
+              "title": "Submit application",
+              "duration": "1 week"
+            },
+            {
+              "title": "Biometrics and interview",
+              "duration": "2 days"
+            },
+            {
+              "title": "Decision",
+              "duration": "2 to 4 weeks"
+            }
+          ],
+          "faqs": [
+            {
+              "question": "Do I need a visa?",
+              "answer": "Most travelers require a visa, but some nationalities may be visa-exempt."
+            },
+            {
+              "question": "How long does it take?",
+              "answer": "Processing typically takes 1 to 4 weeks."
+            },
+            {
+              "question": "Can I extend my stay?",
+              "answer": "Extensions may be possible. Apply before your current visa expires."
+            },
+            {
+              "question": "What documents are required?",
+              "answer": "Passport, photos, proof of funds, and supporting documents specific to your visa type."
+            },
+            {
+              "question": "Can I apply online?",
+              "answer": "Most applications can be submitted online through the official government portal."
+            }
+          ]
         },
         {
           "type": "student",
@@ -72,7 +272,47 @@
           "indicativeFee": 650,
           "processingTime": "4 to 16 weeks",
           "validity": "Duration of study",
-          "notes": "Requires a university acceptance and proof of funds for the full course."
+          "notes": "Requires a university acceptance and proof of funds for the full course.",
+          "maximumStay": "Length of course plus 2 months",
+          "typicalProcessing": "4 to 8 weeks",
+          "purpose": "Study at a recognized educational institution",
+          "stayFor": "Length of course",
+          "steps": [
+            {
+              "title": "Get acceptance letter",
+              "duration": "2 to 4 weeks"
+            },
+            {
+              "title": "Submit visa application",
+              "duration": "1 week"
+            },
+            {
+              "title": "Decision",
+              "duration": "4 to 8 weeks"
+            }
+          ],
+          "faqs": [
+            {
+              "question": "Do I need a visa?",
+              "answer": "Most international students require a student visa."
+            },
+            {
+              "question": "Can I work while studying?",
+              "answer": "Work rights vary by country and visa type."
+            },
+            {
+              "question": "Can I bring family?",
+              "answer": "Some student visas allow dependent family members."
+            },
+            {
+              "question": "What documents are required?",
+              "answer": "Passport, photos, proof of funds, and supporting documents specific to your visa type."
+            },
+            {
+              "question": "Can I apply online?",
+              "answer": "Most applications can be submitted online through the official government portal."
+            }
+          ]
         },
         {
           "type": "work",
@@ -80,7 +320,47 @@
           "indicativeFee": 2100,
           "processingTime": "Varies by category, often several months",
           "validity": "Typically 3 years, renewable",
-          "notes": "Most work visas need an employer petition. Annual caps apply to some categories."
+          "notes": "Most work visas need an employer petition. Annual caps apply to some categories.",
+          "maximumStay": "Up to 3 years, renewable",
+          "typicalProcessing": "1 to 3 months",
+          "purpose": "Employment with a local employer",
+          "stayFor": "Length of employment contract",
+          "steps": [
+            {
+              "title": "Get job offer",
+              "duration": "Varies"
+            },
+            {
+              "title": "Submit visa application",
+              "duration": "1 week"
+            },
+            {
+              "title": "Decision",
+              "duration": "1 to 3 months"
+            }
+          ],
+          "faqs": [
+            {
+              "question": "Do I need a visa?",
+              "answer": "Most employment requires a work visa or permit."
+            },
+            {
+              "question": "Can I bring family?",
+              "answer": "Some work visas allow dependent family members."
+            },
+            {
+              "question": "Can I change employers?",
+              "answer": "Changing employers may require a new visa application."
+            },
+            {
+              "question": "What documents are required?",
+              "answer": "Passport, photos, proof of funds, and supporting documents specific to your visa type."
+            },
+            {
+              "question": "Can I apply online?",
+              "answer": "Most applications can be submitted online through the official government portal."
+            }
+          ]
         }
       ],
       "highlights": [
@@ -106,7 +386,47 @@
           "indicativeFee": 330,
           "processingTime": "3 to 6 weeks",
           "validity": "Up to 6 months per visit",
-          "notes": "Visitors may not work or study. Some nationalities need an electronic travel authorisation."
+          "notes": "Visitors may not work or study. Some nationalities need an electronic travel authorisation.",
+          "maximumStay": "Up to 90 days",
+          "typicalProcessing": "1 to 4 weeks",
+          "purpose": "Tourism, visiting family and friends, short business trips",
+          "stayFor": "Short-term visits, tourism, and leisure",
+          "steps": [
+            {
+              "title": "Submit application",
+              "duration": "1 week"
+            },
+            {
+              "title": "Biometrics and interview",
+              "duration": "2 days"
+            },
+            {
+              "title": "Decision",
+              "duration": "2 to 4 weeks"
+            }
+          ],
+          "faqs": [
+            {
+              "question": "Do I need a visa?",
+              "answer": "Most travelers require a visa, but some nationalities may be visa-exempt."
+            },
+            {
+              "question": "How long does it take?",
+              "answer": "Processing typically takes 1 to 4 weeks."
+            },
+            {
+              "question": "Can I extend my stay?",
+              "answer": "Extensions may be possible. Apply before your current visa expires."
+            },
+            {
+              "question": "What documents are required?",
+              "answer": "Passport, photos, proof of funds, and supporting documents specific to your visa type."
+            },
+            {
+              "question": "Can I apply online?",
+              "answer": "Most applications can be submitted online through the official government portal."
+            }
+          ]
         },
         {
           "type": "student",
@@ -114,7 +434,47 @@
           "indicativeFee": 1200,
           "processingTime": "3 to 8 weeks",
           "validity": "Length of course plus 4 months",
-          "notes": "Requires a confirmed place with a licensed sponsor and proof of funds."
+          "notes": "Requires a confirmed place with a licensed sponsor and proof of funds.",
+          "maximumStay": "Length of course plus 2 months",
+          "typicalProcessing": "4 to 8 weeks",
+          "purpose": "Study at a recognized educational institution",
+          "stayFor": "Length of course",
+          "steps": [
+            {
+              "title": "Get acceptance letter",
+              "duration": "2 to 4 weeks"
+            },
+            {
+              "title": "Submit visa application",
+              "duration": "1 week"
+            },
+            {
+              "title": "Decision",
+              "duration": "4 to 8 weeks"
+            }
+          ],
+          "faqs": [
+            {
+              "question": "Do I need a visa?",
+              "answer": "Most international students require a student visa."
+            },
+            {
+              "question": "Can I work while studying?",
+              "answer": "Work rights vary by country and visa type."
+            },
+            {
+              "question": "Can I bring family?",
+              "answer": "Some student visas allow dependent family members."
+            },
+            {
+              "question": "What documents are required?",
+              "answer": "Passport, photos, proof of funds, and supporting documents specific to your visa type."
+            },
+            {
+              "question": "Can I apply online?",
+              "answer": "Most applications can be submitted online through the official government portal."
+            }
+          ]
         },
         {
           "type": "work",
@@ -122,7 +482,47 @@
           "indicativeFee": 3400,
           "processingTime": "3 to 8 weeks",
           "validity": "Up to 5 years",
-          "notes": "Skilled Worker routes need a job offer from a licensed sponsor that meets salary thresholds."
+          "notes": "Skilled Worker routes need a job offer from a licensed sponsor that meets salary thresholds.",
+          "maximumStay": "Up to 3 years, renewable",
+          "typicalProcessing": "1 to 3 months",
+          "purpose": "Employment with a local employer",
+          "stayFor": "Length of employment contract",
+          "steps": [
+            {
+              "title": "Get job offer",
+              "duration": "Varies"
+            },
+            {
+              "title": "Submit visa application",
+              "duration": "1 week"
+            },
+            {
+              "title": "Decision",
+              "duration": "1 to 3 months"
+            }
+          ],
+          "faqs": [
+            {
+              "question": "Do I need a visa?",
+              "answer": "Most employment requires a work visa or permit."
+            },
+            {
+              "question": "Can I bring family?",
+              "answer": "Some work visas allow dependent family members."
+            },
+            {
+              "question": "Can I change employers?",
+              "answer": "Changing employers may require a new visa application."
+            },
+            {
+              "question": "What documents are required?",
+              "answer": "Passport, photos, proof of funds, and supporting documents specific to your visa type."
+            },
+            {
+              "question": "Can I apply online?",
+              "answer": "Most applications can be submitted online through the official government portal."
+            }
+          ]
         },
         {
           "type": "family",
@@ -130,7 +530,47 @@
           "indicativeFee": 2900,
           "processingTime": "12 to 24 weeks",
           "validity": "30 months, then extendable",
-          "notes": "Financial requirements and English language evidence apply."
+          "notes": "Financial requirements and English language evidence apply.",
+          "maximumStay": "Provisional, then permanent",
+          "typicalProcessing": "12 to 24 months",
+          "purpose": "Join family members who are citizens or residents",
+          "stayFor": "Permanent residence pathway",
+          "steps": [
+            {
+              "title": "Submit sponsorship application",
+              "duration": "4 to 8 weeks"
+            },
+            {
+              "title": "Submit visa application",
+              "duration": "1 week"
+            },
+            {
+              "title": "Decision",
+              "duration": "12 to 24 months"
+            }
+          ],
+          "faqs": [
+            {
+              "question": "Who can sponsor me?",
+              "answer": "Spouses, partners, parents, or children who are citizens or permanent residents."
+            },
+            {
+              "question": "Can I work?",
+              "answer": "Work rights depend on the specific family visa type."
+            },
+            {
+              "question": "Can I study?",
+              "answer": "Study is generally permitted on family visas."
+            },
+            {
+              "question": "What documents are required?",
+              "answer": "Passport, photos, proof of funds, and supporting documents specific to your visa type."
+            },
+            {
+              "question": "Can I apply online?",
+              "answer": "Most applications can be submitted online through the official government portal."
+            }
+          ]
         }
       ],
       "highlights": [
@@ -156,7 +596,47 @@
           "indicativeFee": 180,
           "processingTime": "2 to 8 weeks",
           "validity": "Up to 10 years, multiple entry",
-          "notes": "Some travellers may need an electronic travel authorisation instead of a visa."
+          "notes": "Some travellers may need an electronic travel authorisation instead of a visa.",
+          "maximumStay": "Up to 90 days",
+          "typicalProcessing": "1 to 4 weeks",
+          "purpose": "Tourism, visiting family and friends, short business trips",
+          "stayFor": "Short-term visits, tourism, and leisure",
+          "steps": [
+            {
+              "title": "Submit application",
+              "duration": "1 week"
+            },
+            {
+              "title": "Biometrics and interview",
+              "duration": "2 days"
+            },
+            {
+              "title": "Decision",
+              "duration": "2 to 4 weeks"
+            }
+          ],
+          "faqs": [
+            {
+              "question": "Do I need a visa?",
+              "answer": "Most travelers require a visa, but some nationalities may be visa-exempt."
+            },
+            {
+              "question": "How long does it take?",
+              "answer": "Processing typically takes 1 to 4 weeks."
+            },
+            {
+              "question": "Can I extend my stay?",
+              "answer": "Extensions may be possible. Apply before your current visa expires."
+            },
+            {
+              "question": "What documents are required?",
+              "answer": "Passport, photos, proof of funds, and supporting documents specific to your visa type."
+            },
+            {
+              "question": "Can I apply online?",
+              "answer": "Most applications can be submitted online through the official government portal."
+            }
+          ]
         },
         {
           "type": "student",
@@ -164,7 +644,47 @@
           "indicativeFee": 170,
           "processingTime": "6 to 12 weeks",
           "validity": "Length of study programme",
-          "notes": "Requires a letter of acceptance from a designated learning institution."
+          "notes": "Requires a letter of acceptance from a designated learning institution.",
+          "maximumStay": "Length of course plus 2 months",
+          "typicalProcessing": "4 to 8 weeks",
+          "purpose": "Study at a recognized educational institution",
+          "stayFor": "Length of course",
+          "steps": [
+            {
+              "title": "Get acceptance letter",
+              "duration": "2 to 4 weeks"
+            },
+            {
+              "title": "Submit visa application",
+              "duration": "1 week"
+            },
+            {
+              "title": "Decision",
+              "duration": "4 to 8 weeks"
+            }
+          ],
+          "faqs": [
+            {
+              "question": "Do I need a visa?",
+              "answer": "Most international students require a student visa."
+            },
+            {
+              "question": "Can I work while studying?",
+              "answer": "Work rights vary by country and visa type."
+            },
+            {
+              "question": "Can I bring family?",
+              "answer": "Some student visas allow dependent family members."
+            },
+            {
+              "question": "What documents are required?",
+              "answer": "Passport, photos, proof of funds, and supporting documents specific to your visa type."
+            },
+            {
+              "question": "Can I apply online?",
+              "answer": "Most applications can be submitted online through the official government portal."
+            }
+          ]
         },
         {
           "type": "work",
@@ -172,7 +692,47 @@
           "indicativeFee": 220,
           "processingTime": "Varies widely by programme",
           "validity": "Up to 3 years",
-          "notes": "Many programmes require a job offer or a labour market assessment."
+          "notes": "Many programmes require a job offer or a labour market assessment.",
+          "maximumStay": "Up to 3 years, renewable",
+          "typicalProcessing": "1 to 3 months",
+          "purpose": "Employment with a local employer",
+          "stayFor": "Length of employment contract",
+          "steps": [
+            {
+              "title": "Get job offer",
+              "duration": "Varies"
+            },
+            {
+              "title": "Submit visa application",
+              "duration": "1 week"
+            },
+            {
+              "title": "Decision",
+              "duration": "1 to 3 months"
+            }
+          ],
+          "faqs": [
+            {
+              "question": "Do I need a visa?",
+              "answer": "Most employment requires a work visa or permit."
+            },
+            {
+              "question": "Can I bring family?",
+              "answer": "Some work visas allow dependent family members."
+            },
+            {
+              "question": "Can I change employers?",
+              "answer": "Changing employers may require a new visa application."
+            },
+            {
+              "question": "What documents are required?",
+              "answer": "Passport, photos, proof of funds, and supporting documents specific to your visa type."
+            },
+            {
+              "question": "Can I apply online?",
+              "answer": "Most applications can be submitted online through the official government portal."
+            }
+          ]
         },
         {
           "type": "family",
@@ -180,7 +740,47 @@
           "indicativeFee": 1000,
           "processingTime": "12 months or more",
           "validity": "Permanent residence pathway",
-          "notes": "Sponsorship requirements apply to the sponsoring partner."
+          "notes": "Sponsorship requirements apply to the sponsoring partner.",
+          "maximumStay": "Provisional, then permanent",
+          "typicalProcessing": "12 to 24 months",
+          "purpose": "Join family members who are citizens or residents",
+          "stayFor": "Permanent residence pathway",
+          "steps": [
+            {
+              "title": "Submit sponsorship application",
+              "duration": "4 to 8 weeks"
+            },
+            {
+              "title": "Submit visa application",
+              "duration": "1 week"
+            },
+            {
+              "title": "Decision",
+              "duration": "12 to 24 months"
+            }
+          ],
+          "faqs": [
+            {
+              "question": "Who can sponsor me?",
+              "answer": "Spouses, partners, parents, or children who are citizens or permanent residents."
+            },
+            {
+              "question": "Can I work?",
+              "answer": "Work rights depend on the specific family visa type."
+            },
+            {
+              "question": "Can I study?",
+              "answer": "Study is generally permitted on family visas."
+            },
+            {
+              "question": "What documents are required?",
+              "answer": "Passport, photos, proof of funds, and supporting documents specific to your visa type."
+            },
+            {
+              "question": "Can I apply online?",
+              "answer": "Most applications can be submitted online through the official government portal."
+            }
+          ]
         }
       ],
       "highlights": [
@@ -206,7 +806,47 @@
           "indicativeFee": 25,
           "processingTime": "Usually instant once submitted online",
           "validity": "Up to 3 months per visit",
-          "notes": "Many nationalities are visa waiver eligible but still need an electronic travel authority."
+          "notes": "Many nationalities are visa waiver eligible but still need an electronic travel authority.",
+          "maximumStay": "Up to 90 days",
+          "typicalProcessing": "1 to 4 weeks",
+          "purpose": "Tourism, visiting family and friends, short business trips",
+          "stayFor": "Short-term visits, tourism, and leisure",
+          "steps": [
+            {
+              "title": "Submit application",
+              "duration": "1 week"
+            },
+            {
+              "title": "Biometrics and interview",
+              "duration": "2 days"
+            },
+            {
+              "title": "Decision",
+              "duration": "2 to 4 weeks"
+            }
+          ],
+          "faqs": [
+            {
+              "question": "Do I need a visa?",
+              "answer": "Most travelers require a visa, but some nationalities may be visa-exempt."
+            },
+            {
+              "question": "How long does it take?",
+              "answer": "Processing typically takes 1 to 4 weeks."
+            },
+            {
+              "question": "Can I extend my stay?",
+              "answer": "Extensions may be possible. Apply before your current visa expires."
+            },
+            {
+              "question": "What documents are required?",
+              "answer": "Passport, photos, proof of funds, and supporting documents specific to your visa type."
+            },
+            {
+              "question": "Can I apply online?",
+              "answer": "Most applications can be submitted online through the official government portal."
+            }
+          ]
         },
         {
           "type": "student",
@@ -214,7 +854,47 @@
           "indicativeFee": 450,
           "processingTime": "4 to 10 weeks",
           "validity": "Length of course",
-          "notes": "Requires an offer from an approved provider and evidence of tuition funds."
+          "notes": "Requires an offer from an approved provider and evidence of tuition funds.",
+          "maximumStay": "Length of course plus 2 months",
+          "typicalProcessing": "4 to 8 weeks",
+          "purpose": "Study at a recognized educational institution",
+          "stayFor": "Length of course",
+          "steps": [
+            {
+              "title": "Get acceptance letter",
+              "duration": "2 to 4 weeks"
+            },
+            {
+              "title": "Submit visa application",
+              "duration": "1 week"
+            },
+            {
+              "title": "Decision",
+              "duration": "4 to 8 weeks"
+            }
+          ],
+          "faqs": [
+            {
+              "question": "Do I need a visa?",
+              "answer": "Most international students require a student visa."
+            },
+            {
+              "question": "Can I work while studying?",
+              "answer": "Work rights vary by country and visa type."
+            },
+            {
+              "question": "Can I bring family?",
+              "answer": "Some student visas allow dependent family members."
+            },
+            {
+              "question": "What documents are required?",
+              "answer": "Passport, photos, proof of funds, and supporting documents specific to your visa type."
+            },
+            {
+              "question": "Can I apply online?",
+              "answer": "Most applications can be submitted online through the official government portal."
+            }
+          ]
         },
         {
           "type": "work",
@@ -222,7 +902,47 @@
           "indicativeFee": 380,
           "processingTime": "1 to 6 months",
           "validity": "Up to 3 years",
-          "notes": "Employer accreditation may be required before applying."
+          "notes": "Employer accreditation may be required before applying.",
+          "maximumStay": "Up to 3 years, renewable",
+          "typicalProcessing": "1 to 3 months",
+          "purpose": "Employment with a local employer",
+          "stayFor": "Length of employment contract",
+          "steps": [
+            {
+              "title": "Get job offer",
+              "duration": "Varies"
+            },
+            {
+              "title": "Submit visa application",
+              "duration": "1 week"
+            },
+            {
+              "title": "Decision",
+              "duration": "1 to 3 months"
+            }
+          ],
+          "faqs": [
+            {
+              "question": "Do I need a visa?",
+              "answer": "Most employment requires a work visa or permit."
+            },
+            {
+              "question": "Can I bring family?",
+              "answer": "Some work visas allow dependent family members."
+            },
+            {
+              "question": "Can I change employers?",
+              "answer": "Changing employers may require a new visa application."
+            },
+            {
+              "question": "What documents are required?",
+              "answer": "Passport, photos, proof of funds, and supporting documents specific to your visa type."
+            },
+            {
+              "question": "Can I apply online?",
+              "answer": "Most applications can be submitted online through the official government portal."
+            }
+          ]
         }
       ],
       "highlights": [
@@ -248,7 +968,47 @@
           "indicativeFee": 150,
           "processingTime": "Up to 15 days",
           "validity": "Up to 90 days in any 180-day period",
-          "notes": "Applies to the common visa for short stays across member countries."
+          "notes": "Applies to the common visa for short stays across member countries.",
+          "maximumStay": "Up to 90 days",
+          "typicalProcessing": "1 to 4 weeks",
+          "purpose": "Tourism, visiting family and friends, short business trips",
+          "stayFor": "Short-term visits, tourism, and leisure",
+          "steps": [
+            {
+              "title": "Submit application",
+              "duration": "1 week"
+            },
+            {
+              "title": "Biometrics and interview",
+              "duration": "2 days"
+            },
+            {
+              "title": "Decision",
+              "duration": "2 to 4 weeks"
+            }
+          ],
+          "faqs": [
+            {
+              "question": "Do I need a visa?",
+              "answer": "Most travelers require a visa, but some nationalities may be visa-exempt."
+            },
+            {
+              "question": "How long does it take?",
+              "answer": "Processing typically takes 1 to 4 weeks."
+            },
+            {
+              "question": "Can I extend my stay?",
+              "answer": "Extensions may be possible. Apply before your current visa expires."
+            },
+            {
+              "question": "What documents are required?",
+              "answer": "Passport, photos, proof of funds, and supporting documents specific to your visa type."
+            },
+            {
+              "question": "Can I apply online?",
+              "answer": "Most applications can be submitted online through the official government portal."
+            }
+          ]
         },
         {
           "type": "student",
@@ -256,7 +1016,47 @@
           "indicativeFee": 190,
           "processingTime": "4 to 12 weeks",
           "validity": "Length of study, national rules apply",
-          "notes": "Each member country sets its own student rules after the initial short-stay decision."
+          "notes": "Each member country sets its own student rules after the initial short-stay decision.",
+          "maximumStay": "Length of course plus 2 months",
+          "typicalProcessing": "4 to 8 weeks",
+          "purpose": "Study at a recognized educational institution",
+          "stayFor": "Length of course",
+          "steps": [
+            {
+              "title": "Get acceptance letter",
+              "duration": "2 to 4 weeks"
+            },
+            {
+              "title": "Submit visa application",
+              "duration": "1 week"
+            },
+            {
+              "title": "Decision",
+              "duration": "4 to 8 weeks"
+            }
+          ],
+          "faqs": [
+            {
+              "question": "Do I need a visa?",
+              "answer": "Most international students require a student visa."
+            },
+            {
+              "question": "Can I work while studying?",
+              "answer": "Work rights vary by country and visa type."
+            },
+            {
+              "question": "Can I bring family?",
+              "answer": "Some student visas allow dependent family members."
+            },
+            {
+              "question": "What documents are required?",
+              "answer": "Passport, photos, proof of funds, and supporting documents specific to your visa type."
+            },
+            {
+              "question": "Can I apply online?",
+              "answer": "Most applications can be submitted online through the official government portal."
+            }
+          ]
         },
         {
           "type": "work",
@@ -264,7 +1064,47 @@
           "indicativeFee": 420,
           "processingTime": "1 to 3 months",
           "validity": "Typically 1 to 2 years",
-          "notes": "Work visas are issued by individual member countries, so requirements vary."
+          "notes": "Work visas are issued by individual member countries, so requirements vary.",
+          "maximumStay": "Up to 3 years, renewable",
+          "typicalProcessing": "1 to 3 months",
+          "purpose": "Employment with a local employer",
+          "stayFor": "Length of employment contract",
+          "steps": [
+            {
+              "title": "Get job offer",
+              "duration": "Varies"
+            },
+            {
+              "title": "Submit visa application",
+              "duration": "1 week"
+            },
+            {
+              "title": "Decision",
+              "duration": "1 to 3 months"
+            }
+          ],
+          "faqs": [
+            {
+              "question": "Do I need a visa?",
+              "answer": "Most employment requires a work visa or permit."
+            },
+            {
+              "question": "Can I bring family?",
+              "answer": "Some work visas allow dependent family members."
+            },
+            {
+              "question": "Can I change employers?",
+              "answer": "Changing employers may require a new visa application."
+            },
+            {
+              "question": "What documents are required?",
+              "answer": "Passport, photos, proof of funds, and supporting documents specific to your visa type."
+            },
+            {
+              "question": "Can I apply online?",
+              "answer": "Most applications can be submitted online through the official government portal."
+            }
+          ]
         },
         {
           "type": "family",
@@ -272,7 +1112,47 @@
           "indicativeFee": 280,
           "processingTime": "2 to 6 months",
           "validity": "Typically 1 year, renewable",
-          "notes": "Family reunification rules depend on the member country where you settle."
+          "notes": "Family reunification rules depend on the member country where you settle.",
+          "maximumStay": "Provisional, then permanent",
+          "typicalProcessing": "12 to 24 months",
+          "purpose": "Join family members who are citizens or residents",
+          "stayFor": "Permanent residence pathway",
+          "steps": [
+            {
+              "title": "Submit sponsorship application",
+              "duration": "4 to 8 weeks"
+            },
+            {
+              "title": "Submit visa application",
+              "duration": "1 week"
+            },
+            {
+              "title": "Decision",
+              "duration": "12 to 24 months"
+            }
+          ],
+          "faqs": [
+            {
+              "question": "Who can sponsor me?",
+              "answer": "Spouses, partners, parents, or children who are citizens or permanent residents."
+            },
+            {
+              "question": "Can I work?",
+              "answer": "Work rights depend on the specific family visa type."
+            },
+            {
+              "question": "Can I study?",
+              "answer": "Study is generally permitted on family visas."
+            },
+            {
+              "question": "What documents are required?",
+              "answer": "Passport, photos, proof of funds, and supporting documents specific to your visa type."
+            },
+            {
+              "question": "Can I apply online?",
+              "answer": "Most applications can be submitted online through the official government portal."
+            }
+          ]
         }
       ],
       "highlights": [
@@ -298,7 +1178,47 @@
           "indicativeFee": 0,
           "processingTime": "Usually on arrival",
           "validity": "30 to 90 days depending on entry",
-          "notes": "Many nationalities receive a visa on arrival. Others must apply in advance."
+          "notes": "Many nationalities receive a visa on arrival. Others must apply in advance.",
+          "maximumStay": "Up to 90 days",
+          "typicalProcessing": "1 to 4 weeks",
+          "purpose": "Tourism, visiting family and friends, short business trips",
+          "stayFor": "Short-term visits, tourism, and leisure",
+          "steps": [
+            {
+              "title": "Submit application",
+              "duration": "1 week"
+            },
+            {
+              "title": "Biometrics and interview",
+              "duration": "2 days"
+            },
+            {
+              "title": "Decision",
+              "duration": "2 to 4 weeks"
+            }
+          ],
+          "faqs": [
+            {
+              "question": "Do I need a visa?",
+              "answer": "Most travelers require a visa, but some nationalities may be visa-exempt."
+            },
+            {
+              "question": "How long does it take?",
+              "answer": "Processing typically takes 1 to 4 weeks."
+            },
+            {
+              "question": "Can I extend my stay?",
+              "answer": "Extensions may be possible. Apply before your current visa expires."
+            },
+            {
+              "question": "What documents are required?",
+              "answer": "Passport, photos, proof of funds, and supporting documents specific to your visa type."
+            },
+            {
+              "question": "Can I apply online?",
+              "answer": "Most applications can be submitted online through the official government portal."
+            }
+          ]
         },
         {
           "type": "work",
@@ -306,7 +1226,47 @@
           "indicativeFee": 550,
           "processingTime": "1 to 4 weeks",
           "validity": "Usually tied to the employment contract",
-          "notes": "Usually sponsored by an employer, who manages the application."
+          "notes": "Usually sponsored by an employer, who manages the application.",
+          "maximumStay": "Up to 3 years, renewable",
+          "typicalProcessing": "1 to 3 months",
+          "purpose": "Employment with a local employer",
+          "stayFor": "Length of employment contract",
+          "steps": [
+            {
+              "title": "Get job offer",
+              "duration": "Varies"
+            },
+            {
+              "title": "Submit visa application",
+              "duration": "1 week"
+            },
+            {
+              "title": "Decision",
+              "duration": "1 to 3 months"
+            }
+          ],
+          "faqs": [
+            {
+              "question": "Do I need a visa?",
+              "answer": "Most employment requires a work visa or permit."
+            },
+            {
+              "question": "Can I bring family?",
+              "answer": "Some work visas allow dependent family members."
+            },
+            {
+              "question": "Can I change employers?",
+              "answer": "Changing employers may require a new visa application."
+            },
+            {
+              "question": "What documents are required?",
+              "answer": "Passport, photos, proof of funds, and supporting documents specific to your visa type."
+            },
+            {
+              "question": "Can I apply online?",
+              "answer": "Most applications can be submitted online through the official government portal."
+            }
+          ]
         }
       ],
       "highlights": [
@@ -332,7 +1292,47 @@
           "indicativeFee": 0,
           "processingTime": "Not applicable for visa-exempt travellers",
           "validity": "Usually 30 days on arrival",
-          "notes": "Visa-exempt for many nationalities. Some travellers must apply in advance."
+          "notes": "Visa-exempt for many nationalities. Some travellers must apply in advance.",
+          "maximumStay": "Up to 90 days",
+          "typicalProcessing": "1 to 4 weeks",
+          "purpose": "Tourism, visiting family and friends, short business trips",
+          "stayFor": "Short-term visits, tourism, and leisure",
+          "steps": [
+            {
+              "title": "Submit application",
+              "duration": "1 week"
+            },
+            {
+              "title": "Biometrics and interview",
+              "duration": "2 days"
+            },
+            {
+              "title": "Decision",
+              "duration": "2 to 4 weeks"
+            }
+          ],
+          "faqs": [
+            {
+              "question": "Do I need a visa?",
+              "answer": "Most travelers require a visa, but some nationalities may be visa-exempt."
+            },
+            {
+              "question": "How long does it take?",
+              "answer": "Processing typically takes 1 to 4 weeks."
+            },
+            {
+              "question": "Can I extend my stay?",
+              "answer": "Extensions may be possible. Apply before your current visa expires."
+            },
+            {
+              "question": "What documents are required?",
+              "answer": "Passport, photos, proof of funds, and supporting documents specific to your visa type."
+            },
+            {
+              "question": "Can I apply online?",
+              "answer": "Most applications can be submitted online through the official government portal."
+            }
+          ]
         },
         {
           "type": "student",
@@ -340,7 +1340,47 @@
           "indicativeFee": 230,
           "processingTime": "2 to 4 weeks",
           "validity": "Length of course",
-          "notes": "Requires an offer from an approved institution. Your school usually submits the application."
+          "notes": "Requires an offer from an approved institution. Your school usually submits the application.",
+          "maximumStay": "Length of course plus 2 months",
+          "typicalProcessing": "4 to 8 weeks",
+          "purpose": "Study at a recognized educational institution",
+          "stayFor": "Length of course",
+          "steps": [
+            {
+              "title": "Get acceptance letter",
+              "duration": "2 to 4 weeks"
+            },
+            {
+              "title": "Submit visa application",
+              "duration": "1 week"
+            },
+            {
+              "title": "Decision",
+              "duration": "4 to 8 weeks"
+            }
+          ],
+          "faqs": [
+            {
+              "question": "Do I need a visa?",
+              "answer": "Most international students require a student visa."
+            },
+            {
+              "question": "Can I work while studying?",
+              "answer": "Work rights vary by country and visa type."
+            },
+            {
+              "question": "Can I bring family?",
+              "answer": "Some student visas allow dependent family members."
+            },
+            {
+              "question": "What documents are required?",
+              "answer": "Passport, photos, proof of funds, and supporting documents specific to your visa type."
+            },
+            {
+              "question": "Can I apply online?",
+              "answer": "Most applications can be submitted online through the official government portal."
+            }
+          ]
         },
         {
           "type": "work",
@@ -348,7 +1388,47 @@
           "indicativeFee": 390,
           "processingTime": "3 to 6 weeks",
           "validity": "Up to 2 years",
-          "notes": "Requires a qualifying salary and a job offer from a Singapore employer."
+          "notes": "Requires a qualifying salary and a job offer from a Singapore employer.",
+          "maximumStay": "Up to 3 years, renewable",
+          "typicalProcessing": "1 to 3 months",
+          "purpose": "Employment with a local employer",
+          "stayFor": "Length of employment contract",
+          "steps": [
+            {
+              "title": "Get job offer",
+              "duration": "Varies"
+            },
+            {
+              "title": "Submit visa application",
+              "duration": "1 week"
+            },
+            {
+              "title": "Decision",
+              "duration": "1 to 3 months"
+            }
+          ],
+          "faqs": [
+            {
+              "question": "Do I need a visa?",
+              "answer": "Most employment requires a work visa or permit."
+            },
+            {
+              "question": "Can I bring family?",
+              "answer": "Some work visas allow dependent family members."
+            },
+            {
+              "question": "Can I change employers?",
+              "answer": "Changing employers may require a new visa application."
+            },
+            {
+              "question": "What documents are required?",
+              "answer": "Passport, photos, proof of funds, and supporting documents specific to your visa type."
+            },
+            {
+              "question": "Can I apply online?",
+              "answer": "Most applications can be submitted online through the official government portal."
+            }
+          ]
         }
       ],
       "highlights": [
@@ -374,7 +1454,47 @@
           "indicativeFee": 90,
           "processingTime": "5 working days",
           "validity": "Up to 90 days per visit",
-          "notes": "Visa exemption applies to some nationalities. Check before you travel."
+          "notes": "Visa exemption applies to some nationalities. Check before you travel.",
+          "maximumStay": "Up to 90 days",
+          "typicalProcessing": "1 to 4 weeks",
+          "purpose": "Tourism, visiting family and friends, short business trips",
+          "stayFor": "Short-term visits, tourism, and leisure",
+          "steps": [
+            {
+              "title": "Submit application",
+              "duration": "1 week"
+            },
+            {
+              "title": "Biometrics and interview",
+              "duration": "2 days"
+            },
+            {
+              "title": "Decision",
+              "duration": "2 to 4 weeks"
+            }
+          ],
+          "faqs": [
+            {
+              "question": "Do I need a visa?",
+              "answer": "Most travelers require a visa, but some nationalities may be visa-exempt."
+            },
+            {
+              "question": "How long does it take?",
+              "answer": "Processing typically takes 1 to 4 weeks."
+            },
+            {
+              "question": "Can I extend my stay?",
+              "answer": "Extensions may be possible. Apply before your current visa expires."
+            },
+            {
+              "question": "What documents are required?",
+              "answer": "Passport, photos, proof of funds, and supporting documents specific to your visa type."
+            },
+            {
+              "question": "Can I apply online?",
+              "answer": "Most applications can be submitted online through the official government portal."
+            }
+          ]
         },
         {
           "type": "student",
@@ -382,7 +1502,47 @@
           "indicativeFee": 90,
           "processingTime": "1 to 3 months, including certificate of eligibility",
           "validity": "Length of course, up to 4 years",
-          "notes": "The school applies for a certificate of eligibility on your behalf."
+          "notes": "The school applies for a certificate of eligibility on your behalf.",
+          "maximumStay": "Length of course plus 2 months",
+          "typicalProcessing": "4 to 8 weeks",
+          "purpose": "Study at a recognized educational institution",
+          "stayFor": "Length of course",
+          "steps": [
+            {
+              "title": "Get acceptance letter",
+              "duration": "2 to 4 weeks"
+            },
+            {
+              "title": "Submit visa application",
+              "duration": "1 week"
+            },
+            {
+              "title": "Decision",
+              "duration": "4 to 8 weeks"
+            }
+          ],
+          "faqs": [
+            {
+              "question": "Do I need a visa?",
+              "answer": "Most international students require a student visa."
+            },
+            {
+              "question": "Can I work while studying?",
+              "answer": "Work rights vary by country and visa type."
+            },
+            {
+              "question": "Can I bring family?",
+              "answer": "Some student visas allow dependent family members."
+            },
+            {
+              "question": "What documents are required?",
+              "answer": "Passport, photos, proof of funds, and supporting documents specific to your visa type."
+            },
+            {
+              "question": "Can I apply online?",
+              "answer": "Most applications can be submitted online through the official government portal."
+            }
+          ]
         },
         {
           "type": "work",
@@ -390,7 +1550,47 @@
           "indicativeFee": 90,
           "processingTime": "1 to 3 months",
           "validity": "Up to 5 years depending on category",
-          "notes": "Work visas are category specific and need a qualifying job offer."
+          "notes": "Work visas are category specific and need a qualifying job offer.",
+          "maximumStay": "Up to 3 years, renewable",
+          "typicalProcessing": "1 to 3 months",
+          "purpose": "Employment with a local employer",
+          "stayFor": "Length of employment contract",
+          "steps": [
+            {
+              "title": "Get job offer",
+              "duration": "Varies"
+            },
+            {
+              "title": "Submit visa application",
+              "duration": "1 week"
+            },
+            {
+              "title": "Decision",
+              "duration": "1 to 3 months"
+            }
+          ],
+          "faqs": [
+            {
+              "question": "Do I need a visa?",
+              "answer": "Most employment requires a work visa or permit."
+            },
+            {
+              "question": "Can I bring family?",
+              "answer": "Some work visas allow dependent family members."
+            },
+            {
+              "question": "Can I change employers?",
+              "answer": "Changing employers may require a new visa application."
+            },
+            {
+              "question": "What documents are required?",
+              "answer": "Passport, photos, proof of funds, and supporting documents specific to your visa type."
+            },
+            {
+              "question": "Can I apply online?",
+              "answer": "Most applications can be submitted online through the official government portal."
+            }
+          ]
         }
       ],
       "highlights": [
@@ -416,7 +1616,47 @@
           "indicativeFee": 70,
           "processingTime": "3 to 5 working days for e-Visa",
           "validity": "Up to 1 year, multiple entry, depending on eligibility",
-          "notes": "Most applications are made online. Passport validity requirements apply."
+          "notes": "Most applications are made online. Passport validity requirements apply.",
+          "maximumStay": "Up to 90 days",
+          "typicalProcessing": "1 to 4 weeks",
+          "purpose": "Tourism, visiting family and friends, short business trips",
+          "stayFor": "Short-term visits, tourism, and leisure",
+          "steps": [
+            {
+              "title": "Submit application",
+              "duration": "1 week"
+            },
+            {
+              "title": "Biometrics and interview",
+              "duration": "2 days"
+            },
+            {
+              "title": "Decision",
+              "duration": "2 to 4 weeks"
+            }
+          ],
+          "faqs": [
+            {
+              "question": "Do I need a visa?",
+              "answer": "Most travelers require a visa, but some nationalities may be visa-exempt."
+            },
+            {
+              "question": "How long does it take?",
+              "answer": "Processing typically takes 1 to 4 weeks."
+            },
+            {
+              "question": "Can I extend my stay?",
+              "answer": "Extensions may be possible. Apply before your current visa expires."
+            },
+            {
+              "question": "What documents are required?",
+              "answer": "Passport, photos, proof of funds, and supporting documents specific to your visa type."
+            },
+            {
+              "question": "Can I apply online?",
+              "answer": "Most applications can be submitted online through the official government portal."
+            }
+          ]
         },
         {
           "type": "student",
@@ -424,7 +1664,47 @@
           "indicativeFee": 110,
           "processingTime": "2 to 6 weeks",
           "validity": "Length of course, up to 5 years",
-          "notes": "Requires an admission letter from a recognised institution."
+          "notes": "Requires an admission letter from a recognised institution.",
+          "maximumStay": "Length of course plus 2 months",
+          "typicalProcessing": "4 to 8 weeks",
+          "purpose": "Study at a recognized educational institution",
+          "stayFor": "Length of course",
+          "steps": [
+            {
+              "title": "Get acceptance letter",
+              "duration": "2 to 4 weeks"
+            },
+            {
+              "title": "Submit visa application",
+              "duration": "1 week"
+            },
+            {
+              "title": "Decision",
+              "duration": "4 to 8 weeks"
+            }
+          ],
+          "faqs": [
+            {
+              "question": "Do I need a visa?",
+              "answer": "Most international students require a student visa."
+            },
+            {
+              "question": "Can I work while studying?",
+              "answer": "Work rights vary by country and visa type."
+            },
+            {
+              "question": "Can I bring family?",
+              "answer": "Some student visas allow dependent family members."
+            },
+            {
+              "question": "What documents are required?",
+              "answer": "Passport, photos, proof of funds, and supporting documents specific to your visa type."
+            },
+            {
+              "question": "Can I apply online?",
+              "answer": "Most applications can be submitted online through the official government portal."
+            }
+          ]
         },
         {
           "type": "work",
@@ -432,7 +1712,47 @@
           "indicativeFee": 330,
           "processingTime": "4 to 8 weeks",
           "validity": "Length of employment contract, up to 5 years",
-          "notes": "Requires a job offer and approval from the relevant authority."
+          "notes": "Requires a job offer and approval from the relevant authority.",
+          "maximumStay": "Up to 3 years, renewable",
+          "typicalProcessing": "1 to 3 months",
+          "purpose": "Employment with a local employer",
+          "stayFor": "Length of employment contract",
+          "steps": [
+            {
+              "title": "Get job offer",
+              "duration": "Varies"
+            },
+            {
+              "title": "Submit visa application",
+              "duration": "1 week"
+            },
+            {
+              "title": "Decision",
+              "duration": "1 to 3 months"
+            }
+          ],
+          "faqs": [
+            {
+              "question": "Do I need a visa?",
+              "answer": "Most employment requires a work visa or permit."
+            },
+            {
+              "question": "Can I bring family?",
+              "answer": "Some work visas allow dependent family members."
+            },
+            {
+              "question": "Can I change employers?",
+              "answer": "Changing employers may require a new visa application."
+            },
+            {
+              "question": "What documents are required?",
+              "answer": "Passport, photos, proof of funds, and supporting documents specific to your visa type."
+            },
+            {
+              "question": "Can I apply online?",
+              "answer": "Most applications can be submitted online through the official government portal."
+            }
+          ]
         }
       ],
       "highlights": [

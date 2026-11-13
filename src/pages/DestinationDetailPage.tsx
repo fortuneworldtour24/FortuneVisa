@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import { ArrowLeft, ArrowRight, Globe2 } from 'lucide-react';
+import { useState, useRef, useEffect, useCallback } from 'react';
+import { ArrowLeft, ArrowRight, Globe2, Clock, Check, ChevronDown, ChevronUp, Link as LinkIcon, Scroll, ShieldCheck } from 'lucide-react';
 import { Link, useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { EmptyState } from '@/components/EmptyState';
@@ -8,10 +8,22 @@ import { buildEnquiryPath, findDestination } from '@/lib/visaData';
 import type { Destination, VisaTypeInfo } from '@/lib/visaData';
 import { RequirementBadge } from '@/components/visa/RequirementBadge';
 
+const TABS = [
+  { id: 'visa-types', label: 'Visa Types' },
+  { id: 'overview', label: 'Overview' },
+  { id: 'process', label: 'Process' },
+  { id: 'benefits', label: 'Benefits' },
+  { id: 'faqs', label: 'FAQs' },
+] as const;
+
 export function DestinationDetailPage() {
   const { t } = useTranslation();
   const { country } = useParams<{ country: string }>();
   const destination = country ? findDestination(country) : undefined;
+  const [activeTab, setActiveTab] = useState<'visa-types' | 'overview' | 'process' | 'benefits' | 'faqs'>('visa-types');
+  const [selectedVisaType, setSelectedVisaType] = useState<string>('');
+  const [openFaq, setOpenFaq] = useState<number>(-1);
+  const sectionRefs = useRef<Record<string, HTMLElement | null>>({});
 
   useSeo({
     title: destination ? `${destination.country} Visa Guide` : 'Destination Not Found',
@@ -42,10 +54,25 @@ export function DestinationDetailPage() {
   }
 
   const visaTypeList = destination.visaTypes;
-  const [selectedVisaType, setSelectedVisaType] = useState<string>(visaTypeList[0]?.type ?? '');
+  if (!selectedVisaType && visaTypeList.length > 0) {
+    setSelectedVisaType(visaTypeList[0].type);
+  }
   const selectedVisa = visaTypeList.find((v) => v.type === selectedVisaType) ?? visaTypeList[0];
 
-  const totalAUD = selectedVisa.indicativeFee.toLocaleString('en-AU', { style: 'currency', currency: 'AUD' });
+  const totalAUD = selectedVisa?.indicativeFee
+    ? selectedVisa.indicativeFee.toLocaleString('en-AU', { style: 'currency', currency: 'AUD' })
+    : '';
+
+  const scrollToSection = useCallback((id: string) => {
+    const el = sectionRefs.current[id];
+    if (el) {
+      const headerOffset = 120;
+      const elementPosition = el.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+      window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+    }
+  }, []);
+
 
   return (
     <>
@@ -73,11 +100,35 @@ export function DestinationDetailPage() {
         </div>
       </section>
 
-      {/* Main content: two-column layout */}
-      <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8 lg:py-12">
-        <div className="grid gap-8 lg:grid-cols-2">
-          {/* Left: visa details */}
-          <main>
+      {/* Sticky tab bar */}
+      <nav className="sticky top-20 z-30 border-b border-slate-200/70 bg-white/90 backdrop-blur-md">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="overflow-x-auto pb-2 whitespace-nowrap sm:pb-0">
+            {TABS.map((tab) => (
+              <button
+                key={tab.id}
+                onClick={() => {
+                  setActiveTab(tab.id);
+                  scrollToSection(tab.id);
+                }}
+                className={`inline-flex items-center gap-2 px-4 py-3 text-sm font-medium transition-colors ${
+                  activeTab === tab.id
+                    ? 'text-primary-700 border-b-2 border-primary-700'
+                    : 'text-slate-600 border-b-2 border-transparent hover:text-slate-900 hover:border-slate-200'
+                }`}
+              >
+                {tab.label}
+              </button>
+            ))}
+          </div>
+        </div>
+      </nav>
+
+      {/* Main content sections */}
+      <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
+        {/* Visa Types */}
+        <section id="visa-types" ref={(el) => (sectionRefs.current['visa-types'] = el)} className="mb-16">
+          <h2 className="mb-8 text-2xl font-extrabold tracking-tight text-ink">{t('destinationDetail.visaTypesHeading')}</h2>
             {destination.visaTypes.length > 0 ? (
               <div className="grid gap-6">
                 {destination.visaTypes.map((visa) => (
@@ -96,16 +147,16 @@ export function DestinationDetailPage() {
 
                     <div className="mt-4 space-y-2 text-sm text-slate-600">
                       <div className="flex justify-between">
-                        <span className="text-slate-500">{t('destinationDetail.processingTime')}</span>
-                        <span className="font-medium">{visa.processingTime}</span>
-                      </div>
-                      <div className="flex justify-between">
                         <span className="text-slate-500">{t('destinationDetail.validity')}</span>
                         <span className="font-medium">{visa.validity}</span>
                       </div>
                       <div className="flex justify-between">
-                        <span className="text-slate-500">{t('destinationDetail.indicativeFee')}</span>
-                        <span className="font-medium">{visa.indicativeFee.toLocaleString('en-AU', { style: 'currency', currency: 'AUD' })}</span>
+                        <span className="text-slate-500">{t('destinationDetail.maximumStay')}</span>
+                        <span className="font-medium">{visa.maximumStay}</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span className="text-slate-500">{t('destinationDetail.typicalProcessing')}</span>
+                        <span className="font-medium">{visa.typicalProcessing}</span>
                       </div>
                     </div>
 
@@ -128,8 +179,101 @@ export function DestinationDetailPage() {
                 body={t('checker.empty.body')}
               />
             )}
-          </main>
-        </div>
+        </section>
+
+        {/* Overview */}
+        <section id="overview" ref={(el) => (sectionRefs.current['overview'] = el)} className="mb-16">
+          <h2 className="mb-8 text-2xl font-extrabold tracking-tight text-ink">{t('destinationDetail.overview')}</h2>
+          <div className="grid gap-6 lg:grid-cols-3">
+            <div className="rounded-3xl border border-slate-200/80 bg-white p-6 sm:p-8 shadow-card">
+              <div className="flex items-center gap-3 mb-6">
+                <Scroll className="h-6 w-6 text-primary-700" aria-hidden="true" />
+                <span className="text-sm font-semibold text-slate-600">{t('destinationDetail.purpose')}</span>
+              </div>
+              <p className="text-sm text-slate-600">{selectedVisa?.purpose ?? t('destinationDetail.noPurpose')}</p>
+            </div>
+            <div className="rounded-3xl border border-slate-200/80 bg-white p-6 sm:p-8 shadow-card">
+              <div className="flex items-center gap-3 mb-6">
+                <Clock className="h-6 w-6 text-primary-700" aria-hidden="true" />
+                <span className="text-sm font-semibold text-slate-600">{t('destinationDetail.validFor')}</span>
+              </div>
+              <p className="text-sm text-slate-600">{selectedVisa?.validity ?? t('destinationDetail.noValidity')}</p>
+            </div>
+            <div className="rounded-3xl border border-slate-200/80 bg-white p-6 sm:p-8 shadow-card">
+              <div className="flex items-center gap-3 mb-6">
+                <ShieldCheck className="h-6 w-6 text-primary-700" aria-hidden="true" />
+                <span className="text-sm font-semibold text-slate-600">{t('destinationDetail.stayFor')}</span>
+              </div>
+              <p className="text-sm text-slate-600">{selectedVisa?.stayFor ?? t('destinationDetail.noStayFor')}</p>
+            </div>
+          </div>
+        </section>
+
+        {/* Process */}
+        <section id="process" ref={(el) => (sectionRefs.current['process'] = el)} className="mb-16">
+          <h2 className="mb-8 text-2xl font-extrabold tracking-tight text-ink">{t('destinationDetail.process')}</h2>
+          <div className="grid gap-6 lg:grid-cols-3">
+            {selectedVisa?.steps.map((step, index) => (
+              <div key={step.title} className="flex flex-col items-center text-center rounded-3xl border border-slate-200/80 bg-white p-6 sm:p-8 shadow-card group">
+                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary-700 text-white mb-4 group-hover:scale-110 transition-transform">
+                  <span className="text-sm font-bold">{index + 1}</span>
+                </div>
+                <div className="flex items-center gap-2 mb-2">
+                  <Check className="h-4 w-4 text-primary-700" aria-hidden="true" />
+                  <h3 className="text-sm font-semibold text-ink">{step.title}</h3>
+                </div>
+                <p className="text-sm text-slate-600">{step.duration}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Benefits */}
+        <section id="benefits" ref={(el) => (sectionRefs.current['benefits'] = el)} className="mb-16">
+          <h2 className="mb-8 text-2xl font-extrabold tracking-tight text-ink">{t('destinationDetail.benefits')}</h2>
+          <div className="grid gap-6 lg:grid-cols-3">
+            {destination.highlights.map((highlight, index) => (
+              <div
+                key={highlight}
+                className="flex items-center gap-3 rounded-3xl border border-slate-200/80 bg-white p-6 sm:p-8 shadow-card"
+              >
+                <ShieldCheck className="h-5 w-5 text-primary-700 shrink-0" aria-hidden="true" />
+                <p className="text-sm text-slate-600">{highlight}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* FAQs */}
+        <section id="faqs" ref={(el) => (sectionRefs.current['faqs'] = el)} className="mb-16">
+          <h2 className="mb-8 text-2xl font-extrabold tracking-tight text-ink">{t('destinationDetail.faqs')}</h2>
+          <div className="space-y-3">
+            {selectedVisa?.faqs.map((faq, index) => (
+              <div
+                key={faq.question}
+                className="rounded-3xl border border-slate-200/80 bg-white shadow-card"
+              >
+                <button
+                  onClick={() => setOpenFaq(openFaq === index ? -1 : index)}
+                  className="flex w-full items-center justify-between p-4 sm:p-6 text-left"
+                  aria-expanded={openFaq === index}
+                >
+                  <span className="text-sm font-medium text-ink">{faq.question}</span>
+                  {openFaq === index ? (
+                    <ChevronUp className="h-4 w-4 text-slate-400 transition-transform" />
+                  ) : (
+                    <ChevronDown className="h-4 w-4 text-slate-400 transition-transform" />
+                  )}
+                </button>
+                {openFaq === index && (
+                  <div className="px-4 sm:px-6 pb-4 border-t border-slate-100/50">
+                    <p className="text-sm text-slate-600">{faq.answer}</p>
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        </section>
       </div>
 
 
