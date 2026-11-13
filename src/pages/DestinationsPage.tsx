@@ -116,8 +116,8 @@ export function DestinationsPage() {
           {/* Spacer */}
           <div className="flex-1" />
 
-          {/* Grid / Map toggle */}
-          <div className="flex rounded-xl border border-slate-200 bg-white p-0.5" role="group" aria-label={t('destinations.viewToggle')}>
+          {/* Grid / Map toggle — wraps on narrow screens */}
+          <div className="flex flex-wrap items-center gap-2 rounded-xl border border-slate-200 bg-white p-0.5 sm:gap-0" role="group" aria-label={t('destinations.viewToggle')}>
             <button
               type="button"
               onClick={() => setView('grid')}
