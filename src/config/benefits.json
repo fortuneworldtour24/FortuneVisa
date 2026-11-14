@@ -1,0 +1,85 @@
+{
+  "id": "doc-checking",
+  "title": "Document checking before you submit",
+  "intro": "We review every form and supporting document before lodgement.",
+  "bullets": [
+    "Thorough document review",
+    "Error-free submissions",
+    "Compliance with requirements"
+  ],
+  "details": [
+    { "key": "What's included", "value": "All forms, identity documents, and supporting evidence" }
+  ],
+  "icon": "ShieldCheck",
+  "enabled": true
+},
+{
+  "id": "dedicated-consultant",
+  "title": "A dedicated consultant",
+  "intro": "You'll have a single point of contact throughout your journey.",
+  "bullets": [
+    "Personalised guidance",
+    "Consistent communication",
+    "Your consultant is your advocate"
+  ],
+  "details": [
+    { "key": "Consultant assignment", "value": "You'll be assigned a dedicated consultant upon enrolment" }
+  ],
+  "icon": "User",
+  "enabled": true
+},
+{
+  "id": "help-when-goes-wrong",
+  "title": "Help when something goes wrong",
+  "intro": "We support you if there are issues with your application.",
+  "bullets": [
+    "WhatsApp support during business hours",
+    "Phone assistance available",
+    "We guide you through next steps"
+  ],
+  "details": [
+    { "key": "WhatsApp", "value": "Monday to Friday, 9:00am to 5:30pm AEST" },
+    { "key": "Phone", "value": "Monday to Friday, 9:00am to 5:30pm AEST" }
+  ],
+  "icon": "Phone",
+  "enabled": true
+},
+{
+  "id": "247-doctor-access",
+  "title": "24/7 doctor access",
+  "intro": "Round-the-clock medical consultation",
+  "bullets": [
+    "Instant video consultations",
+    "Prescription support",
+    "Health advice anytime"
+  ],
+  "details": [],
+  "icon": "Heart",
+  "enabled": false
+},
+{
+  "id": "passport-loss-support",
+  "title": "Passport loss support",
+  "intro": "Assistance if your passport is lost or stolen",
+  "bullets": [
+    "Emergency document replacement",
+    "Consulate coordination",
+    "Travel advice"
+  ],
+  "details": [],
+  "icon": "MapPin",
+  "enabled": false
+},
+{
+  "id": "fast-track-immigration",
+  "title": "Fast-track immigration",
+  "intro": "Expedited processing services",
+  "bullets": [
+    "Priority processing options",
+    "Expedited appointment scheduling",
+    "Accelerated decision timelines"
+  ],
+  "details": [],
+  "icon": "Zap",
+  "enabled": false
+}
