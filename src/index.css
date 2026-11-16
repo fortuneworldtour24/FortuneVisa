@@ -71,3 +71,77 @@
   opacity: 1 !important;
   transform: none !important;
 }
+/* Animated keyframes */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes floaty {
+  0%,
+  100% {
+    transform: translateY(0) rotate(var(--r, 0deg));
+  }
+  50% {
+    transform: translateY(-12px) rotate(var(--r, 0deg));
+  }
+}
+
+@keyframes blob {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(30px, -20px) scale(1.15);
+  }
+}
+
+@keyframes marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Animation classes */
+.anim-in {
+  animation: fadeUp 0.7s ease-out both;
+}
+
+.anim-float {
+  animation: floaty 6s ease-in-out infinite;
+}
+
+.anim-blob {
+  animation: blob 14s ease-in-out infinite;
+}
+
+.anim-marquee {
+  animation: marquee 30s linear infinite;
+  width: max-content;
+}
+
+/* Scroll reveal with no JavaScript. Unsupported browsers simply show everything. */
+@supports (animation-timeline: view()) {
+  .anim-scroll {
+    animation: fadeUp linear both;
+    animation-timeline: view();
+    animation-range: entry 0% entry 35%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .anim-in,
+  .anim-float,
+  .anim-blob,
+  .anim-marquee,
+  .anim-scroll {
+    animation: none !important;
+  }
+}

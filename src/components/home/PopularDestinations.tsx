@@ -20,7 +20,7 @@ export function PopularDestinations() {
 
       <div className="mt-12 flex snap-x snap-mandatory gap-5 overflow-x-auto px-4 pb-6 [scrollbar-width:none] sm:px-6 md:grid md:grid-cols-2 md:overflow-visible md:pb-0 lg:grid-cols-4 lg:gap-6 lg:px-8 [&::-webkit-scrollbar]:hidden">
         {featured.map((dest, index) => (
-          <Reveal key={dest.slug} delay={(index % 4) * 80} className="w-[80%] shrink-0 snap-start sm:w-[45%] md:w-auto">
+          <Reveal key={dest.slug} delay={(index % 4) * 80} className="anim-scroll w-[80%] shrink-0 snap-start sm:w-[45%] md:w-auto">
             <DestinationCard destination={dest} />
           </Reveal>
         ))}

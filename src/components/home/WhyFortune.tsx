@@ -22,7 +22,7 @@ export function WhyFortune() {
       <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
         {BENEFITS.map(({ key, icon: Icon }, index) => (
           <Reveal key={key} delay={index * 100}>
-            <article className="group h-full rounded-3xl border border-slate-200/80 bg-white p-7 shadow-card transition-all duration-300 hover:-translate-y-1 hover:shadow-lift">
+            <article className="group h-full rounded-3xl border border-slate-200/80 bg-white p-7 shadow-card anim-scroll transition-all duration-300 hover:-translate-y-1 hover:shadow-lift">
               <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-primary-50 text-primary-700 transition-colors group-hover:bg-primary-700 group-hover:text-white">
                 <Icon className="h-6 w-6" aria-hidden="true" />
               </span>

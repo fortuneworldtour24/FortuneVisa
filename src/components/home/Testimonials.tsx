@@ -17,7 +17,7 @@ export function Testimonials() {
         <div className="mt-12 grid gap-6 md:grid-cols-3">
           {TESTIMONIAL_IDS.map((id, index) => (
             <Reveal key={id} delay={index * 100}>
-              <figure className="flex h-full flex-col rounded-3xl border border-dashed border-slate-300 bg-background p-7">
+              <figure className="flex h-full flex-col rounded-3xl border border-dashed border-slate-300 anim-scroll bg-background p-7">
                 <div className="flex items-center justify-between">
                   <Quote className="h-8 w-8 text-accent-500" aria-hidden="true" />
                   <span className="rounded-full bg-slate-200 px-3 py-1 text-xs font-bold uppercase tracking-wider text-slate-700">

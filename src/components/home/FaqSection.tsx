@@ -23,7 +23,7 @@ export function FaqSection() {
           return (
             <Reveal key={id}>
               <div
-                className={`overflow-hidden rounded-2xl border bg-white transition-colors duration-200 ${
+                className={`overflow-hidden rounded-2xl border bg-white anim-scroll transition-colors duration-200 ${
                   isOpen ? 'border-primary-200 shadow-card' : 'border-slate-200 hover:border-primary-100'
                 }`}
               >

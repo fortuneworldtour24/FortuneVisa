@@ -1,4 +1,5 @@
 import { HeroSection } from '@/components/home/HeroSection';
+import { CountryMarquee } from '@/components/home/HeroDecor';
 import { useSeo } from '@/hooks/useSeo';
 import { TrustStrip } from '@/components/home/TrustStrip';
 import { PopularDestinations } from '@/components/home/PopularDestinations';
@@ -17,6 +18,7 @@ export function HomePage() {
   return (
     <>
       <HeroSection />
+      <CountryMarquee />
       <TrustStrip />
       <PopularDestinations />
       <HowItWorks />

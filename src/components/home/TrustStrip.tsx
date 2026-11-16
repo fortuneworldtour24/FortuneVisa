@@ -17,7 +17,7 @@ export function TrustStrip() {
     <section className="border-y border-slate-200/70 bg-white">
       <div className="mx-auto grid max-w-7xl grid-cols-1 gap-4 px-4 py-10 sm:grid-cols-2 sm:px-6 lg:grid-cols-4 lg:gap-6 lg:px-8">
         {ITEMS.map(({ key, icon: Icon }, index) => (
-          <Reveal key={key} delay={index * 80}>
+          <Reveal key={key} delay={index * 80} className="anim-scroll">
             <div className="flex items-start gap-4 rounded-2xl p-3 transition-colors hover:bg-primary-50/60">
               <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-primary-50 text-primary-700">
                 <Icon className="h-6 w-6" aria-hidden="true" />

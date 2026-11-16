@@ -1,82 +1,69 @@
-import { Clock } from 'lucide-react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { Clock } from 'lucide-react';
 import type { Destination } from '@/lib/visaData';
 
-type DestinationCardProps = {
-  destination: Destination;
-};
+const aud = (n: number) =>
+  new Intl.NumberFormat('en-AU', { style: 'currency', currency: 'AUD', maximumFractionDigits: 0 }).format(n);
 
-function toAUD(usd: number): string {
-  const rate = 1.52;
-  return (usd * rate).toLocaleString('en-AU', { style: 'currency', currency: 'AUD' });
-}
-
-export function DestinationCard({ destination }: DestinationCardProps) {
+export function DestinationCard({ destination }: { destination: Destination }) {
   const { t } = useTranslation();
-  const { slug, country, flag, imageUrl, visaTypes } = destination;
-  const primary = visaTypes[0];
+  const [broken, setBroken] = useState(false);
+  const d = destination as Destination & { iso_code?: string };
+  const v = d.visaTypes?.[0] as (Destination['visaTypes'][number] & { validityShort?: string }) | undefined;
+  const code = (d.iso_code || '').toLowerCase();
+  const fee = v && v.indicativeFee > 0 ? aud(v.indicativeFee) : '—';
+  const rows: [string, string][] = [
+    [t('destinations.type', 'Type'), v?.type ?? '—'],
+    [t('destinations.valid', 'Valid'), v?.validityShort ?? v?.validity ?? '—'],
+    [t('destinations.fees', 'Fees (AUD)'), fee],
+  ];
 
   return (
     <Link
-      to={`/destinations/${slug}`}
-      className="group relative flex flex-col overflow-hidden rounded-3xl shadow-card transition-all duration-300 hover:-translate-y-1 hover:shadow-lift focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-primary-200"
-      style={{ aspectRatio: '3 / 4' }}
+      to={`/destinations/${d.slug}`}
+      className="group relative block aspect-[3/4] overflow-hidden rounded-3xl bg-gradient-to-br from-indigo-600 to-indigo-900 shadow-md transition duration-300 hover:-translate-y-1 hover:shadow-2xl"
     >
-      {/* Full-bleed background image */}
-      <img
-        src={imageUrl}
-        alt={t('destinationCard.imageAlt', { country })}
-        loading="lazy"
-        className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-      />
-      {/* Dark gradient overlay at the bottom */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
-
-      {/* Content */}
-      <div className="relative z-10 flex flex-col p-5 sm:p-6">
-        {/* Flag + Country name */}
-        <div className="flex items-center gap-2.5 sm:gap-3">
-          <span
-            className="flex h-10 w-10 items-center justify-center rounded-full bg-white/20 text-lg backdrop-blur-sm sm:h-12 sm:w-12 sm:text-xl"
-            aria-hidden="true"
-          >
-            {flag}
-          </span>
-          <h2 className="text-base font-extrabold uppercase tracking-wide text-white sm:text-lg">
-            {country}
-          </h2>
-        </div>
-
-        {/* Stats row: TYPE, VALID, FEES */}
-        {primary && (
-          <div className="mt-4 flex flex-wrap items-center gap-2 text-[11px] font-semibold uppercase tracking-wider text-white/90 sm:text-xs">
-            <div className="min-w-0 flex-1">
-              <span className="block text-[10px] text-white/60">{t('destinationCard.type')}</span>
-              <span className="truncate">{t(`visaTypes.${primary.type}`)}</span>
-            </div>
-            <div className="min-w-0 flex-1">
-              <span className="block text-[10px] text-white/60">{t('destinationCard.valid')}</span>
-              <span className="truncate">{primary.validity}</span>
-            </div>
-            <div className="min-w-0 flex-1 text-right">
-              <span className="block text-[10px] text-white/60">{t('destinationCard.fees')}</span>
-              <span className="truncate">{toAUD(primary.indicativeFee)}</span>
-            </div>
-          </div>
-        )}
-
-        {/* Typical processing line under the card */}
-        {primary && (
-          <div className="mt-3 flex items-center gap-1.5 text-[11px] font-medium text-white/70 sm:text-xs">
-            <Clock className="h-3.5 w-3.5 shrink-0" aria-hidden="true" />
-            <span>
-              Typical processing: {primary.processingTime}
+      {d.imageUrl && !broken && (
+        <img
+          src={d.imageUrl}
+          alt={d.country}
+          loading="lazy"
+          onError={() => setBroken(true)}
+          className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+        />
+      )}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
+      <div className="absolute inset-x-0 bottom-0 p-4 text-white">
+        <div className="flex items-center gap-3">
+          {code ? (
+            <span className="inline-flex h-9 w-9 shrink-0 overflow-hidden rounded-full ring-2 ring-white/70">
+              <span className={`fi fis fi-${code}`} style={{ fontSize: 36, lineHeight: 1 }} />
             </span>
-          </div>
-        )}
+          ) : null}
+          <h3 className="min-w-0 text-lg font-bold uppercase leading-tight tracking-wide">{d.country}</h3>
+        </div>
+        <dl className="mt-3 space-y-1.5 rounded-2xl bg-black/40 p-3 text-xs backdrop-blur-sm">
+          {rows.map(([k, val]) => (
+            <div key={k} className="flex items-baseline justify-between gap-3">
+              <dt className="shrink-0 uppercase tracking-wide text-white/60">{k}</dt>
+              <dd className="min-w-0 text-right font-semibold capitalize line-clamp-2">{val}</dd>
+            </div>
+          ))}
+        </dl>
+        {v?.processingTime ? (
+          <p className="mt-2 flex items-start gap-1.5 text-xs text-white/80">
+            <Clock className="mt-0.5 h-3.5 w-3.5 shrink-0" />
+            <span className="line-clamp-2">
+              {t('destinations.typicalProcessing', 'Typical processing')}: {v.processingTime}
+            </span>
+          </p>
+        ) : null}
       </div>
     </Link>
   );
 }
+
+export default DestinationCard;
 
