@@ -18,7 +18,13 @@ import { TermsPage } from '@/pages/TermsPage';
 const AdminLogin = lazy(() => import('@/admin/AdminLogin'));
 const AdminGuard = lazy(() => import('@/admin/AdminGuard'));
 const AdminLayout = lazy(() => import('@/admin/AdminLayout'));
-const AdminPage = lazy(() => import('@/admin/AdminPage'));
+const AdminDashboard = lazy(() => import('@/admin/AdminDashboard'));
+const DestinationsAdmin = lazy(() => import('@/admin/DestinationsAdmin'));
+const PostsAdmin = lazy(() => import('@/admin/PostsAdmin'));
+const OffersAdmin = lazy(() => import('@/admin/OffersAdmin'));
+const ContentAdmin = lazy(() => import('@/admin/ContentAdmin'));
+const SeoAdmin = lazy(() => import('@/admin/SeoAdmin'));
+const EnquiriesAdmin = lazy(() => import('@/admin/EnquiriesAdmin'));
 
 const adminFallback = (
   <div className="flex min-h-screen items-center justify-center p-4 text-slate-500">Loading…</div>
@@ -63,13 +69,13 @@ function App() {
             </Suspense>
           }
         >
-          <Route index element={<AdminPage title="Dashboard" />} />
-          <Route path="destinations" element={<AdminPage title="Destinations" />} />
-          <Route path="blog" element={<AdminPage title="Blog" />} />
-          <Route path="offers" element={<AdminPage title="Offers" />} />
-          <Route path="content" element={<AdminPage title="Page content" />} />
-          <Route path="seo" element={<AdminPage title="SEO" />} />
-          <Route path="enquiries" element={<AdminPage title="Enquiries" />} />
+          <Route index element={<AdminDashboard />} />
+          <Route path="destinations" element={<DestinationsAdmin />} />
+          <Route path="blog" element={<PostsAdmin />} />
+          <Route path="offers" element={<OffersAdmin />} />
+          <Route path="content" element={<ContentAdmin />} />
+          <Route path="seo" element={<SeoAdmin />} />
+          <Route path="enquiries" element={<EnquiriesAdmin />} />
         </Route>
       </Routes>
     </BrowserRouter>

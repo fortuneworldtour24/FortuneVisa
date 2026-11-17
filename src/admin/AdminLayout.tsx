@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { Suspense, useState } from 'react';
 import { NavLink, Outlet, useNavigate } from 'react-router-dom';
 import { FileText, Globe, Inbox, LayoutDashboard, LogOut, Menu, Search, Tag, Type, X } from 'lucide-react';
 import { getDb } from './db';
@@ -82,7 +82,9 @@ export function AdminLayout() {
       </header>
 
       <main className="min-w-0 flex-1 p-4 sm:p-8">
-        <Outlet />
+        <Suspense fallback={<p className="text-slate-500">Loading…</p>}>
+          <Outlet />
+        </Suspense>
       </main>
     </div>
   );
