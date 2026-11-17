@@ -8,7 +8,10 @@
     "Compliance with requirements"
   ],
   "details": [
-    { "key": "What's included", "value": "All forms, identity documents, and supporting evidence" }
+    {
+      "key": "What's included",
+      "value": "All forms, identity documents, and supporting evidence"
+    }
   ],
   "icon": "ShieldCheck",
   "enabled": true
@@ -23,7 +26,10 @@
     "Your consultant is your advocate"
   ],
   "details": [
-    { "key": "Consultant assignment", "value": "You'll be assigned a dedicated consultant upon enrolment" }
+    {
+      "key": "Consultant assignment",
+      "value": "You'll be assigned a dedicated consultant upon enrolment"
+    }
   ],
   "icon": "User",
   "enabled": true
@@ -38,8 +44,14 @@
     "We guide you through next steps"
   ],
   "details": [
-    { "key": "WhatsApp", "value": "Monday to Friday, 9:00am to 5:30pm AEST" },
-    { "key": "Phone", "value": "Monday to Friday, 9:00am to 5:30pm AEST" }
+    {
+      "key": "WhatsApp",
+      "value": "Monday to Friday, 9:00am to 5:30pm IST"
+    },
+    {
+      "key": "Phone",
+      "value": "Monday to Friday, 9:00am to 5:30pm IST"
+    }
   ],
   "icon": "Phone",
   "enabled": true

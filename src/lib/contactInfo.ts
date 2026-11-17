@@ -1,0 +1,3 @@
+export const PHONE_DISPLAY = '+91 84509 55550';
+export const PHONE_TEL = '+918450955550';
+export const WHATSAPP_NUMBER = '918450955550';

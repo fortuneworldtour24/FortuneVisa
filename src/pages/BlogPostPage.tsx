@@ -13,7 +13,7 @@ type LoadState = 'loading' | 'success' | 'error' | 'not-found';
 
 function formatDate(iso: string): string {
   const date = new Date(iso);
-  return date.toLocaleDateString('en-AU', { day: 'numeric', month: 'long', year: 'numeric' });
+  return date.toLocaleDateString('en-IN', { day: 'numeric', month: 'long', year: 'numeric' });
 }
 
 export function BlogPostPage() {

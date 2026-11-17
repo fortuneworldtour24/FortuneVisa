@@ -17,7 +17,7 @@ export function HeroSection() {
           {/* Left content column */}
           <div className="space-y-8 lg:col-span-6">
             <span className="inline-flex items-center rounded-full bg-indigo-100 px-3 py-1.5 text-xs font-semibold text-indigo-700">
-              {t('home.hero.pill', 'Visa guidance for Australia and beyond')}
+              {t('home.hero.pill', 'Visa help for Indian travellers')}
             </span>
 
             <h1 className="anim-in text-4xl font-extrabold leading-[1.1] tracking-tight text-ink sm:text-5xl lg:text-6xl">

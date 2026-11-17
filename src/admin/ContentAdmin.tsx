@@ -9,23 +9,29 @@ type Section = { key: string; label: string; fields?: FieldDef[]; list?: { noun:
 
 const SECTIONS: Section[] = [
     {
-        key: 'home.hero', label: 'Home hero', fields: [
-            { name: 'pill', label: 'Small pill text' },
-            { name: 'titleStart', label: 'Heading (before the highlighted word)' },
-            { name: 'titleAccent', label: 'Highlighted word' },
-            { name: 'subtitle', label: 'Supporting text', area: true },
+        key: 'about', label: 'About page', fields: [
+            { name: 'intro', label: 'Intro under the heading', area: true },
+            { name: 'missionTitle', label: 'Mission heading' },
+            { name: 'missionBody', label: 'Mission text', area: true },
+            { name: 'body', label: 'Extra section (optional)', area: true, hint: 'Markdown supported: ## heading, **bold**, - list.' },
         ]
     },
-    { key: 'home.faqs', label: 'Home FAQs', list: { noun: 'FAQ', item: [{ name: 'question', label: 'Question' }, { name: 'answer', label: 'Answer', area: true }] } },
-    { key: 'why.cards', label: 'Why Fortune cards', list: { noun: 'card', item: [{ name: 'title', label: 'Title' }, { name: 'text', label: 'Text', area: true }] } },
     {
-        key: 'contact', label: 'Contact details', fields: [
-            { name: 'address', label: 'Address', area: true },
-            { name: 'phone', label: 'Phone' },
-            { name: 'email', label: 'Email' },
-            { name: 'whatsapp', label: 'WhatsApp number', hint: 'Digits only with country code, e.g. 61412345678' },
-            { name: 'hours', label: 'Opening hours' },
-        ]
+        key: 'about.values', label: 'About: values', list: {
+            noun: 'value', item: [
+                { name: 'title', label: 'Title' },
+                { name: 'text', label: 'Text', area: true },
+            ]
+        }
+    },
+    {
+        key: 'about.team', label: 'About: team', list: {
+            noun: 'team member', item: [
+                { name: 'name', label: 'Name' },
+                { name: 'role', label: 'Role' },
+                { name: 'bio', label: 'Short bio', area: true },
+            ]
+        }
     },
     {
         key: 'footer', label: 'Footer', fields: [

@@ -14,7 +14,7 @@ type LoadState = 'loading' | 'success' | 'error';
 
 function formatDate(iso: string): string {
   const date = new Date(iso);
-  return date.toLocaleDateString('en-AU', { day: 'numeric', month: 'long', year: 'numeric' });
+  return date.toLocaleDateString('en-IN', { day: 'numeric', month: 'long', year: 'numeric' });
 }
 
 export function BlogListPage() {
@@ -26,7 +26,7 @@ export function BlogListPage() {
   useSeo({
     title: 'Blog — Visa News and Guides',
     description:
-      'Plain-English Australian visa tips, policy updates and application guides from Fortune Visa Services in Parramatta.',
+      'Plain-English Australian visa tips, policy updates and application guides from Fortune Visa Services.',
   });
 
   useEffect(() => {
@@ -220,11 +220,10 @@ function CategoryChip({ label, active, onClick }: { label: string; active: boole
     <button
       type="button"
       onClick={onClick}
-      className={`rounded-full px-4 py-2 text-sm font-semibold transition-colors ${
-        active
-          ? 'bg-primary-700 text-white shadow-card'
-          : 'border border-slate-200 bg-white text-ink hover:border-primary-200 hover:bg-primary-50'
-      }`}
+      className={`rounded-full px-4 py-2 text-sm font-semibold transition-colors ${active
+        ? 'bg-primary-700 text-white shadow-card'
+        : 'border border-slate-200 bg-white text-ink hover:border-primary-200 hover:bg-primary-50'
+        }`}
     >
       {label}
     </button>

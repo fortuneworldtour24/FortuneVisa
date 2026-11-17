@@ -18,7 +18,7 @@
     "en": "English"
   },
   "footer": {
-    "description": "Licensed guidance for Australian visas, from first enquiry to final grant. Clear advice, honest timelines, and a team that stays with you.",
+    "description": "Visa guidance for Indian travellers, from first enquiry to final submission.",
     "quickLinks": "Quick links",
     "contactDetails": "Contact details",
     "legal": "Legal",
@@ -53,7 +53,7 @@
     "trust": {
       "expert": {
         "title": "Expert guidance",
-        "body": "Practical advice focused on Australian visas and migration."
+        "body": "Practical advice on visas for Indian travellers."
       },
       "documents": {
         "title": "Document review",
@@ -70,7 +70,7 @@
     },
     "destinations": {
       "title": "Popular visa pathways",
-      "subtitle": "The Australian visas our clients ask about most.",
+      "subtitle": "The visas our clients ask about most.",
       "viewDetails": "View details"
     },
     "steps": {
@@ -152,12 +152,30 @@
     }
   },
   "visas": {
-    "student": { "name": "Student visa", "subclass": "Subclass 500" },
-    "visitor": { "name": "Visitor visa", "subclass": "Subclass 600" },
-    "skilled": { "name": "Skilled Independent visa", "subclass": "Subclass 189" },
-    "nominated": { "name": "Skilled Nominated visa", "subclass": "Subclass 190" },
-    "partner": { "name": "Partner visa", "subclass": "Subclass 820 / 801" },
-    "workingHoliday": { "name": "Working Holiday visa", "subclass": "Subclass 417" }
+    "student": {
+      "name": "Student visa",
+      "subclass": "Subclass 500"
+    },
+    "visitor": {
+      "name": "Visitor visa",
+      "subclass": "Subclass 600"
+    },
+    "skilled": {
+      "name": "Skilled Independent visa",
+      "subclass": "Subclass 189"
+    },
+    "nominated": {
+      "name": "Skilled Nominated visa",
+      "subclass": "Subclass 190"
+    },
+    "partner": {
+      "name": "Partner visa",
+      "subclass": "Subclass 820 / 801"
+    },
+    "workingHoliday": {
+      "name": "Working Holiday visa",
+      "subclass": "Subclass 417"
+    }
   },
   "countries": {
     "AU": "Australia",
@@ -222,7 +240,7 @@
     "imageAlt": "{{country}} travel destination",
     "type": "TYPE",
     "valid": "VALID",
-    "fees": "FEES (AUD)",
+    "fees": "FEES (INR)",
     "processing": "Typical processing"
   },
   "destinationDetail": {
@@ -237,7 +255,7 @@
     "notFoundCta": "Browse destinations"
   },
   "visaDetails": {
-    "fee": "Indicative fee (AUD)",
+    "fee": "Indicative fee (INR)",
     "processing": "Typical processing time",
     "validity": "Validity",
     "notes": "Notes"
@@ -359,7 +377,7 @@
     "blog": {
       "eyebrow": "Blog",
       "title": "Visa news and practical guides",
-      "description": "Plain-English updates on policy changes, application tips and life in Australia."
+      "description": "Plain-English updates on policy changes, application tips and travel tips from India"
     },
     "privacy": {
       "eyebrow": "Legal",
@@ -417,7 +435,7 @@
     "emailTitle": "Email us",
     "whatsappTitle": "Message on WhatsApp",
     "whatsappBody": "Prefer a quick chat? Message our team on WhatsApp.",
-    "hours": "Monday to Friday, 9:00am to 5:30pm AEST"
+    "hours": "Monday to Friday, 9:00am to 5:30pm IST"
   },
   "about": {
     "eyebrow": "About Fortune",

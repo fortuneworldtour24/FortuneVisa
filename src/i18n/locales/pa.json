@@ -39,7 +39,7 @@
     "imageAlt": "{{country}} ਯਾਤਰਾ ਮੰਜ਼ਿਲ",
     "type": "ਕਿਸਮ",
     "valid": "ਵੈਧਤਾ",
-    "fees": "ਫੀਸ (AUD)",
+    "fees": "ਫੀਸ (INR)",
     "processing": "ਆਮ ਪ੍ਰੋਸੈਸਿੰਗ"
   },
   "destinations": {
@@ -56,4 +56,3 @@
     }
   }
 }
-

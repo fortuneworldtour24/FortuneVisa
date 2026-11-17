@@ -3,9 +3,7 @@ import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { Clock } from 'lucide-react';
 import type { Destination } from '@/lib/visaData';
-
-const aud = (n: number) =>
-  new Intl.NumberFormat('en-AU', { style: 'currency', currency: 'AUD', maximumFractionDigits: 0 }).format(n);
+import { formatMoney } from '@/lib/money';
 
 export function DestinationCard({ destination }: { destination: Destination }) {
   const { t } = useTranslation();
@@ -13,11 +11,11 @@ export function DestinationCard({ destination }: { destination: Destination }) {
   const d = destination as Destination & { iso_code?: string };
   const v = d.visaTypes?.[0] as (Destination['visaTypes'][number] & { validityShort?: string }) | undefined;
   const code = (d.iso_code || '').toLowerCase();
-  const fee = v && v.indicativeFee > 0 ? aud(v.indicativeFee) : '—';
+  const fee = v && v.indicativeFee > 0 ? formatMoney(v.indicativeFee) : t('destinations.onRequest', 'On request');
   const rows: [string, string][] = [
     [t('destinations.type', 'Type'), v?.type ?? '—'],
     [t('destinations.valid', 'Valid'), v?.validityShort ?? v?.validity ?? '—'],
-    [t('destinations.fees', 'Fees (AUD)'), fee],
+    [t('destinations.fees', 'Fees (INR)'), fee],
   ];
 
   return (
@@ -66,4 +64,3 @@ export function DestinationCard({ destination }: { destination: Destination }) {
 }
 
 export default DestinationCard;
-

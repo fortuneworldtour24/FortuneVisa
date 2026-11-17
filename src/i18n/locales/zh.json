@@ -39,7 +39,7 @@
     "imageAlt": "{{country}}旅行目的地",
     "type": "类型",
     "valid": "有效期",
-    "fees": "费用 (AUD)",
+    "fees": "费用 (INR)",
     "processing": "常规处理时间"
   },
   "destinations": {
@@ -56,4 +56,3 @@
     }
   }
 }
-

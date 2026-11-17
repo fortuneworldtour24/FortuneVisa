@@ -84,7 +84,7 @@ export function ContactPage() {
           <div className="overflow-hidden rounded-3xl border border-slate-200/80 bg-white p-2 shadow-card">
             <iframe
               title="Fortune Visa Services office location map"
-              src="https://www.google.com/maps?q=Level+15,+60+Station+Street,+Parramatta+NSW+2150,+Australia&output=embed"
+              src="https://www.google.com/maps?q=Kirti+Nagar,+New+Delhi+110015&output=embed"
               width="100%"
               height="320"
               loading="lazy"

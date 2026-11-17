@@ -3,11 +3,11 @@ export const siteConfig = {
   logoPrimary: 'Fortune',
   logoSecondary: 'Visa Services',
   tagline: 'Visas made simple. Journeys made certain.',
-  address: 'Level 15, 60 Station Street, Parramatta, NSW 2150, Australia',
-  phone: '+61 2 8020 4701',
-  phoneHref: 'tel:+61280204701',
-  email: 'contact@fortunevisaservices.com',
-  whatsappNumber: '61400000000',
+  address: 'Kirti Nagar, New Delhi, 110015, India',
+  phone: '+91 84509 55550',
+  phoneHref: 'tel:+918450955550',
+  email: 'contact@fortunevisaservices.in',
+  whatsappNumber: '918450955550',
 } as const;
 
 export const whatsappHref = `https://wa.me/${siteConfig.whatsappNumber}`;

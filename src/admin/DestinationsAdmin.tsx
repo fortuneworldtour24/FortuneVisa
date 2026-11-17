@@ -180,7 +180,7 @@ export function DestinationsAdmin() {
                     {edit.visa_types.map((v, i) => (
                         <div key={i} className="grid gap-3 rounded-xl border border-slate-200 p-4 sm:grid-cols-2">
                             <Field label="Type"><input className={inputCls} value={v.type} onChange={(e) => setVisa(i, { type: e.target.value })} /></Field>
-                            <Field label="Indicative fee (AUD)"><input type="number" className={inputCls} value={v.indicativeFee} onChange={(e) => setVisa(i, { indicativeFee: Number(e.target.value) })} /></Field>
+                            <Field label="Indicative fee (INR)"><input type="number" className={inputCls} value={v.indicativeFee} onChange={(e) => setVisa(i, { indicativeFee: Number(e.target.value) })} /></Field>
                             <Field label="Validity"><input className={inputCls} value={v.validity} onChange={(e) => setVisa(i, { validity: e.target.value })} /></Field>
                             <Field label="Typical processing time"><input className={inputCls} value={v.processingTime} onChange={(e) => setVisa(i, { processingTime: e.target.value })} /></Field>
                             <div className="sm:col-span-2">
