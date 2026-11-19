@@ -1,119 +1,169 @@
 import { useMemo, useState } from 'react';
-import { ArrowRight, ChevronDown } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import type { FormEvent } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import {
-  DESTINATION_COUNTRY_CODE,
-  PASSPORT_COUNTRY_CODES,
-  VISA_TYPE_IDS,
-  countryFlag,
-} from '@/config/visaOptions';
+import { ArrowRight } from 'lucide-react';
+import visasJson from '@/data/visas.json';
 
-const selectClass =
-  'h-14 w-full appearance-none rounded-2xl border border-slate-200 bg-white px-4 pr-11 text-base font-medium text-ink shadow-sm transition-colors hover:border-primary-200 focus:border-primary-500 focus:outline-none focus:ring-4 focus:ring-primary-100';
+type Dest = {
+  slug: string;
+  country: string;
+  iso_code?: string;
+  visaTypes?: { type: string }[];
+};
+
+const raw = visasJson as unknown as Dest[] | { countries: Dest[] };
+const DESTINATIONS: Dest[] = Array.isArray(raw) ? raw : raw.countries ?? [];
+
+// India first, then everyone else alphabetically
+const OTHER_PASSPORTS = [
+  'AE', 'AF', 'AL', 'AM', 'AR', 'AT', 'AU', 'AZ', 'BD', 'BE', 'BG', 'BH', 'BR', 'BT', 'CA', 'CH', 'CL', 'CN',
+  'CO', 'CZ', 'DE', 'DK', 'DZ', 'EG', 'ES', 'ET', 'FI', 'FJ', 'FR', 'GB', 'GE', 'GH', 'GR', 'HK', 'HU', 'ID',
+  'IE', 'IL', 'IQ', 'IR', 'IT', 'JO', 'JP', 'KE', 'KG', 'KH', 'KR', 'KW', 'KZ', 'LB', 'LK', 'MA', 'MM', 'MN',
+  'MU', 'MV', 'MX', 'MY', 'NG', 'NL', 'NO', 'NP', 'NZ', 'OM', 'PH', 'PK', 'PL', 'PT', 'QA', 'RO', 'RS', 'RU',
+  'SA', 'SE', 'SG', 'TH', 'TJ', 'TR', 'TW', 'TZ', 'UA', 'UG', 'US', 'UZ', 'VN', 'ZA', 'ZM', 'ZW',
+];
+
+const selectCls =
+  'h-12 w-full appearance-none rounded-xl border border-slate-300 bg-white pr-10 text-sm text-ink outline-none transition focus:border-primary-500 focus:ring-2 focus:ring-primary-100';
+
+function Flag({ code }: { code?: string }) {
+  if (!code) return null;
+  return (
+    <span className="pointer-events-none absolute left-3 top-1/2 inline-flex h-6 w-6 -translate-y-1/2 overflow-hidden rounded-full ring-1 ring-slate-200">
+      <span className={`fi fis fi-${code.toLowerCase()}`} style={{ fontSize: 24, lineHeight: 1 }} />
+    </span>
+  );
+}
 
 export function VisaSearchCard() {
-  const { t } = useTranslation();
-  const [passport, setPassport] = useState('');
+  const { t, i18n } = useTranslation();
+  const navigate = useNavigate();
+
+  const [passport, setPassport] = useState('IN');
   const [destination, setDestination] = useState('');
+  const [visaType, setVisaType] = useState('');
 
-  const passportOptions = useMemo(
-    () =>
-      PASSPORT_COUNTRY_CODES.map((code) => ({
-        code,
-        label: `${countryFlag(code)}  ${t(`countries.${code}`)}`,
-        name: t(`countries.${code}`),
-      })).sort((a, b) => a.name.localeCompare(b.name)),
-    [t],
+  const passports = useMemo(() => {
+    let names: Intl.DisplayNames | null = null;
+    try {
+      names = new Intl.DisplayNames([i18n.language || 'en'], { type: 'region' });
+    } catch {
+      names = null;
+    }
+    const nameOf = (c: string) => names?.of(c) ?? c;
+    const rest = OTHER_PASSPORTS.map((code) => ({ code, name: nameOf(code) })).sort((a, b) =>
+      a.name.localeCompare(b.name)
+    );
+    return [{ code: 'IN', name: nameOf('IN') }, ...rest];
+  }, [i18n.language]);
+
+  const destinations = useMemo(
+    () => DESTINATIONS.filter((d) => (d.iso_code ?? '').toLowerCase() !== passport.toLowerCase()),
+    [passport]
   );
+  const selected = DESTINATIONS.find((d) => d.slug === destination);
+  const visaTypes = selected?.visaTypes ?? [];
 
-  const destinationCountry = t(`countries.${DESTINATION_COUNTRY_CODE}`);
-  const ready = passport !== '' && destination !== '';
-  const query = new URLSearchParams({ passport, destination }).toString();
+  const onPassportChange = (code: string) => {
+    setPassport(code);
+    const current = DESTINATIONS.find((d) => d.slug === destination);
+    if (current && (current.iso_code ?? '').toLowerCase() === code.toLowerCase()) {
+      setDestination('');
+      setVisaType('');
+    }
+  };
+
+  const onDestinationChange = (slug: string) => {
+    setDestination(slug);
+    const dest = DESTINATIONS.find((d) => d.slug === slug);
+    setVisaType(dest?.visaTypes?.[0]?.type ?? '');
+  };
+
+  const onSubmit = (e: FormEvent) => {
+    e.preventDefault();
+    if (!destination) return;
+    const params = new URLSearchParams({ passport, destination });
+    if (visaType) params.set('visaType', visaType);
+    navigate(`/checker?${params.toString()}`);
+  };
 
   return (
-    <div className="rounded-3xl border border-slate-200/80 bg-white p-6 shadow-lift sm:p-8">
-      <div className="space-y-5">
-        <div className="space-y-2">
-          <label htmlFor="passport-country" className="text-sm font-semibold text-ink">
-            {t('home.hero.passportLabel')}
-          </label>
-          <div className="relative">
+    <form onSubmit={onSubmit} className="rounded-3xl bg-white p-5 shadow-xl ring-1 ring-slate-200 sm:p-6">
+      <div className="space-y-4">
+        <label className="block text-sm font-semibold text-ink">
+          {t('home.search.passport', 'Passport country')}
+          <div className="relative mt-1.5">
+            <Flag code={passport} />
             <select
-              id="passport-country"
+              className={`${selectCls} pl-12`}
               value={passport}
-              onChange={(event) => setPassport(event.target.value)}
-              className={selectClass}
+              onChange={(e) => onPassportChange(e.target.value)}
             >
-              <option value="" disabled>
-                {t('home.hero.passportPlaceholder')}
-              </option>
-              {passportOptions.map(({ code, label }) => (
-                <option key={code} value={code}>
-                  {label}
+              {passports.map((p) => (
+                <option key={p.code} value={p.code}>
+                  {p.name}
                 </option>
               ))}
             </select>
-            <ChevronIcon />
           </div>
-        </div>
+        </label>
 
-        <div className="space-y-2">
-          <label htmlFor="destination" className="text-sm font-semibold text-ink">
-            {t('home.hero.destinationLabel')}
-          </label>
-          <div className="relative">
+        <label className="block text-sm font-semibold text-ink">
+          {t('home.search.destination', 'Travelling to')}
+          <div className="relative mt-1.5">
+            <Flag code={selected?.iso_code} />
             <select
-              id="destination"
+              className={`${selectCls} ${selected ? 'pl-12' : 'pl-4'}`}
               value={destination}
-              onChange={(event) => setDestination(event.target.value)}
-              className={selectClass}
+              onChange={(e) => onDestinationChange(e.target.value)}
             >
-              <option value="" disabled>
-                {t('home.hero.destinationPlaceholder')}
-              </option>
-              {VISA_TYPE_IDS.map((id) => (
-                <option key={id} value={id}>
-                  {t('home.hero.destinationOption', {
-                    country: destinationCountry,
-                    visa: t(`visas.${id}.name`),
-                  })}
+              <option value="">{t('home.search.destinationPlaceholder', 'Select your destination')}</option>
+              {destinations.map((d) => (
+                <option key={d.slug} value={d.slug}>
+                  {d.country}
                 </option>
               ))}
             </select>
-            <ChevronIcon />
           </div>
-        </div>
+        </label>
 
-        {ready ? (
-          <Link
-            to={`/checker?${query}`}
-            className="group flex h-14 w-full items-center justify-center gap-2 rounded-full bg-primary-700 px-6 text-base font-semibold text-white shadow-card transition-all duration-200 hover:-translate-y-0.5 hover:bg-primary-800 hover:shadow-lift"
-          >
-            {t('home.hero.checkCta')}
-            <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" aria-hidden="true" />
-          </Link>
-        ) : (
-          <button
-            type="button"
-            disabled
-            className="flex h-14 w-full cursor-not-allowed items-center justify-center gap-2 rounded-full bg-slate-200 px-6 text-base font-semibold text-slate-500"
-          >
-            {t('home.hero.checkCta')}
-            <ArrowRight className="h-5 w-5" aria-hidden="true" />
-          </button>
-        )}
-        {!ready && <p className="text-center text-sm text-muted">{t('home.hero.checkHint')}</p>}
+        {visaTypes.length > 0 ? (
+          <label className="block text-sm font-semibold text-ink">
+            {t('home.search.visaType', 'Visa type')}
+            <div className="relative mt-1.5">
+              <select
+                className={`${selectCls} pl-4`}
+                value={visaType}
+                onChange={(e) => setVisaType(e.target.value)}
+              >
+                {visaTypes.map((v) => (
+                  <option key={v.type} value={v.type}>
+                    {t(`visaTypes.${v.type}`, v.type)}
+                  </option>
+                ))}
+              </select>
+            </div>
+          </label>
+        ) : null}
+
+        <button
+          type="submit"
+          disabled={!destination}
+          className="inline-flex h-12 w-full items-center justify-center gap-2 rounded-full bg-primary-700 text-sm font-semibold text-white shadow-card transition hover:bg-primary-800 disabled:cursor-not-allowed disabled:bg-slate-200 disabled:text-slate-500"
+        >
+          {t('home.search.cta', 'Check visa requirements')}
+          <ArrowRight className="h-4 w-4" aria-hidden="true" />
+        </button>
+
+        {!destination ? (
+          <p className="text-center text-xs text-slate-500">
+            {t('home.search.hint', 'Choose your destination to continue.')}
+          </p>
+        ) : null}
       </div>
-    </div>
+    </form>
   );
 }
 
-function ChevronIcon() {
-  return (
-    <ChevronDown
-      className="pointer-events-none absolute right-4 top-1/2 h-5 w-5 -translate-y-1/2 text-muted"
-      aria-hidden="true"
-    />
-  );
-}
+export default VisaSearchCard;
