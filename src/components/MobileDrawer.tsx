@@ -1,108 +1,105 @@
 import { useEffect } from 'react';
+import { createPortal } from 'react-dom';
 import { NavLink } from 'react-router-dom';
-import { ArrowRight, Mail, Phone, X } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
-import { siteConfig } from '@/config/siteConfig';
-import { NAV_LINKS } from '@/config/navigation';
+import { Mail, Phone, X } from 'lucide-react';
 import { Logo } from '@/components/Logo';
 import { LanguageSwitcher } from '@/components/LanguageSwitcher';
+import { PHONE_DISPLAY, PHONE_TEL } from '@/lib/contactInfo';
 
-type MobileDrawerProps = {
+type Props = {
   open: boolean;
   onClose: () => void;
 };
 
-export function MobileDrawer({ open, onClose }: MobileDrawerProps) {
+const LINKS = [
+  { to: '/destinations', key: 'nav.destinations', label: 'Destinations' },
+  { to: '/checker', key: 'nav.checker', label: 'Visa Checker' },
+  { to: '/services', key: 'nav.services', label: 'Services' },
+  { to: '/checklist', key: 'nav.checklist', label: 'Checklist' },
+  { to: '/about', key: 'nav.about', label: 'About' },
+  { to: '/blog', key: 'nav.blog', label: 'Blog' },
+  { to: '/contact', key: 'nav.contact', label: 'Contact' },
+];
+
+export function MobileDrawer({ open, onClose }: Props) {
   const { t } = useTranslation();
 
   useEffect(() => {
-    if (!open) return;
-    const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.key === 'Escape') onClose();
+    if (!open) return undefined;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') onClose();
     };
-    document.addEventListener('keydown', handleKeyDown);
+    document.addEventListener('keydown', onKey);
+    const previous = document.body.style.overflow;
     document.body.style.overflow = 'hidden';
     return () => {
-      document.removeEventListener('keydown', handleKeyDown);
-      document.body.style.overflow = '';
+      document.removeEventListener('keydown', onKey);
+      document.body.style.overflow = previous;
     };
   }, [open, onClose]);
 
-  return (
-    <div
-      className={`fixed inset-0 z-[60] lg:hidden ${open ? 'pointer-events-auto' : 'pointer-events-none'}`}
-      aria-hidden={!open}
-    >
-      <div
-        onClick={onClose}
-        className={`absolute inset-0 bg-ink/40 backdrop-blur-sm transition-opacity duration-300 ${open ? 'opacity-100' : 'opacity-0'}`}
-      />
+  if (!open || typeof document === 'undefined') return null;
 
-      <aside
-        id="mobile-navigation"
-        aria-label={t('nav.mobileNavigation')}
-        className={`absolute right-0 top-0 flex h-full w-full max-w-sm flex-col bg-white shadow-lift transition-[transform,visibility] duration-300 ease-out ${open ? 'visible translate-x-0' : 'invisible translate-x-full'}`}
-      >
-        <div className="flex h-20 items-center justify-between border-b border-slate-100 px-5">
-          <Logo />
-          <button
-            type="button"
-            onClick={onClose}
-            aria-label={t('nav.closeMenu')}
-            className="flex h-10 w-10 items-center justify-center rounded-full text-ink transition-colors hover:bg-slate-100"
-          >
-            <X className="h-5 w-5" aria-hidden="true" />
-          </button>
+  return createPortal(
+    <div className="fixed inset-0 z-[60] flex flex-col overflow-y-auto bg-white lg:hidden" role="dialog" aria-modal="true" aria-label="Menu">
+      <div className="flex items-center justify-between border-b border-slate-200 px-4 py-3">
+        <Logo />
+        <button
+          type="button"
+          onClick={onClose}
+          aria-label="Close menu"
+          className="flex h-11 w-11 items-center justify-center rounded-full border border-slate-200 text-slate-800"
+        >
+          <X className="h-5 w-5" />
+        </button>
+      </div>
+
+      <nav className="flex-1 px-4 py-4">
+        <ul className="space-y-1">
+          {LINKS.map((l) => (
+            <li key={l.to}>
+              <NavLink
+                to={l.to}
+                onClick={onClose}
+                className={({ isActive }) =>
+                  `flex min-h-[48px] items-center rounded-xl px-4 text-base font-semibold transition ${isActive ? 'bg-indigo-50 text-primary-700' : 'text-slate-800 hover:bg-slate-50'
+                  }`
+                }
+              >
+                {t(l.key, l.label)}
+              </NavLink>
+            </li>
+          ))}
+        </ul>
+
+        <div className="mt-6 flex items-center justify-between rounded-xl border border-slate-200 px-4 py-3">
+          <span className="text-sm font-semibold text-slate-600">{t('nav.language', 'Language')}</span>
+          <LanguageSwitcher />
         </div>
 
-        <nav className="flex-1 overflow-y-auto px-3 py-6">
-          <ul className="flex flex-col gap-1">
-            {NAV_LINKS.map(({ to, labelKey, icon: Icon }) => (
-              <li key={to}>
-                <NavLink
-                  to={to}
-                  onClick={onClose}
-                  className={({ isActive }) =>
-                    `flex items-center justify-between rounded-2xl px-4 py-3.5 text-base font-semibold transition-colors ${
-                      isActive ? 'bg-primary-50 text-primary-700' : 'text-ink hover:bg-slate-50'
-                    }`
-                  }
-                >
-                  <span className="flex items-center gap-3">
-                    <Icon className="h-5 w-5 text-primary-700" aria-hidden="true" />
-                    {t(labelKey)}
-                  </span>
-                  <ArrowRight className="h-4 w-4 text-muted" aria-hidden="true" />
-                </NavLink>
-              </li>
-            ))}
-          </ul>
-        </nav>
+        <NavLink
+          to="/contact"
+          onClick={onClose}
+          className="mt-5 flex h-12 w-full items-center justify-center rounded-full bg-primary-700 text-sm font-semibold text-white shadow-card transition hover:bg-primary-800"
+        >
+          {t('nav.freeEnquiry', 'Free Enquiry')}
+        </NavLink>
+      </nav>
 
-        <div className="space-y-4 border-t border-slate-100 p-5">
-          <div className="flex items-center justify-between">
-            <span className="text-sm font-semibold text-muted">{t('nav.language')}</span>
-            <LanguageSwitcher />
-          </div>
-          <NavLink
-            to="/contact"
-            onClick={onClose}
-            className="flex w-full items-center justify-center rounded-full bg-primary-700 px-5 py-3.5 text-sm font-semibold text-white shadow-card transition-colors hover:bg-primary-800"
-          >
-            {t('nav.freeEnquiry')}
-          </NavLink>
-          <div className="flex flex-col gap-2 text-sm text-muted">
-            <a href={siteConfig.phoneHref} className="flex items-center gap-2 hover:text-primary-700">
-              <Phone className="h-4 w-4" aria-hidden="true" />
-              {siteConfig.phone}
-            </a>
-            <a href={`mailto:${siteConfig.email}`} className="flex items-center gap-2 hover:text-primary-700">
-              <Mail className="h-4 w-4" aria-hidden="true" />
-              {siteConfig.email}
-            </a>
-          </div>
-        </div>
-      </aside>
-    </div>
+      <div className="space-y-3 border-t border-slate-200 px-4 py-5 text-sm text-slate-600">
+        <a href={`tel:${PHONE_TEL}`} className="flex items-center gap-3">
+          <Phone className="h-4 w-4" aria-hidden="true" />
+          {PHONE_DISPLAY}
+        </a>
+        <a href="mailto:contact@fortunevisaservices.in" className="flex items-center gap-3">
+          <Mail className="h-4 w-4" aria-hidden="true" />
+          contact@fortunevisaservices.in
+        </a>
+      </div>
+    </div>,
+    document.body
   );
 }
+
+export default MobileDrawer;

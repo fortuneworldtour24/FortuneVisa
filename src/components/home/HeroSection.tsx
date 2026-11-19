@@ -13,9 +13,9 @@ export function HeroSection() {
       <HeroBackdrop />
 
       <div className="mx-auto max-w-7xl px-4 pb-16 pt-10 sm:px-6 sm:pt-16 lg:px-8 lg:pb-24 lg:pt-20">
-        <div className="grid items-center gap-12 lg:grid-cols-12">
+        <div className="grid grid-cols-1 lg:grid-cols-12 items-center gap-12">
           {/* Left content column */}
-          <div className="space-y-8 lg:col-span-6">
+          <div className="space-y-8 lg:col-span-6 min-w-0">
             <span className="inline-flex items-center rounded-full bg-indigo-100 px-3 py-1.5 text-xs font-semibold text-indigo-700">
               {t('home.hero.pill', 'Visa help for Indian travellers')}
             </span>
@@ -51,7 +51,7 @@ export function HeroSection() {
           </div>
 
           {/* Right column: floating destination images (desktop), scroll row (mobile) */}
-          <div className="lg:col-span-6">
+          <div className="lg:col-span-6 min-w-0">
             <HeroImages />
           </div>
         </div>

@@ -71,12 +71,14 @@
   opacity: 1 !important;
   transform: none !important;
 }
+
 /* Animated keyframes */
 @keyframes fadeUp {
   from {
     opacity: 0;
     transform: translateY(24px);
   }
+
   to {
     opacity: 1;
     transform: none;
@@ -84,20 +86,24 @@
 }
 
 @keyframes floaty {
+
   0%,
   100% {
     transform: translateY(0) rotate(var(--r, 0deg));
   }
+
   50% {
     transform: translateY(-12px) rotate(var(--r, 0deg));
   }
 }
 
 @keyframes blob {
+
   0%,
   100% {
     transform: translate(0, 0) scale(1);
   }
+
   50% {
     transform: translate(30px, -20px) scale(1.15);
   }
@@ -137,6 +143,7 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
+
   .anim-in,
   .anim-float,
   .anim-blob,
@@ -144,4 +151,60 @@
   .anim-scroll {
     animation: none !important;
   }
+}
+
+body {
+  overflow-x: clip;
+}
+
+/* Map pins */
+.fm-icon {
+  background: transparent;
+  border: 0;
+}
+
+.fm-pin {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 10px 3px 3px;
+  background: #fff;
+  border-radius: 9999px;
+  white-space: nowrap;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.25);
+  font: 600 12px/1 'Plus Jakarta Sans', system-ui, sans-serif;
+  color: #0f172a;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.fm-pin:hover,
+.fm-pin.is-active {
+  transform: translate(-50%, -50%) scale(1.08);
+  box-shadow: 0 4px 14px rgba(67, 56, 202, 0.45);
+}
+
+.fm-pin.is-active {
+  outline: 2px solid #4338ca;
+}
+
+.fm-flag {
+  display: inline-flex;
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
+  border-radius: 9999px;
+}
+
+.fm-flag .fi {
+  font-size: 24px;
+  line-height: 1;
+}
+
+.leaflet-container {
+  font-family: inherit;
 }

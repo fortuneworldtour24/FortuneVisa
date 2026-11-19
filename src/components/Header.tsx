@@ -18,11 +18,11 @@ export function Header() {
   }, [pathname, closeMenu]);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-slate-200/70 bg-background/85 backdrop-blur-md print:hidden">
+    <header className="sticky top-0 z-50 border-b bg-white">
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
         <Logo />
 
-        <nav aria-label={t('nav.mainNavigation')} className="hidden lg:block">
+        <nav aria-label={t('nav.mainNavigation')} className="hidden lg:flex">
           <ul className="flex items-center gap-1">
             {NAV_LINKS.map(({ to, labelKey }) => (
               <li key={to}>
@@ -57,7 +57,7 @@ export function Header() {
             aria-label={t('nav.openMenu')}
             aria-expanded={menuOpen}
             aria-controls="mobile-navigation"
-            className="flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 bg-white text-ink transition-colors hover:bg-slate-50 lg:hidden"
+            className="flex h-14 w-14 items-center justify-center rounded-full border border-slate-200 bg-white text-ink transition-colors hover:bg-slate-50 lg:hidden"
           >
             <Menu className="h-5 w-5" aria-hidden="true" />
           </button>

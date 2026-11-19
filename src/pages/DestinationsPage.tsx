@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react';
+import { lazy, Suspense, useMemo, useState } from 'react';
 import { Globe2, Grid3x3, Map, Search, X } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { PageHero } from '@/components/PageHero';
@@ -8,6 +8,8 @@ import { ConsultationCta } from '@/components/ConsultationCta';
 import { useSeo } from '@/hooks/useSeo';
 import { DESTINATIONS, VISA_TYPES } from '@/lib/visaData';
 import type { VisaType } from '@/lib/visaData';
+
+const DestinationsMap = lazy(() => import('@/components/destinations/DestinationsMap'));
 
 const PROCESSING_OPTIONS = [
   { value: 'all', labelKey: 'destinations.filters.anyProcessing' },
@@ -29,14 +31,18 @@ function matchesProcessing(time: string, speed: ProcessingSpeed): boolean {
   const maxMonths = monthMatch ? Number(monthMatch[2] ?? monthMatch[1]) : null;
   if (speed === 'fast') return hasDays || (maxWeeks !== null && maxWeeks <= 4 && !monthMatch);
   if (speed === 'medium') return (maxMonths !== null && maxMonths <= 3) || (maxWeeks !== null && maxWeeks <= 12);
-  /* slow */ return (maxMonths !== null && maxMonths > 3) || (maxWeeks !== null && maxWeeks > 12);
+  return (maxMonths !== null && maxMonths > 3) || (maxWeeks !== null && maxWeeks > 12);
 }
+
+const selectCls =
+  'h-11 rounded-xl border border-slate-200 bg-white px-3 text-sm font-medium text-ink transition-colors hover:border-primary-200 focus:border-primary-500 focus:outline-none focus:ring-4 focus:ring-primary-100';
 
 export function DestinationsPage() {
   const { t } = useTranslation();
   useSeo({
     title: 'Explore Visa Destinations',
-    description: 'Browse indicative visa information for popular destinations including Australia, the USA, UK, Canada and more.',
+    description:
+      'Browse indicative visa information for popular destinations for Indian travellers, including the UAE, Singapore, the UK, the USA and more.',
   });
 
   const [query, setQuery] = useState('');
@@ -71,13 +77,16 @@ export function DestinationsPage() {
         description={t('destinations.description')}
       />
 
-      {/* Sticky filter bar */}
-      <div className="sticky top-20 z-30 border-b border-slate-200/70 bg-white/90 backdrop-blur-md">
+      <div className="sticky top-20 z-30 border-b border-slate-200/70 bg-white">
         <div className="mx-auto flex max-w-7xl flex-wrap items-center gap-3 px-4 py-3 sm:px-6 lg:px-8">
-          {/* Search */}
           <div className="relative w-full sm:w-56">
-            <label htmlFor="dest-search" className="sr-only">{t('destinations.searchLabel')}</label>
-            <Search className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted" aria-hidden="true" />
+            <label htmlFor="dest-search" className="sr-only">
+              {t('destinations.searchLabel')}
+            </label>
+            <Search
+              className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted"
+              aria-hidden="true"
+            />
             <input
               id="dest-search"
               type="search"
@@ -88,41 +97,46 @@ export function DestinationsPage() {
             />
           </div>
 
-          {/* Visa type dropdown */}
           <select
             value={visaFilter}
             onChange={(e) => setVisaFilter(e.target.value as VisaType | 'all')}
             aria-label={t('destinations.filterLabel')}
-            className="h-11 rounded-xl border border-slate-200 bg-white px-3 text-sm font-medium text-ink transition-colors hover:border-primary-200 focus:border-primary-500 focus:outline-none focus:ring-4 focus:ring-primary-100"
+            className={selectCls}
           >
             <option value="all">{t('destinations.filterAll')}</option>
             {VISA_TYPES.map((vt) => (
-              <option key={vt} value={vt}>{t(`visaTypes.${vt}`)}</option>
+              <option key={vt} value={vt}>
+                {t(`visaTypes.${vt}`)}
+              </option>
             ))}
           </select>
 
-          {/* Processing time dropdown */}
           <select
             value={processingFilter}
             onChange={(e) => setProcessingFilter(e.target.value as ProcessingSpeed)}
             aria-label={t('destinations.filters.processingLabel')}
-            className="h-11 rounded-xl border border-slate-200 bg-white px-3 text-sm font-medium text-ink transition-colors hover:border-primary-200 focus:border-primary-500 focus:outline-none focus:ring-4 focus:ring-primary-100"
+            className={selectCls}
           >
             {PROCESSING_OPTIONS.map((opt) => (
-              <option key={opt.value} value={opt.value}>{t(opt.labelKey)}</option>
+              <option key={opt.value} value={opt.value}>
+                {t(opt.labelKey)}
+              </option>
             ))}
           </select>
 
-          {/* Spacer */}
           <div className="flex-1" />
 
-          {/* Grid / Map toggle — wraps on narrow screens */}
-          <div className="flex flex-wrap items-center gap-2 rounded-xl border border-slate-200 bg-white p-0.5 sm:gap-0" role="group" aria-label={t('destinations.viewToggle')}>
+          <div
+            className="flex items-center rounded-xl border border-slate-200 bg-white p-0.5"
+            role="group"
+            aria-label={t('destinations.viewToggle')}
+          >
             <button
               type="button"
               onClick={() => setView('grid')}
               aria-pressed={view === 'grid'}
-              className={`inline-flex h-10 w-10 items-center justify-center rounded-lg text-sm transition-colors ${view === 'grid' ? 'bg-primary-700 text-white shadow-sm' : 'text-muted hover:text-ink'}`}
+              className={`inline-flex h-10 w-10 items-center justify-center rounded-lg text-sm transition-colors ${view === 'grid' ? 'bg-primary-700 text-white shadow-sm' : 'text-muted hover:text-ink'
+                }`}
             >
               <Grid3x3 className="h-4 w-4" aria-hidden="true" />
               <span className="sr-only">{t('destinations.gridView')}</span>
@@ -131,7 +145,8 @@ export function DestinationsPage() {
               type="button"
               onClick={() => setView('map')}
               aria-pressed={view === 'map'}
-              className={`inline-flex h-10 w-10 items-center justify-center rounded-lg text-sm transition-colors ${view === 'map' ? 'bg-primary-700 text-white shadow-sm' : 'text-muted hover:text-ink'}`}
+              className={`inline-flex h-10 w-10 items-center justify-center rounded-lg text-sm transition-colors ${view === 'map' ? 'bg-primary-700 text-white shadow-sm' : 'text-muted hover:text-ink'
+                }`}
             >
               <Map className="h-4 w-4" aria-hidden="true" />
               <span className="sr-only">{t('destinations.mapView')}</span>
@@ -146,14 +161,19 @@ export function DestinationsPage() {
         </p>
 
         {view === 'map' ? (
-          <div className="mt-6 flex h-96 items-center justify-center rounded-3xl border-2 border-dashed border-slate-300 bg-slate-50 text-center">
-            <div>
-              <Map className="mx-auto h-10 w-10 text-slate-400" aria-hidden="true" />
-              <p className="mt-3 text-sm font-semibold text-muted">{t('destinations.mapPlaceholder')}</p>
-            </div>
+          <div className="mt-6">
+            <Suspense
+              fallback={
+                <div className="flex h-[40vh] items-center justify-center rounded-3xl bg-slate-50 text-slate-500">
+                  Loading map…
+                </div>
+              }
+            >
+              <DestinationsMap destinations={filtered} />
+            </Suspense>
           </div>
         ) : filtered.length > 0 ? (
-          <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {filtered.map((destination) => (
               <DestinationCard key={destination.slug} destination={destination} />
             ))}
@@ -183,3 +203,5 @@ export function DestinationsPage() {
     </>
   );
 }
+
+export default DestinationsPage;
