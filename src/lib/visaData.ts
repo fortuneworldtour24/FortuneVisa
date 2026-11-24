@@ -1,4 +1,5 @@
 import visasJson from '@/data/visas.json';
+import { supabase } from '@/lib/supabase';
 
 export const VISA_TYPES = ['tourist', 'student', 'work', 'family'] as const;
 
@@ -27,9 +28,44 @@ export type Destination = {
   highlights: string[];
   relatedDestinations: string[];
   visaTypes: VisaTypeInfo[];
+  iso_code?: string;
+  lat?: number;
+  lng?: number;
 };
 
 export const DESTINATIONS = visasJson.countries as Destination[];
+
+export async function loadRemoteDestinations(): Promise<void> {
+  try {
+    if (!supabase) return;
+    const fetchPromise = (async () => {
+      const { data, error } = await supabase
+        .from('destinations')
+        .select('*')
+        .eq('published', true)
+        .order('sort_order');
+      if (error || !data || (Array.isArray(data) && data.length === 0)) return;
+      const mapped: Destination[] = (data as any[]).map((row) => ({
+        slug: row.slug,
+        country: row.country,
+        iso_code: row.iso_code,
+        imageUrl: row.image_url,
+        lat: row.lat,
+        lng: row.lng,
+        visaTypes: row.visa_types,
+        faqs: row.faqs,
+        relatedDestinations: row.related,
+        highlights: row.highlights,
+        flag: row.flag,
+      }));
+      DESTINATIONS.splice(0, DESTINATIONS.length, ...mapped);
+    })();
+    const timeout = new Promise<void>((resolve) => setTimeout(resolve, 4000));
+    await Promise.race([fetchPromise, timeout]);
+  } catch {
+    // swallow errors
+  }
+}
 
 export function findDestination(slug: string): Destination | undefined {
   return DESTINATIONS.find((destination) => destination.slug === slug);
