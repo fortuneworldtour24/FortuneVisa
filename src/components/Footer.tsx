@@ -80,6 +80,12 @@ export function Footer() {
                     </Link>
                   </li>
                 ))}
+                <li>
+                  <Link to="/refund-policy" className="transition-colors hover:text-accent-500">Refund Policy</Link>
+                </li>
+                <li>
+                  <Link to="/pricing" className="transition-colors hover:text-accent-500">Pricing</Link>
+                </li>
               </ul>
             </div>
             <div className="rounded-2xl border border-white/10 bg-white/5 p-4">

@@ -1,16 +1,18 @@
 import { useCallback, useEffect, useState } from 'react';
-import { ArrowRight, Check, ChevronDown, ChevronUp, Globe2, Phone, ShieldCheck, X } from 'lucide-react';
+import { ArrowRight, ChevronDown, ChevronUp, Globe2, Phone, ShieldCheck, X } from 'lucide-react';
 import { Link, useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { EmptyState } from '@/components/EmptyState';
 import { RequirementBadge } from '@/components/visa/RequirementBadge';
 import { DestinationCard } from '@/components/destinations/DestinationCard';
+import { ExtraVisaInfo } from '@/components/destinations/ExtraVisaInfo';
 import { EnquirySidebar } from '@/components/destinations/EnquirySidebar';
 import { useSeo } from '@/hooks/useSeo';
 import { findDestination } from '@/lib/visaData';
 import type { Destination } from '@/lib/visaData';
 import { formatMoney } from '@/lib/money';
 import { PHONE_TEL } from '@/lib/contactInfo';
+
 
 type TabId = 'visa-types' | 'overview' | 'process' | 'benefits' | 'faqs';
 
@@ -52,7 +54,7 @@ export function DestinationDetailPage() {
     { id: 'visa-types' as TabId, label: t('destinationDetail.tabs.visaTypes', 'Visa types'), show: visas.length > 0 },
     { id: 'overview' as TabId, label: t('destinationDetail.tabs.overview', 'Overview'), show: Boolean(selectedVisa) },
     { id: 'process' as TabId, label: t('destinationDetail.tabs.process', 'Process'), show: steps.length > 0 },
-    { id: 'benefits' as TabId, label: t('destinationDetail.tabs.benefits', 'Benefits'), show: highlights.length > 0 },
+    { id: 'benefits' as TabId, label: t('destinationDetail.tabs.benefits', 'Benefits'), show: true },
     { id: 'faqs' as TabId, label: t('destinationDetail.tabs.faqs', 'FAQs'), show: faqs.length > 0 },
   ]
     .filter((x) => x.show)
@@ -194,8 +196,8 @@ export function DestinationDetailPage() {
                   scrollToSection(tab.id);
                 }}
                 className={`inline-flex items-center px-4 py-3 text-sm font-medium transition-colors ${activeTab === tab.id
-                    ? 'border-b-2 border-primary-700 text-primary-700'
-                    : 'border-b-2 border-transparent text-slate-600 hover:text-slate-900'
+                  ? 'border-b-2 border-primary-700 text-primary-700'
+                  : 'border-b-2 border-transparent text-slate-600 hover:text-slate-900'
                   }`}
               >
                 {tab.label}
@@ -277,6 +279,7 @@ export function DestinationDetailPage() {
                   ))}
                 </div>
                 {selectedVisa.notes ? <p className="mt-4 text-sm leading-relaxed text-slate-600">{selectedVisa.notes}</p> : null}
+                <ExtraVisaInfo visa={selectedVisa} />
               </section>
             ) : null}
 
@@ -297,19 +300,28 @@ export function DestinationDetailPage() {
               </section>
             ) : null}
 
-            {highlights.length > 0 ? (
-              <section id="benefits" className="scroll-mt-40">
-                <h2 className="mb-5 text-2xl font-extrabold tracking-tight text-ink">{t('destinationDetail.benefits', 'Why apply with us')}</h2>
-                <div className="grid gap-3 sm:grid-cols-2">
-                  {highlights.map((h) => (
-                    <div key={h} className="flex items-center gap-3 rounded-2xl border border-slate-200/80 bg-white p-4 shadow-card">
-                      <ShieldCheck className="h-5 w-5 shrink-0 text-primary-700" aria-hidden="true" />
-                      <p className="text-sm text-slate-700">{h}</p>
-                    </div>
-                  ))}
-                </div>
-              </section>
-            ) : null}
+            <section id="benefits" className="scroll-mt-40">
+              <h2 className="mb-5 text-2xl font-extrabold tracking-tight text-ink">{t('destinationDetail.benefits', 'Why apply with us')}</h2>
+              <div className="grid gap-3 sm:grid-cols-2">
+                {[
+                  t('destinationDetail.benefit1', 'Free consultation and eligibility check'),
+                  t('destinationDetail.benefit2', 'We review your documents before submission'),
+                  t('destinationDetail.benefit3', 'Written quote with government fee and service fee shown separately'),
+                  t('destinationDetail.benefit4', 'Pay us directly after your consultation, never on this website'),
+                ].map((text) => (
+                  <div key={text} className="flex items-center gap-3 rounded-2xl border border-slate-200/80 bg-white p-4 shadow-card">
+                    <ShieldCheck className="h-5 w-5 shrink-0 text-primary-700" aria-hidden="true" />
+                    <p className="text-sm text-slate-700">{text}</p>
+                  </div>
+                ))}
+              </div>
+              <p className="mt-4 text-xs leading-relaxed text-slate-500">
+                {t('destinationDetail.noGuarantee', 'The immigration authority makes every visa decision. We cannot guarantee approval.')}{' '}
+                <Link to="/pricing" className="font-semibold text-primary-700 hover:underline">{t('destinationDetail.pricingLink', 'How pricing works')}</Link>
+                {' · '}
+                <Link to="/refund-policy" className="font-semibold text-primary-700 hover:underline">{t('destinationDetail.refundLink', 'Refund policy')}</Link>
+              </p>
+            </section>
 
             {faqs.length > 0 ? (
               <section id="faqs" className="scroll-mt-40">

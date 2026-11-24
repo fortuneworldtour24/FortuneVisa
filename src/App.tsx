@@ -13,6 +13,8 @@ import { BlogListPage } from '@/pages/BlogListPage';
 import { BlogPostPage } from '@/pages/BlogPostPage';
 import { PrivacyPage } from '@/pages/PrivacyPage';
 import { TermsPage } from '@/pages/TermsPage';
+import { RefundPolicyPage } from '@/pages/RefundPolicyPage';
+import { PricingPage } from '@/pages/PricingPage';
 
 // Admin screens load only when someone opens /admin
 const AdminLogin = lazy(() => import('@/admin/AdminLogin'));
@@ -48,6 +50,8 @@ function App() {
           <Route path="contact" element={<ContactPage />} />
           <Route path="privacy" element={<PrivacyPage />} />
           <Route path="terms" element={<TermsPage />} />
+          <Route path="refund-policy" element={<RefundPolicyPage />} />
+          <Route path="pricing" element={<PricingPage />} />
         </Route>
 
         {/* Admin: no public header, footer, WhatsApp button or cookie banner */}

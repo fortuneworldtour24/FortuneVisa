@@ -1,1768 +1,2762 @@
 {
-  "_notice": "SAMPLE DATA - verify before launch. Every fee, processing time, validity period and requirement below is a placeholder and must be checked against official government sources.",
+  "_notice": "Guidance data. Fees are not listed because prices are quoted after a free consultation. Entry rules change; every entry has an empty lastVerified until checked against the official source.",
   "countries": [
     {
-      "_comment": "sample data, verify before launch",
-      "slug": "australia",
-      "country": "Australia",
-      "flag": "🇦🇺",
-      "imageUrl": "https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?w=800&q=70",
-      "visaTypes": [
-        {
-          "type": "tourist",
-          "required": true,
-          "indicativeFee": 190,
-          "processingTime": "1 to 4 weeks",
-          "validity": "Up to 12 months, multiple entry",
-          "notes": "Some nationalities use an electronic travel authority instead of a visa.",
-          "maximumStay": "Up to 90 days",
-          "typicalProcessing": "1 to 4 weeks",
-          "purpose": "Tourism, visiting family and friends, short business trips",
-          "stayFor": "Short-term visits, tourism, and leisure",
-          "steps": [
-            {
-              "title": "Submit application",
-              "duration": "1 week"
-            },
-            {
-              "title": "Biometrics and interview",
-              "duration": "2 days"
-            },
-            {
-              "title": "Decision",
-              "duration": "2 to 4 weeks"
-            }
-          ],
-          "faqs": [
-            {
-              "question": "Do I need a visa?",
-              "answer": "Most travelers require a visa, but some nationalities may be visa-exempt."
-            },
-            {
-              "question": "How long does it take?",
-              "answer": "Processing typically takes 1 to 4 weeks."
-            },
-            {
-              "question": "Can I extend my stay?",
-              "answer": "Extensions may be possible. Apply before your current visa expires."
-            },
-            {
-              "question": "What documents are required?",
-              "answer": "Passport, photos, proof of funds, and supporting documents specific to your visa type."
-            },
-            {
-              "question": "Can I apply online?",
-              "answer": "Most applications can be submitted online through the official government portal."
-            }
-          ]
-        },
-        {
-          "type": "student",
-          "required": true,
-          "indicativeFee": 1600,
-          "processingTime": "4 to 8 weeks",
-          "validity": "Length of course plus 2 months",
-          "notes": "Requires an offer from a registered course and evidence of genuine study intent.",
-          "maximumStay": "Length of course plus 2 months",
-          "typicalProcessing": "4 to 8 weeks",
-          "purpose": "Study at a recognized educational institution",
-          "stayFor": "Length of course",
-          "steps": [
-            {
-              "title": "Get acceptance letter",
-              "duration": "2 to 4 weeks"
-            },
-            {
-              "title": "Submit visa application",
-              "duration": "1 week"
-            },
-            {
-              "title": "Decision",
-              "duration": "4 to 8 weeks"
-            }
-          ],
-          "faqs": [
-            {
-              "question": "Do I need a visa?",
-              "answer": "Most international students require a student visa."
-            },
-            {
-              "question": "Can I work while studying?",
-              "answer": "Work rights vary by country and visa type."
-            },
-            {
-              "question": "Can I bring family?",
-              "answer": "Some student visas allow dependent family members."
-            },
-            {
-              "question": "What documents are required?",
-              "answer": "Passport, photos, proof of funds, and supporting documents specific to your visa type."
-            },
-            {
-              "question": "Can I apply online?",
-              "answer": "Most applications can be submitted online through the official government portal."
-            }
-          ]
-        },
-        {
-          "type": "work",
-          "required": true,
-          "indicativeFee": 4500,
-          "processingTime": "3 to 12 months",
-          "validity": "Up to 4 years",
-          "notes": "Skilled pathways are points-based or employer sponsored. Eligibility changes often.",
-          "maximumStay": "Up to 3 years, renewable",
-          "typicalProcessing": "1 to 3 months",
-          "purpose": "Employment with a local employer",
-          "stayFor": "Length of employment contract",
-          "steps": [
-            {
-              "title": "Get job offer",
-              "duration": "Varies"
-            },
-            {
-              "title": "Submit visa application",
-              "duration": "1 week"
-            },
-            {
-              "title": "Decision",
-              "duration": "1 to 3 months"
-            }
-          ],
-          "faqs": [
-            {
-              "question": "Do I need a visa?",
-              "answer": "Most employment requires a work visa or permit."
-            },
-            {
-              "question": "Can I bring family?",
-              "answer": "Some work visas allow dependent family members."
-            },
-            {
-              "question": "Can I change employers?",
-              "answer": "Changing employers may require a new visa application."
-            },
-            {
-              "question": "What documents are required?",
-              "answer": "Passport, photos, proof of funds, and supporting documents specific to your visa type."
-            },
-            {
-              "question": "Can I apply online?",
-              "answer": "Most applications can be submitted online through the official government portal."
-            }
-          ]
-        },
-        {
-          "type": "family",
-          "required": true,
-          "indicativeFee": 9000,
-          "processingTime": "12 to 24 months",
-          "validity": "Provisional, then permanent",
-          "notes": "Requires evidence of a genuine relationship and a sponsor who meets the criteria.",
-          "maximumStay": "Provisional, then permanent",
-          "typicalProcessing": "12 to 24 months",
-          "purpose": "Join family members who are citizens or residents",
-          "stayFor": "Permanent residence pathway",
-          "steps": [
-            {
-              "title": "Submit sponsorship application",
-              "duration": "4 to 8 weeks"
-            },
-            {
-              "title": "Submit visa application",
-              "duration": "1 week"
-            },
-            {
-              "title": "Decision",
-              "duration": "12 to 24 months"
-            }
-          ],
-          "faqs": [
-            {
-              "question": "Who can sponsor me?",
-              "answer": "Spouses, partners, parents, or children who are citizens or permanent residents."
-            },
-            {
-              "question": "Can I work?",
-              "answer": "Work rights depend on the specific family visa type."
-            },
-            {
-              "question": "Can I study?",
-              "answer": "Study is generally permitted on family visas."
-            },
-            {
-              "question": "What documents are required?",
-              "answer": "Passport, photos, proof of funds, and supporting documents specific to your visa type."
-            },
-            {
-              "question": "Can I apply online?",
-              "answer": "Most applications can be submitted online through the official government portal."
-            }
-          ]
-        }
-      ],
-      "highlights": [
-        "World-class reefs and marine life",
-        "Iconic beaches and outdoor life",
-        "Abundant wildlife and nature"
-      ],
-      "relatedDestinations": [
-        "new-zealand",
-        "singapore"
-      ]
-    },
-    {
-      "_comment": "sample data, verify before launch",
-      "slug": "united-states",
-      "country": "United States",
-      "flag": "🇺🇸",
-      "imageUrl": "https://images.unsplash.com/photo-1576606970009-7ddc4229ced7?q=80&w=800&auto=format&fit=crop",
-      "visaTypes": [
-        {
-          "type": "tourist",
-          "required": true,
-          "indicativeFee": 285,
-          "processingTime": "2 to 12 weeks, subject to interview wait times",
-          "validity": "Up to 10 years, multiple entry",
-          "notes": "An in-person interview is usually required. Some travellers may use the visa waiver program.",
-          "maximumStay": "Up to 90 days",
-          "typicalProcessing": "1 to 4 weeks",
-          "purpose": "Tourism, visiting family and friends, short business trips",
-          "stayFor": "Short-term visits, tourism, and leisure",
-          "steps": [
-            {
-              "title": "Submit application",
-              "duration": "1 week"
-            },
-            {
-              "title": "Biometrics and interview",
-              "duration": "2 days"
-            },
-            {
-              "title": "Decision",
-              "duration": "2 to 4 weeks"
-            }
-          ],
-          "faqs": [
-            {
-              "question": "Do I need a visa?",
-              "answer": "Most travelers require a visa, but some nationalities may be visa-exempt."
-            },
-            {
-              "question": "How long does it take?",
-              "answer": "Processing typically takes 1 to 4 weeks."
-            },
-            {
-              "question": "Can I extend my stay?",
-              "answer": "Extensions may be possible. Apply before your current visa expires."
-            },
-            {
-              "question": "What documents are required?",
-              "answer": "Passport, photos, proof of funds, and supporting documents specific to your visa type."
-            },
-            {
-              "question": "Can I apply online?",
-              "answer": "Most applications can be submitted online through the official government portal."
-            }
-          ]
-        },
-        {
-          "type": "student",
-          "required": true,
-          "indicativeFee": 650,
-          "processingTime": "4 to 16 weeks",
-          "validity": "Duration of study",
-          "notes": "Requires a university acceptance and proof of funds for the full course.",
-          "maximumStay": "Length of course plus 2 months",
-          "typicalProcessing": "4 to 8 weeks",
-          "purpose": "Study at a recognized educational institution",
-          "stayFor": "Length of course",
-          "steps": [
-            {
-              "title": "Get acceptance letter",
-              "duration": "2 to 4 weeks"
-            },
-            {
-              "title": "Submit visa application",
-              "duration": "1 week"
-            },
-            {
-              "title": "Decision",
-              "duration": "4 to 8 weeks"
-            }
-          ],
-          "faqs": [
-            {
-              "question": "Do I need a visa?",
-              "answer": "Most international students require a student visa."
-            },
-            {
-              "question": "Can I work while studying?",
-              "answer": "Work rights vary by country and visa type."
-            },
-            {
-              "question": "Can I bring family?",
-              "answer": "Some student visas allow dependent family members."
-            },
-            {
-              "question": "What documents are required?",
-              "answer": "Passport, photos, proof of funds, and supporting documents specific to your visa type."
-            },
-            {
-              "question": "Can I apply online?",
-              "answer": "Most applications can be submitted online through the official government portal."
-            }
-          ]
-        },
-        {
-          "type": "work",
-          "required": true,
-          "indicativeFee": 2100,
-          "processingTime": "Varies by category, often several months",
-          "validity": "Typically 3 years, renewable",
-          "notes": "Most work visas need an employer petition. Annual caps apply to some categories.",
-          "maximumStay": "Up to 3 years, renewable",
-          "typicalProcessing": "1 to 3 months",
-          "purpose": "Employment with a local employer",
-          "stayFor": "Length of employment contract",
-          "steps": [
-            {
-              "title": "Get job offer",
-              "duration": "Varies"
-            },
-            {
-              "title": "Submit visa application",
-              "duration": "1 week"
-            },
-            {
-              "title": "Decision",
-              "duration": "1 to 3 months"
-            }
-          ],
-          "faqs": [
-            {
-              "question": "Do I need a visa?",
-              "answer": "Most employment requires a work visa or permit."
-            },
-            {
-              "question": "Can I bring family?",
-              "answer": "Some work visas allow dependent family members."
-            },
-            {
-              "question": "Can I change employers?",
-              "answer": "Changing employers may require a new visa application."
-            },
-            {
-              "question": "What documents are required?",
-              "answer": "Passport, photos, proof of funds, and supporting documents specific to your visa type."
-            },
-            {
-              "question": "Can I apply online?",
-              "answer": "Most applications can be submitted online through the official government portal."
-            }
-          ]
-        }
-      ],
-      "highlights": [
-        "Diverse landscapes from coasts to deserts",
-        "Major global cities and culture",
-        "Rich history and iconic landmarks"
-      ],
-      "relatedDestinations": [
-        "united-kingdom",
-        "canada"
-      ]
-    },
-    {
-      "_comment": "sample data, verify before launch",
-      "slug": "united-kingdom",
-      "country": "United Kingdom",
-      "flag": "🇬🇧",
-      "imageUrl": "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=800&q=70",
-      "visaTypes": [
-        {
-          "type": "tourist",
-          "required": true,
-          "indicativeFee": 330,
-          "processingTime": "3 to 6 weeks",
-          "validity": "Up to 6 months per visit",
-          "notes": "Visitors may not work or study. Some nationalities need an electronic travel authorisation.",
-          "maximumStay": "Up to 90 days",
-          "typicalProcessing": "1 to 4 weeks",
-          "purpose": "Tourism, visiting family and friends, short business trips",
-          "stayFor": "Short-term visits, tourism, and leisure",
-          "steps": [
-            {
-              "title": "Submit application",
-              "duration": "1 week"
-            },
-            {
-              "title": "Biometrics and interview",
-              "duration": "2 days"
-            },
-            {
-              "title": "Decision",
-              "duration": "2 to 4 weeks"
-            }
-          ],
-          "faqs": [
-            {
-              "question": "Do I need a visa?",
-              "answer": "Most travelers require a visa, but some nationalities may be visa-exempt."
-            },
-            {
-              "question": "How long does it take?",
-              "answer": "Processing typically takes 1 to 4 weeks."
-            },
-            {
-              "question": "Can I extend my stay?",
-              "answer": "Extensions may be possible. Apply before your current visa expires."
-            },
-            {
-              "question": "What documents are required?",
-              "answer": "Passport, photos, proof of funds, and supporting documents specific to your visa type."
-            },
-            {
-              "question": "Can I apply online?",
-              "answer": "Most applications can be submitted online through the official government portal."
-            }
-          ]
-        },
-        {
-          "type": "student",
-          "required": true,
-          "indicativeFee": 1200,
-          "processingTime": "3 to 8 weeks",
-          "validity": "Length of course plus 4 months",
-          "notes": "Requires a confirmed place with a licensed sponsor and proof of funds.",
-          "maximumStay": "Length of course plus 2 months",
-          "typicalProcessing": "4 to 8 weeks",
-          "purpose": "Study at a recognized educational institution",
-          "stayFor": "Length of course",
-          "steps": [
-            {
-              "title": "Get acceptance letter",
-              "duration": "2 to 4 weeks"
-            },
-            {
-              "title": "Submit visa application",
-              "duration": "1 week"
-            },
-            {
-              "title": "Decision",
-              "duration": "4 to 8 weeks"
-            }
-          ],
-          "faqs": [
-            {
-              "question": "Do I need a visa?",
-              "answer": "Most international students require a student visa."
-            },
-            {
-              "question": "Can I work while studying?",
-              "answer": "Work rights vary by country and visa type."
-            },
-            {
-              "question": "Can I bring family?",
-              "answer": "Some student visas allow dependent family members."
-            },
-            {
-              "question": "What documents are required?",
-              "answer": "Passport, photos, proof of funds, and supporting documents specific to your visa type."
-            },
-            {
-              "question": "Can I apply online?",
-              "answer": "Most applications can be submitted online through the official government portal."
-            }
-          ]
-        },
-        {
-          "type": "work",
-          "required": true,
-          "indicativeFee": 3400,
-          "processingTime": "3 to 8 weeks",
-          "validity": "Up to 5 years",
-          "notes": "Skilled Worker routes need a job offer from a licensed sponsor that meets salary thresholds.",
-          "maximumStay": "Up to 3 years, renewable",
-          "typicalProcessing": "1 to 3 months",
-          "purpose": "Employment with a local employer",
-          "stayFor": "Length of employment contract",
-          "steps": [
-            {
-              "title": "Get job offer",
-              "duration": "Varies"
-            },
-            {
-              "title": "Submit visa application",
-              "duration": "1 week"
-            },
-            {
-              "title": "Decision",
-              "duration": "1 to 3 months"
-            }
-          ],
-          "faqs": [
-            {
-              "question": "Do I need a visa?",
-              "answer": "Most employment requires a work visa or permit."
-            },
-            {
-              "question": "Can I bring family?",
-              "answer": "Some work visas allow dependent family members."
-            },
-            {
-              "question": "Can I change employers?",
-              "answer": "Changing employers may require a new visa application."
-            },
-            {
-              "question": "What documents are required?",
-              "answer": "Passport, photos, proof of funds, and supporting documents specific to your visa type."
-            },
-            {
-              "question": "Can I apply online?",
-              "answer": "Most applications can be submitted online through the official government portal."
-            }
-          ]
-        },
-        {
-          "type": "family",
-          "required": true,
-          "indicativeFee": 2900,
-          "processingTime": "12 to 24 weeks",
-          "validity": "30 months, then extendable",
-          "notes": "Financial requirements and English language evidence apply.",
-          "maximumStay": "Provisional, then permanent",
-          "typicalProcessing": "12 to 24 months",
-          "purpose": "Join family members who are citizens or residents",
-          "stayFor": "Permanent residence pathway",
-          "steps": [
-            {
-              "title": "Submit sponsorship application",
-              "duration": "4 to 8 weeks"
-            },
-            {
-              "title": "Submit visa application",
-              "duration": "1 week"
-            },
-            {
-              "title": "Decision",
-              "duration": "12 to 24 months"
-            }
-          ],
-          "faqs": [
-            {
-              "question": "Who can sponsor me?",
-              "answer": "Spouses, partners, parents, or children who are citizens or permanent residents."
-            },
-            {
-              "question": "Can I work?",
-              "answer": "Work rights depend on the specific family visa type."
-            },
-            {
-              "question": "Can I study?",
-              "answer": "Study is generally permitted on family visas."
-            },
-            {
-              "question": "What documents are required?",
-              "answer": "Passport, photos, proof of funds, and supporting documents specific to your visa type."
-            },
-            {
-              "question": "Can I apply online?",
-              "answer": "Most applications can be submitted online through the official government portal."
-            }
-          ]
-        }
-      ],
-      "highlights": [
-        "Historic castles and royal palaces",
-        "World-renowned museums and art",
-        "Mix of rural countryside and big cities"
-      ],
-      "relatedDestinations": [
-        "united-states",
-        "france"
-      ]
-    },
-    {
-      "_comment": "sample data, verify before launch",
-      "slug": "canada",
-      "country": "Canada",
-      "flag": "🇨🇦",
-      "imageUrl": "https://images.unsplash.com/photo-1517935706615-2717063c2225?w=800&q=70",
-      "visaTypes": [
-        {
-          "type": "tourist",
-          "required": true,
-          "indicativeFee": 180,
-          "processingTime": "2 to 8 weeks",
-          "validity": "Up to 10 years, multiple entry",
-          "notes": "Some travellers may need an electronic travel authorisation instead of a visa.",
-          "maximumStay": "Up to 90 days",
-          "typicalProcessing": "1 to 4 weeks",
-          "purpose": "Tourism, visiting family and friends, short business trips",
-          "stayFor": "Short-term visits, tourism, and leisure",
-          "steps": [
-            {
-              "title": "Submit application",
-              "duration": "1 week"
-            },
-            {
-              "title": "Biometrics and interview",
-              "duration": "2 days"
-            },
-            {
-              "title": "Decision",
-              "duration": "2 to 4 weeks"
-            }
-          ],
-          "faqs": [
-            {
-              "question": "Do I need a visa?",
-              "answer": "Most travelers require a visa, but some nationalities may be visa-exempt."
-            },
-            {
-              "question": "How long does it take?",
-              "answer": "Processing typically takes 1 to 4 weeks."
-            },
-            {
-              "question": "Can I extend my stay?",
-              "answer": "Extensions may be possible. Apply before your current visa expires."
-            },
-            {
-              "question": "What documents are required?",
-              "answer": "Passport, photos, proof of funds, and supporting documents specific to your visa type."
-            },
-            {
-              "question": "Can I apply online?",
-              "answer": "Most applications can be submitted online through the official government portal."
-            }
-          ]
-        },
-        {
-          "type": "student",
-          "required": true,
-          "indicativeFee": 170,
-          "processingTime": "6 to 12 weeks",
-          "validity": "Length of study programme",
-          "notes": "Requires a letter of acceptance from a designated learning institution.",
-          "maximumStay": "Length of course plus 2 months",
-          "typicalProcessing": "4 to 8 weeks",
-          "purpose": "Study at a recognized educational institution",
-          "stayFor": "Length of course",
-          "steps": [
-            {
-              "title": "Get acceptance letter",
-              "duration": "2 to 4 weeks"
-            },
-            {
-              "title": "Submit visa application",
-              "duration": "1 week"
-            },
-            {
-              "title": "Decision",
-              "duration": "4 to 8 weeks"
-            }
-          ],
-          "faqs": [
-            {
-              "question": "Do I need a visa?",
-              "answer": "Most international students require a student visa."
-            },
-            {
-              "question": "Can I work while studying?",
-              "answer": "Work rights vary by country and visa type."
-            },
-            {
-              "question": "Can I bring family?",
-              "answer": "Some student visas allow dependent family members."
-            },
-            {
-              "question": "What documents are required?",
-              "answer": "Passport, photos, proof of funds, and supporting documents specific to your visa type."
-            },
-            {
-              "question": "Can I apply online?",
-              "answer": "Most applications can be submitted online through the official government portal."
-            }
-          ]
-        },
-        {
-          "type": "work",
-          "required": true,
-          "indicativeFee": 220,
-          "processingTime": "Varies widely by programme",
-          "validity": "Up to 3 years",
-          "notes": "Many programmes require a job offer or a labour market assessment.",
-          "maximumStay": "Up to 3 years, renewable",
-          "typicalProcessing": "1 to 3 months",
-          "purpose": "Employment with a local employer",
-          "stayFor": "Length of employment contract",
-          "steps": [
-            {
-              "title": "Get job offer",
-              "duration": "Varies"
-            },
-            {
-              "title": "Submit visa application",
-              "duration": "1 week"
-            },
-            {
-              "title": "Decision",
-              "duration": "1 to 3 months"
-            }
-          ],
-          "faqs": [
-            {
-              "question": "Do I need a visa?",
-              "answer": "Most employment requires a work visa or permit."
-            },
-            {
-              "question": "Can I bring family?",
-              "answer": "Some work visas allow dependent family members."
-            },
-            {
-              "question": "Can I change employers?",
-              "answer": "Changing employers may require a new visa application."
-            },
-            {
-              "question": "What documents are required?",
-              "answer": "Passport, photos, proof of funds, and supporting documents specific to your visa type."
-            },
-            {
-              "question": "Can I apply online?",
-              "answer": "Most applications can be submitted online through the official government portal."
-            }
-          ]
-        },
-        {
-          "type": "family",
-          "required": true,
-          "indicativeFee": 1000,
-          "processingTime": "12 months or more",
-          "validity": "Permanent residence pathway",
-          "notes": "Sponsorship requirements apply to the sponsoring partner.",
-          "maximumStay": "Provisional, then permanent",
-          "typicalProcessing": "12 to 24 months",
-          "purpose": "Join family members who are citizens or residents",
-          "stayFor": "Permanent residence pathway",
-          "steps": [
-            {
-              "title": "Submit sponsorship application",
-              "duration": "4 to 8 weeks"
-            },
-            {
-              "title": "Submit visa application",
-              "duration": "1 week"
-            },
-            {
-              "title": "Decision",
-              "duration": "12 to 24 months"
-            }
-          ],
-          "faqs": [
-            {
-              "question": "Who can sponsor me?",
-              "answer": "Spouses, partners, parents, or children who are citizens or permanent residents."
-            },
-            {
-              "question": "Can I work?",
-              "answer": "Work rights depend on the specific family visa type."
-            },
-            {
-              "question": "Can I study?",
-              "answer": "Study is generally permitted on family visas."
-            },
-            {
-              "question": "What documents are required?",
-              "answer": "Passport, photos, proof of funds, and supporting documents specific to your visa type."
-            },
-            {
-              "question": "Can I apply online?",
-              "answer": "Most applications can be submitted online through the official government portal."
-            }
-          ]
-        }
-      ],
-      "highlights": [
-        "Vast wilderness and National Parks",
-        "Multicultural cities and Indigenous culture",
-        "Comfortable winter sports and outdoors"
-      ],
-      "relatedDestinations": [
-        "united-states",
-        "australia"
-      ]
-    },
-    {
-      "_comment": "sample data, verify before launch",
-      "slug": "new-zealand",
-      "country": "New Zealand",
-      "flag": "🇳🇿",
-      "imageUrl": "https://images.unsplash.com/photo-1507699622108-4be3abd695ad?w=800&q=70",
-      "visaTypes": [
-        {
-          "type": "tourist",
-          "required": false,
-          "indicativeFee": 25,
-          "processingTime": "Usually instant once submitted online",
-          "validity": "Up to 3 months per visit",
-          "notes": "Many nationalities are visa waiver eligible but still need an electronic travel authority.",
-          "maximumStay": "Up to 90 days",
-          "typicalProcessing": "1 to 4 weeks",
-          "purpose": "Tourism, visiting family and friends, short business trips",
-          "stayFor": "Short-term visits, tourism, and leisure",
-          "steps": [
-            {
-              "title": "Submit application",
-              "duration": "1 week"
-            },
-            {
-              "title": "Biometrics and interview",
-              "duration": "2 days"
-            },
-            {
-              "title": "Decision",
-              "duration": "2 to 4 weeks"
-            }
-          ],
-          "faqs": [
-            {
-              "question": "Do I need a visa?",
-              "answer": "Most travelers require a visa, but some nationalities may be visa-exempt."
-            },
-            {
-              "question": "How long does it take?",
-              "answer": "Processing typically takes 1 to 4 weeks."
-            },
-            {
-              "question": "Can I extend my stay?",
-              "answer": "Extensions may be possible. Apply before your current visa expires."
-            },
-            {
-              "question": "What documents are required?",
-              "answer": "Passport, photos, proof of funds, and supporting documents specific to your visa type."
-            },
-            {
-              "question": "Can I apply online?",
-              "answer": "Most applications can be submitted online through the official government portal."
-            }
-          ]
-        },
-        {
-          "type": "student",
-          "required": true,
-          "indicativeFee": 450,
-          "processingTime": "4 to 10 weeks",
-          "validity": "Length of course",
-          "notes": "Requires an offer from an approved provider and evidence of tuition funds.",
-          "maximumStay": "Length of course plus 2 months",
-          "typicalProcessing": "4 to 8 weeks",
-          "purpose": "Study at a recognized educational institution",
-          "stayFor": "Length of course",
-          "steps": [
-            {
-              "title": "Get acceptance letter",
-              "duration": "2 to 4 weeks"
-            },
-            {
-              "title": "Submit visa application",
-              "duration": "1 week"
-            },
-            {
-              "title": "Decision",
-              "duration": "4 to 8 weeks"
-            }
-          ],
-          "faqs": [
-            {
-              "question": "Do I need a visa?",
-              "answer": "Most international students require a student visa."
-            },
-            {
-              "question": "Can I work while studying?",
-              "answer": "Work rights vary by country and visa type."
-            },
-            {
-              "question": "Can I bring family?",
-              "answer": "Some student visas allow dependent family members."
-            },
-            {
-              "question": "What documents are required?",
-              "answer": "Passport, photos, proof of funds, and supporting documents specific to your visa type."
-            },
-            {
-              "question": "Can I apply online?",
-              "answer": "Most applications can be submitted online through the official government portal."
-            }
-          ]
-        },
-        {
-          "type": "work",
-          "required": true,
-          "indicativeFee": 380,
-          "processingTime": "1 to 6 months",
-          "validity": "Up to 3 years",
-          "notes": "Employer accreditation may be required before applying.",
-          "maximumStay": "Up to 3 years, renewable",
-          "typicalProcessing": "1 to 3 months",
-          "purpose": "Employment with a local employer",
-          "stayFor": "Length of employment contract",
-          "steps": [
-            {
-              "title": "Get job offer",
-              "duration": "Varies"
-            },
-            {
-              "title": "Submit visa application",
-              "duration": "1 week"
-            },
-            {
-              "title": "Decision",
-              "duration": "1 to 3 months"
-            }
-          ],
-          "faqs": [
-            {
-              "question": "Do I need a visa?",
-              "answer": "Most employment requires a work visa or permit."
-            },
-            {
-              "question": "Can I bring family?",
-              "answer": "Some work visas allow dependent family members."
-            },
-            {
-              "question": "Can I change employers?",
-              "answer": "Changing employers may require a new visa application."
-            },
-            {
-              "question": "What documents are required?",
-              "answer": "Passport, photos, proof of funds, and supporting documents specific to your visa type."
-            },
-            {
-              "question": "Can I apply online?",
-              "answer": "Most applications can be submitted online through the official government portal."
-            }
-          ]
-        }
-      ],
-      "highlights": [
-        "Glacier-carved fiords and mountains",
-        "Adventure sports and wildlife",
-        "Stunning landscapes and Maori culture"
-      ],
-      "relatedDestinations": [
-        "australia",
-        "singapore"
-      ]
-    },
-    {
-      "_comment": "sample data, verify before launch",
-      "slug": "schengen-area",
-      "country": "Schengen Area",
-      "flag": "🇪🇺",
-      "imageUrl": "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=800&q=70",
-      "visaTypes": [
-        {
-          "type": "tourist",
-          "required": true,
-          "indicativeFee": 150,
-          "processingTime": "Up to 15 days",
-          "validity": "Up to 90 days in any 180-day period",
-          "notes": "Applies to the common visa for short stays across member countries.",
-          "maximumStay": "Up to 90 days",
-          "typicalProcessing": "1 to 4 weeks",
-          "purpose": "Tourism, visiting family and friends, short business trips",
-          "stayFor": "Short-term visits, tourism, and leisure",
-          "steps": [
-            {
-              "title": "Submit application",
-              "duration": "1 week"
-            },
-            {
-              "title": "Biometrics and interview",
-              "duration": "2 days"
-            },
-            {
-              "title": "Decision",
-              "duration": "2 to 4 weeks"
-            }
-          ],
-          "faqs": [
-            {
-              "question": "Do I need a visa?",
-              "answer": "Most travelers require a visa, but some nationalities may be visa-exempt."
-            },
-            {
-              "question": "How long does it take?",
-              "answer": "Processing typically takes 1 to 4 weeks."
-            },
-            {
-              "question": "Can I extend my stay?",
-              "answer": "Extensions may be possible. Apply before your current visa expires."
-            },
-            {
-              "question": "What documents are required?",
-              "answer": "Passport, photos, proof of funds, and supporting documents specific to your visa type."
-            },
-            {
-              "question": "Can I apply online?",
-              "answer": "Most applications can be submitted online through the official government portal."
-            }
-          ]
-        },
-        {
-          "type": "student",
-          "required": true,
-          "indicativeFee": 190,
-          "processingTime": "4 to 12 weeks",
-          "validity": "Length of study, national rules apply",
-          "notes": "Each member country sets its own student rules after the initial short-stay decision.",
-          "maximumStay": "Length of course plus 2 months",
-          "typicalProcessing": "4 to 8 weeks",
-          "purpose": "Study at a recognized educational institution",
-          "stayFor": "Length of course",
-          "steps": [
-            {
-              "title": "Get acceptance letter",
-              "duration": "2 to 4 weeks"
-            },
-            {
-              "title": "Submit visa application",
-              "duration": "1 week"
-            },
-            {
-              "title": "Decision",
-              "duration": "4 to 8 weeks"
-            }
-          ],
-          "faqs": [
-            {
-              "question": "Do I need a visa?",
-              "answer": "Most international students require a student visa."
-            },
-            {
-              "question": "Can I work while studying?",
-              "answer": "Work rights vary by country and visa type."
-            },
-            {
-              "question": "Can I bring family?",
-              "answer": "Some student visas allow dependent family members."
-            },
-            {
-              "question": "What documents are required?",
-              "answer": "Passport, photos, proof of funds, and supporting documents specific to your visa type."
-            },
-            {
-              "question": "Can I apply online?",
-              "answer": "Most applications can be submitted online through the official government portal."
-            }
-          ]
-        },
-        {
-          "type": "work",
-          "required": true,
-          "indicativeFee": 420,
-          "processingTime": "1 to 3 months",
-          "validity": "Typically 1 to 2 years",
-          "notes": "Work visas are issued by individual member countries, so requirements vary.",
-          "maximumStay": "Up to 3 years, renewable",
-          "typicalProcessing": "1 to 3 months",
-          "purpose": "Employment with a local employer",
-          "stayFor": "Length of employment contract",
-          "steps": [
-            {
-              "title": "Get job offer",
-              "duration": "Varies"
-            },
-            {
-              "title": "Submit visa application",
-              "duration": "1 week"
-            },
-            {
-              "title": "Decision",
-              "duration": "1 to 3 months"
-            }
-          ],
-          "faqs": [
-            {
-              "question": "Do I need a visa?",
-              "answer": "Most employment requires a work visa or permit."
-            },
-            {
-              "question": "Can I bring family?",
-              "answer": "Some work visas allow dependent family members."
-            },
-            {
-              "question": "Can I change employers?",
-              "answer": "Changing employers may require a new visa application."
-            },
-            {
-              "question": "What documents are required?",
-              "answer": "Passport, photos, proof of funds, and supporting documents specific to your visa type."
-            },
-            {
-              "question": "Can I apply online?",
-              "answer": "Most applications can be submitted online through the official government portal."
-            }
-          ]
-        },
-        {
-          "type": "family",
-          "required": true,
-          "indicativeFee": 280,
-          "processingTime": "2 to 6 months",
-          "validity": "Typically 1 year, renewable",
-          "notes": "Family reunification rules depend on the member country where you settle.",
-          "maximumStay": "Provisional, then permanent",
-          "typicalProcessing": "12 to 24 months",
-          "purpose": "Join family members who are citizens or residents",
-          "stayFor": "Permanent residence pathway",
-          "steps": [
-            {
-              "title": "Submit sponsorship application",
-              "duration": "4 to 8 weeks"
-            },
-            {
-              "title": "Submit visa application",
-              "duration": "1 week"
-            },
-            {
-              "title": "Decision",
-              "duration": "12 to 24 months"
-            }
-          ],
-          "faqs": [
-            {
-              "question": "Who can sponsor me?",
-              "answer": "Spouses, partners, parents, or children who are citizens or permanent residents."
-            },
-            {
-              "question": "Can I work?",
-              "answer": "Work rights depend on the specific family visa type."
-            },
-            {
-              "question": "Can I study?",
-              "answer": "Study is generally permitted on family visas."
-            },
-            {
-              "question": "What documents are required?",
-              "answer": "Passport, photos, proof of funds, and supporting documents specific to your visa type."
-            },
-            {
-              "question": "Can I apply online?",
-              "answer": "Most applications can be submitted online through the official government portal."
-            }
-          ]
-        }
-      ],
-      "highlights": [
-        "One visa, 27 European countries",
-        "World-class art, food and history",
-        "Perfect base for slow travel"
-      ],
-      "relatedDestinations": [
-        "france",
-        "italy"
-      ]
-    },
-    {
-      "_comment": "sample data, verify before launch",
       "slug": "uae",
       "country": "United Arab Emirates",
-      "flag": "🇦🇪",
+      "flag": "",
+      "iso_code": "ae",
+      "lat": 24.45,
+      "lng": 54.38,
       "imageUrl": "https://images.unsplash.com/photo-1772090049995-6116febe0d60?q=80&w=435&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D",
       "visaTypes": [
         {
           "type": "tourist",
-          "required": false,
-          "indicativeFee": 0,
-          "processingTime": "Usually on arrival",
-          "validity": "30 to 90 days depending on entry",
-          "notes": "Many nationalities receive a visa on arrival. Others must apply in advance.",
-          "maximumStay": "Up to 90 days",
-          "typicalProcessing": "1 to 4 weeks",
-          "purpose": "Tourism, visiting family and friends, short business trips",
-          "stayFor": "Short-term visits, tourism, and leisure",
-          "steps": [
-            {
-              "title": "Submit application",
-              "duration": "1 week"
-            },
-            {
-              "title": "Biometrics and interview",
-              "duration": "2 days"
-            },
-            {
-              "title": "Decision",
-              "duration": "2 to 4 weeks"
-            }
-          ],
-          "faqs": [
-            {
-              "question": "Do I need a visa?",
-              "answer": "Most travelers require a visa, but some nationalities may be visa-exempt."
-            },
-            {
-              "question": "How long does it take?",
-              "answer": "Processing typically takes 1 to 4 weeks."
-            },
-            {
-              "question": "Can I extend my stay?",
-              "answer": "Extensions may be possible. Apply before your current visa expires."
-            },
-            {
-              "question": "What documents are required?",
-              "answer": "Passport, photos, proof of funds, and supporting documents specific to your visa type."
-            },
-            {
-              "question": "Can I apply online?",
-              "answer": "Most applications can be submitted online through the official government portal."
-            }
-          ]
-        },
-        {
-          "type": "work",
           "required": true,
-          "indicativeFee": 550,
-          "processingTime": "1 to 4 weeks",
-          "validity": "Usually tied to the employment contract",
-          "notes": "Usually sponsored by an employer, who manages the application.",
-          "maximumStay": "Up to 3 years, renewable",
-          "typicalProcessing": "1 to 3 months",
-          "purpose": "Employment with a local employer",
-          "stayFor": "Length of employment contract",
+          "indicativeFee": 0,
+          "processingTime": "Confirmed at consultation",
+          "validity": "Confirmed at consultation",
+          "validityShort": "See details",
+          "notes": "Indicative guidance only. We verify the current rule before you apply.",
+          "maximumStay": "Confirmed at consultation",
+          "typicalProcessing": "Confirmed at consultation",
+          "purpose": "Tourism, family visits, short business trips",
+          "stayFor": "Short visits",
+          "entryRule": "Indian citizens generally need a visa arranged before travel (e-visa). Some holders of valid US, UK or Schengen visas may qualify for easier entry.",
+          "govtFee": 0,
+          "vfsFee": 0,
+          "serviceFee": 0,
+          "documents": [
+            "Passport valid for at least 6 months, with blank pages",
+            "Recent passport-size photograph",
+            "Confirmed travel itinerary or flight plan (no need to buy tickets first)",
+            "Accommodation plan",
+            "Proof of funds, such as recent bank statements",
+            "Aadhaar or other ID proof"
+          ],
+          "whoCannotApply": [
+            "Passport not valid for the required period",
+            "Applicants with a previous visa refusal or overstay should speak to us first"
+          ],
+          "insuranceRequired": false,
+          "officialSourceUrl": "https://icp.gov.ae",
+          "lastVerified": "",
           "steps": [
             {
-              "title": "Get job offer",
-              "duration": "Varies"
+              "title": "Free eligibility check and consultation",
+              "duration": "Same day"
             },
             {
-              "title": "Submit visa application",
-              "duration": "1 week"
+              "title": "Share documents with us on WhatsApp or email",
+              "duration": "1 to 2 days"
             },
             {
-              "title": "Decision",
-              "duration": "1 to 3 months"
+              "title": "We review and submit your online application",
+              "duration": "1 day"
+            },
+            {
+              "title": "Official decision",
+              "duration": "Varies by country"
+            },
+            {
+              "title": "Receive your approval and travel guidance",
+              "duration": "On approval"
             }
           ],
           "faqs": [
             {
-              "question": "Do I need a visa?",
-              "answer": "Most employment requires a work visa or permit."
+              "question": "Do Indian citizens need a visa for United Arab Emirates?",
+              "answer": "Indian citizens generally need a visa arranged before travel (e-visa). Some holders of valid US, UK or Schengen visas may qualify for easier entry. Entry rules change, so we confirm the current position with you before you apply."
             },
             {
-              "question": "Can I bring family?",
-              "answer": "Some work visas allow dependent family members."
+              "question": "How much will it cost?",
+              "answer": "The government fee, any centre fee and our service fee are quoted to you in writing after a free consultation. Prices are not fixed on this website."
             },
             {
-              "question": "Can I change employers?",
-              "answer": "Changing employers may require a new visa application."
+              "question": "How do I pay?",
+              "answer": "Not on this website. After your consultation we share a payment request and you pay us directly. See our Pricing page."
             },
             {
-              "question": "What documents are required?",
-              "answer": "Passport, photos, proof of funds, and supporting documents specific to your visa type."
+              "question": "Can I get a refund?",
+              "answer": "Yes, in full if we have not yet submitted your application. Once submitted, fees are not refundable. See our Refund Policy."
             },
             {
-              "question": "Can I apply online?",
-              "answer": "Most applications can be submitted online through the official government portal."
+              "question": "Can you guarantee approval?",
+              "answer": "No. Only the immigration authority decides. We help you prepare a complete and accurate application."
             }
           ]
         }
       ],
       "highlights": [
-        "Glitzy skyline and desert landscapes",
-        "Luxury cities and melting-pot culture",
-        "Luxury shopping and extreme weather"
+        "Pre-arranged e-visa",
+        "Documents reviewed by us",
+        "Direct, written quotes"
       ],
       "relatedDestinations": [
-        "dubai",
-        "abu-dhabi"
+        "singapore",
+        "thailand",
+        "sri-lanka",
+        "turkey"
       ]
     },
     {
-      "_comment": "sample data, verify before launch",
       "slug": "singapore",
       "country": "Singapore",
-      "flag": "🇸🇬",
+      "flag": "",
+      "iso_code": "sg",
+      "lat": 1.35,
+      "lng": 103.82,
       "imageUrl": "https://images.unsplash.com/photo-1775306963755-8897be3967bb?q=80&w=800&auto=format&fit=crop",
+      "visaTypes": [
+        {
+          "type": "tourist",
+          "required": true,
+          "indicativeFee": 0,
+          "processingTime": "Confirmed at consultation",
+          "validity": "Confirmed at consultation",
+          "validityShort": "See details",
+          "notes": "Indicative guidance only. We verify the current rule before you apply.",
+          "maximumStay": "Confirmed at consultation",
+          "typicalProcessing": "Confirmed at consultation",
+          "purpose": "Tourism, family visits, short business trips",
+          "stayFor": "Short visits",
+          "entryRule": "Indian citizens need a Singapore visa, applied for through an authorised agent. A separate SG Arrival Card is also required before arrival.",
+          "govtFee": 0,
+          "vfsFee": 0,
+          "serviceFee": 0,
+          "documents": [
+            "Passport valid for at least 6 months, with blank pages",
+            "Recent passport-size photograph",
+            "Confirmed travel itinerary or flight plan (no need to buy tickets first)",
+            "Accommodation plan",
+            "Proof of funds, such as recent bank statements",
+            "Aadhaar or other ID proof"
+          ],
+          "whoCannotApply": [
+            "Passport not valid for the required period",
+            "Applicants with a previous visa refusal or overstay should speak to us first"
+          ],
+          "insuranceRequired": false,
+          "officialSourceUrl": "https://www.ica.gov.sg",
+          "lastVerified": "",
+          "steps": [
+            {
+              "title": "Free eligibility check and consultation",
+              "duration": "Same day"
+            },
+            {
+              "title": "Share documents with us on WhatsApp or email",
+              "duration": "1 to 2 days"
+            },
+            {
+              "title": "We review and submit your online application",
+              "duration": "1 day"
+            },
+            {
+              "title": "Official decision",
+              "duration": "Varies by country"
+            },
+            {
+              "title": "Receive your approval and travel guidance",
+              "duration": "On approval"
+            }
+          ],
+          "faqs": [
+            {
+              "question": "Do Indian citizens need a visa for Singapore?",
+              "answer": "Indian citizens need a Singapore visa, applied for through an authorised agent. A separate SG Arrival Card is also required before arrival. Entry rules change, so we confirm the current position with you before you apply."
+            },
+            {
+              "question": "How much will it cost?",
+              "answer": "The government fee, any centre fee and our service fee are quoted to you in writing after a free consultation. Prices are not fixed on this website."
+            },
+            {
+              "question": "How do I pay?",
+              "answer": "Not on this website. After your consultation we share a payment request and you pay us directly. See our Pricing page."
+            },
+            {
+              "question": "Can I get a refund?",
+              "answer": "Yes, in full if we have not yet submitted your application. Once submitted, fees are not refundable. See our Refund Policy."
+            },
+            {
+              "question": "Can you guarantee approval?",
+              "answer": "No. Only the immigration authority decides. We help you prepare a complete and accurate application."
+            }
+          ]
+        }
+      ],
+      "highlights": [
+        "Short-stay visa guidance",
+        "Arrival card reminder",
+        "Documents reviewed by us"
+      ],
+      "relatedDestinations": [
+        "malaysia",
+        "thailand",
+        "vietnam",
+        "japan"
+      ]
+    },
+    {
+      "slug": "thailand",
+      "country": "Thailand",
+      "flag": "",
+      "iso_code": "th",
+      "lat": 13.75,
+      "lng": 100.5,
+      "imageUrl": "",
       "visaTypes": [
         {
           "type": "tourist",
           "required": false,
           "indicativeFee": 0,
-          "processingTime": "Not applicable for visa-exempt travellers",
-          "validity": "Usually 30 days on arrival",
-          "notes": "Visa-exempt for many nationalities. Some travellers must apply in advance.",
-          "maximumStay": "Up to 90 days",
-          "typicalProcessing": "1 to 4 weeks",
-          "purpose": "Tourism, visiting family and friends, short business trips",
-          "stayFor": "Short-term visits, tourism, and leisure",
+          "processingTime": "Confirmed at consultation",
+          "validity": "Confirmed at consultation",
+          "validityShort": "See details",
+          "notes": "Rules changed repeatedly in 2026. Always confirm with the Royal Thai Embassy before you travel.",
+          "maximumStay": "Up to 30 days (verify)",
+          "typicalProcessing": "Confirmed at consultation",
+          "purpose": "Tourism, family visits, short business trips",
+          "stayFor": "Short visits",
+          "entryRule": "Recent announcements say Indian tourists can enter visa-free for up to 30 days, plus the digital arrival card (TDAC). Thailand has changed this rule several times in 2026, so confirm it with us or the Royal Thai Embassy before booking.",
+          "govtFee": 0,
+          "vfsFee": 0,
+          "serviceFee": 0,
+          "documents": [
+            "Passport valid for at least 6 months, with blank pages",
+            "Recent passport-size photograph",
+            "Confirmed travel itinerary or flight plan (no need to buy tickets first)",
+            "Accommodation plan",
+            "Proof of funds, such as recent bank statements",
+            "Aadhaar or other ID proof"
+          ],
+          "whoCannotApply": [
+            "Passport not valid for the required period",
+            "Applicants with a previous visa refusal or overstay should speak to us first"
+          ],
+          "insuranceRequired": false,
+          "officialSourceUrl": "https://newdelhi.thaiembassy.org",
+          "lastVerified": "",
           "steps": [
             {
-              "title": "Submit application",
-              "duration": "1 week"
+              "title": "Free consultation to confirm the current entry rule",
+              "duration": "Same day"
             },
             {
-              "title": "Biometrics and interview",
-              "duration": "2 days"
+              "title": "Check passport validity and onward ticket needs",
+              "duration": "1 day"
             },
             {
-              "title": "Decision",
-              "duration": "2 to 4 weeks"
+              "title": "Complete any pre-arrival registration, such as an arrival card",
+              "duration": "1 day"
+            },
+            {
+              "title": "Travel guidance before you fly",
+              "duration": "Before departure"
             }
           ],
           "faqs": [
             {
-              "question": "Do I need a visa?",
-              "answer": "Most travelers require a visa, but some nationalities may be visa-exempt."
+              "question": "Do Indian citizens need a visa for Thailand?",
+              "answer": "Recent announcements say Indian tourists can enter visa-free for up to 30 days, plus the digital arrival card (TDAC). Thailand has changed this rule several times in 2026, so confirm it with us or the Royal Thai Embassy before booking. Entry rules change, so we confirm the current position with you before you apply."
             },
             {
-              "question": "How long does it take?",
-              "answer": "Processing typically takes 1 to 4 weeks."
+              "question": "How much will it cost?",
+              "answer": "The government fee, any centre fee and our service fee are quoted to you in writing after a free consultation. Prices are not fixed on this website."
             },
             {
-              "question": "Can I extend my stay?",
-              "answer": "Extensions may be possible. Apply before your current visa expires."
+              "question": "How do I pay?",
+              "answer": "Not on this website. After your consultation we share a payment request and you pay us directly. See our Pricing page."
             },
             {
-              "question": "What documents are required?",
-              "answer": "Passport, photos, proof of funds, and supporting documents specific to your visa type."
+              "question": "Can I get a refund?",
+              "answer": "Yes, in full if we have not yet submitted your application. Once submitted, fees are not refundable. See our Refund Policy."
             },
             {
-              "question": "Can I apply online?",
-              "answer": "Most applications can be submitted online through the official government portal."
-            }
-          ]
-        },
-        {
-          "type": "student",
-          "required": true,
-          "indicativeFee": 230,
-          "processingTime": "2 to 4 weeks",
-          "validity": "Length of course",
-          "notes": "Requires an offer from an approved institution. Your school usually submits the application.",
-          "maximumStay": "Length of course plus 2 months",
-          "typicalProcessing": "4 to 8 weeks",
-          "purpose": "Study at a recognized educational institution",
-          "stayFor": "Length of course",
-          "steps": [
-            {
-              "title": "Get acceptance letter",
-              "duration": "2 to 4 weeks"
-            },
-            {
-              "title": "Submit visa application",
-              "duration": "1 week"
-            },
-            {
-              "title": "Decision",
-              "duration": "4 to 8 weeks"
-            }
-          ],
-          "faqs": [
-            {
-              "question": "Do I need a visa?",
-              "answer": "Most international students require a student visa."
-            },
-            {
-              "question": "Can I work while studying?",
-              "answer": "Work rights vary by country and visa type."
-            },
-            {
-              "question": "Can I bring family?",
-              "answer": "Some student visas allow dependent family members."
-            },
-            {
-              "question": "What documents are required?",
-              "answer": "Passport, photos, proof of funds, and supporting documents specific to your visa type."
-            },
-            {
-              "question": "Can I apply online?",
-              "answer": "Most applications can be submitted online through the official government portal."
-            }
-          ]
-        },
-        {
-          "type": "work",
-          "required": true,
-          "indicativeFee": 390,
-          "processingTime": "3 to 6 weeks",
-          "validity": "Up to 2 years",
-          "notes": "Requires a qualifying salary and a job offer from a Singapore employer.",
-          "maximumStay": "Up to 3 years, renewable",
-          "typicalProcessing": "1 to 3 months",
-          "purpose": "Employment with a local employer",
-          "stayFor": "Length of employment contract",
-          "steps": [
-            {
-              "title": "Get job offer",
-              "duration": "Varies"
-            },
-            {
-              "title": "Submit visa application",
-              "duration": "1 week"
-            },
-            {
-              "title": "Decision",
-              "duration": "1 to 3 months"
-            }
-          ],
-          "faqs": [
-            {
-              "question": "Do I need a visa?",
-              "answer": "Most employment requires a work visa or permit."
-            },
-            {
-              "question": "Can I bring family?",
-              "answer": "Some work visas allow dependent family members."
-            },
-            {
-              "question": "Can I change employers?",
-              "answer": "Changing employers may require a new visa application."
-            },
-            {
-              "question": "What documents are required?",
-              "answer": "Passport, photos, proof of funds, and supporting documents specific to your visa type."
-            },
-            {
-              "question": "Can I apply online?",
-              "answer": "Most applications can be submitted online through the official government portal."
+              "question": "Can you guarantee approval?",
+              "answer": "No. Only the immigration authority decides. We help you prepare a complete and accurate application."
             }
           ]
         }
       ],
       "highlights": [
-        "Ultimate food hub and multicultural cities",
-        "Clean, green and highly liveable",
-        "Tiny island with easy regional access"
+        "Visa-free tourism (verify)",
+        "TDAC arrival card guidance",
+        "Rule changes tracked"
       ],
       "relatedDestinations": [
+        "vietnam",
         "malaysia",
+        "singapore",
+        "sri-lanka"
+      ]
+    },
+    {
+      "slug": "vietnam",
+      "country": "Vietnam",
+      "flag": "",
+      "iso_code": "vn",
+      "lat": 21.03,
+      "lng": 105.85,
+      "imageUrl": "",
+      "visaTypes": [
+        {
+          "type": "tourist",
+          "required": true,
+          "indicativeFee": 0,
+          "processingTime": "Confirmed at consultation",
+          "validity": "Up to 90 days",
+          "validityShort": "Up to 90 days",
+          "notes": "Indicative guidance only. We verify the current rule before you apply.",
+          "maximumStay": "Up to 90 days",
+          "typicalProcessing": "Confirmed at consultation",
+          "purpose": "Tourism, family visits, short business trips",
+          "stayFor": "Short visits",
+          "entryRule": "Indian citizens can apply for a Vietnam e-visa online through the official portal, valid up to 90 days.",
+          "govtFee": 0,
+          "vfsFee": 0,
+          "serviceFee": 0,
+          "documents": [
+            "Passport valid for at least 6 months, with blank pages",
+            "Recent passport-size photograph",
+            "Confirmed travel itinerary or flight plan (no need to buy tickets first)",
+            "Accommodation plan",
+            "Proof of funds, such as recent bank statements",
+            "Aadhaar or other ID proof"
+          ],
+          "whoCannotApply": [
+            "Passport not valid for the required period",
+            "Applicants with a previous visa refusal or overstay should speak to us first"
+          ],
+          "insuranceRequired": false,
+          "officialSourceUrl": "https://evisa.gov.vn",
+          "lastVerified": "",
+          "steps": [
+            {
+              "title": "Free eligibility check and consultation",
+              "duration": "Same day"
+            },
+            {
+              "title": "Share documents with us on WhatsApp or email",
+              "duration": "1 to 2 days"
+            },
+            {
+              "title": "We review and submit your online application",
+              "duration": "1 day"
+            },
+            {
+              "title": "Official decision",
+              "duration": "Varies by country"
+            },
+            {
+              "title": "Receive your approval and travel guidance",
+              "duration": "On approval"
+            }
+          ],
+          "faqs": [
+            {
+              "question": "Do Indian citizens need a visa for Vietnam?",
+              "answer": "Indian citizens can apply for a Vietnam e-visa online through the official portal, valid up to 90 days. Entry rules change, so we confirm the current position with you before you apply."
+            },
+            {
+              "question": "How much will it cost?",
+              "answer": "The government fee, any centre fee and our service fee are quoted to you in writing after a free consultation. Prices are not fixed on this website."
+            },
+            {
+              "question": "How do I pay?",
+              "answer": "Not on this website. After your consultation we share a payment request and you pay us directly. See our Pricing page."
+            },
+            {
+              "question": "Can I get a refund?",
+              "answer": "Yes, in full if we have not yet submitted your application. Once submitted, fees are not refundable. See our Refund Policy."
+            },
+            {
+              "question": "Can you guarantee approval?",
+              "answer": "No. Only the immigration authority decides. We help you prepare a complete and accurate application."
+            }
+          ]
+        }
+      ],
+      "highlights": [
+        "Official e-visa route",
+        "Up to 90 days (verify)",
+        "Document review"
+      ],
+      "relatedDestinations": [
+        "thailand",
+        "singapore",
+        "malaysia",
+        "japan"
+      ]
+    },
+    {
+      "slug": "sri-lanka",
+      "country": "Sri Lanka",
+      "flag": "",
+      "iso_code": "lk",
+      "lat": 7.87,
+      "lng": 80.77,
+      "imageUrl": "",
+      "visaTypes": [
+        {
+          "type": "tourist",
+          "required": true,
+          "indicativeFee": 0,
+          "processingTime": "Confirmed at consultation",
+          "validity": "30 days (verify)",
+          "validityShort": "30 days (verify)",
+          "notes": "Indicative guidance only. We verify the current rule before you apply.",
+          "maximumStay": "Up to 30 days (verify)",
+          "typicalProcessing": "Confirmed at consultation",
+          "purpose": "Tourism, family visits, short business trips",
+          "stayFor": "Short visits",
+          "entryRule": "Indian citizens currently need an Electronic Travel Authorisation (ETA) before arrival, reported as free for up to 30 days at the time of writing. Check the official portal for the current position.",
+          "govtFee": 0,
+          "vfsFee": 0,
+          "serviceFee": 0,
+          "documents": [
+            "Passport valid for at least 6 months, with blank pages",
+            "Recent passport-size photograph",
+            "Confirmed travel itinerary or flight plan (no need to buy tickets first)",
+            "Accommodation plan",
+            "Proof of funds, such as recent bank statements",
+            "Aadhaar or other ID proof"
+          ],
+          "whoCannotApply": [
+            "Passport not valid for the required period",
+            "Applicants with a previous visa refusal or overstay should speak to us first"
+          ],
+          "insuranceRequired": false,
+          "officialSourceUrl": "https://eta.gov.lk",
+          "lastVerified": "",
+          "steps": [
+            {
+              "title": "Free eligibility check and consultation",
+              "duration": "Same day"
+            },
+            {
+              "title": "Share documents with us on WhatsApp or email",
+              "duration": "1 to 2 days"
+            },
+            {
+              "title": "We review and submit your online application",
+              "duration": "1 day"
+            },
+            {
+              "title": "Official decision",
+              "duration": "Varies by country"
+            },
+            {
+              "title": "Receive your approval and travel guidance",
+              "duration": "On approval"
+            }
+          ],
+          "faqs": [
+            {
+              "question": "Do Indian citizens need a visa for Sri Lanka?",
+              "answer": "Indian citizens currently need an Electronic Travel Authorisation (ETA) before arrival, reported as free for up to 30 days at the time of writing. Check the official portal for the current position. Entry rules change, so we confirm the current position with you before you apply."
+            },
+            {
+              "question": "How much will it cost?",
+              "answer": "The government fee, any centre fee and our service fee are quoted to you in writing after a free consultation. Prices are not fixed on this website."
+            },
+            {
+              "question": "How do I pay?",
+              "answer": "Not on this website. After your consultation we share a payment request and you pay us directly. See our Pricing page."
+            },
+            {
+              "question": "Can I get a refund?",
+              "answer": "Yes, in full if we have not yet submitted your application. Once submitted, fees are not refundable. See our Refund Policy."
+            },
+            {
+              "question": "Can you guarantee approval?",
+              "answer": "No. Only the immigration authority decides. We help you prepare a complete and accurate application."
+            }
+          ]
+        }
+      ],
+      "highlights": [
+        "ETA guidance",
+        "Reported 30-day stay (verify)",
+        "Quick document check"
+      ],
+      "relatedDestinations": [
+        "thailand",
+        "vietnam",
+        "malaysia",
+        "singapore"
+      ]
+    },
+    {
+      "slug": "turkey",
+      "country": "Turkey",
+      "flag": "",
+      "iso_code": "tr",
+      "lat": 39.93,
+      "lng": 32.86,
+      "imageUrl": "",
+      "visaTypes": [
+        {
+          "type": "tourist",
+          "required": true,
+          "indicativeFee": 0,
+          "processingTime": "Confirmed at consultation",
+          "validity": "Confirmed at consultation",
+          "validityShort": "See details",
+          "notes": "E-visa eligibility is conditional. We check this before you apply.",
+          "maximumStay": "Confirmed at consultation",
+          "typicalProcessing": "Confirmed at consultation",
+          "purpose": "Tourism, family visits, short business trips",
+          "stayFor": "Short visits",
+          "entryRule": "Indian citizens may be eligible for the Turkey e-visa only if they hold a valid visa or residence permit from specific countries such as the US, UK or a Schengen country. Others need a sticker visa from the embassy.",
+          "govtFee": 0,
+          "vfsFee": 0,
+          "serviceFee": 0,
+          "documents": [
+            "Passport valid for at least 6 months, with blank pages",
+            "Recent passport-size photograph",
+            "Confirmed travel itinerary or flight plan (no need to buy tickets first)",
+            "Accommodation plan",
+            "Proof of funds, such as recent bank statements",
+            "Aadhaar or other ID proof"
+          ],
+          "whoCannotApply": [
+            "Passport not valid for the required period",
+            "Applicants with a previous visa refusal or overstay should speak to us first"
+          ],
+          "insuranceRequired": false,
+          "officialSourceUrl": "https://www.evisa.gov.tr",
+          "lastVerified": "",
+          "steps": [
+            {
+              "title": "Free eligibility check and consultation",
+              "duration": "Same day"
+            },
+            {
+              "title": "Share documents with us on WhatsApp or email",
+              "duration": "1 to 2 days"
+            },
+            {
+              "title": "We review and submit your online application",
+              "duration": "1 day"
+            },
+            {
+              "title": "Official decision",
+              "duration": "Varies by country"
+            },
+            {
+              "title": "Receive your approval and travel guidance",
+              "duration": "On approval"
+            }
+          ],
+          "faqs": [
+            {
+              "question": "Do Indian citizens need a visa for Turkey?",
+              "answer": "Indian citizens may be eligible for the Turkey e-visa only if they hold a valid visa or residence permit from specific countries such as the US, UK or a Schengen country. Others need a sticker visa from the embassy. Entry rules change, so we confirm the current position with you before you apply."
+            },
+            {
+              "question": "How much will it cost?",
+              "answer": "The government fee, any centre fee and our service fee are quoted to you in writing after a free consultation. Prices are not fixed on this website."
+            },
+            {
+              "question": "How do I pay?",
+              "answer": "Not on this website. After your consultation we share a payment request and you pay us directly. See our Pricing page."
+            },
+            {
+              "question": "Can I get a refund?",
+              "answer": "Yes, in full if we have not yet submitted your application. Once submitted, fees are not refundable. See our Refund Policy."
+            },
+            {
+              "question": "Can you guarantee approval?",
+              "answer": "No. Only the immigration authority decides. We help you prepare a complete and accurate application."
+            }
+          ]
+        }
+      ],
+      "highlights": [
+        "Eligibility check first",
+        "E-visa or sticker visa",
+        "Honest assessment"
+      ],
+      "relatedDestinations": [
+        "uae",
+        "schengen-area",
+        "singapore",
         "thailand"
       ]
     },
     {
-      "_comment": "sample data, verify before launch",
+      "slug": "malaysia",
+      "country": "Malaysia",
+      "flag": "",
+      "iso_code": "my",
+      "lat": 3.14,
+      "lng": 101.69,
+      "imageUrl": "",
+      "visaTypes": [
+        {
+          "type": "tourist",
+          "required": true,
+          "indicativeFee": 0,
+          "processingTime": "Confirmed at consultation",
+          "validity": "Confirmed at consultation",
+          "validityShort": "See details",
+          "notes": "Indicative guidance only. We verify the current rule before you apply.",
+          "maximumStay": "Confirmed at consultation",
+          "typicalProcessing": "Confirmed at consultation",
+          "purpose": "Tourism, family visits, short business trips",
+          "stayFor": "Short visits",
+          "entryRule": "Malaysia has offered Indian citizens an e-visa and, for a limited period, visa-free entry. The current position changes, so confirm before booking.",
+          "govtFee": 0,
+          "vfsFee": 0,
+          "serviceFee": 0,
+          "documents": [
+            "Passport valid for at least 6 months, with blank pages",
+            "Recent passport-size photograph",
+            "Confirmed travel itinerary or flight plan (no need to buy tickets first)",
+            "Accommodation plan",
+            "Proof of funds, such as recent bank statements",
+            "Aadhaar or other ID proof"
+          ],
+          "whoCannotApply": [
+            "Passport not valid for the required period",
+            "Applicants with a previous visa refusal or overstay should speak to us first"
+          ],
+          "insuranceRequired": false,
+          "officialSourceUrl": "https://www.imi.gov.my",
+          "lastVerified": "",
+          "steps": [
+            {
+              "title": "Free eligibility check and consultation",
+              "duration": "Same day"
+            },
+            {
+              "title": "Share documents with us on WhatsApp or email",
+              "duration": "1 to 2 days"
+            },
+            {
+              "title": "We review and submit your online application",
+              "duration": "1 day"
+            },
+            {
+              "title": "Official decision",
+              "duration": "Varies by country"
+            },
+            {
+              "title": "Receive your approval and travel guidance",
+              "duration": "On approval"
+            }
+          ],
+          "faqs": [
+            {
+              "question": "Do Indian citizens need a visa for Malaysia?",
+              "answer": "Malaysia has offered Indian citizens an e-visa and, for a limited period, visa-free entry. The current position changes, so confirm before booking. Entry rules change, so we confirm the current position with you before you apply."
+            },
+            {
+              "question": "How much will it cost?",
+              "answer": "The government fee, any centre fee and our service fee are quoted to you in writing after a free consultation. Prices are not fixed on this website."
+            },
+            {
+              "question": "How do I pay?",
+              "answer": "Not on this website. After your consultation we share a payment request and you pay us directly. See our Pricing page."
+            },
+            {
+              "question": "Can I get a refund?",
+              "answer": "Yes, in full if we have not yet submitted your application. Once submitted, fees are not refundable. See our Refund Policy."
+            },
+            {
+              "question": "Can you guarantee approval?",
+              "answer": "No. Only the immigration authority decides. We help you prepare a complete and accurate application."
+            }
+          ]
+        }
+      ],
+      "highlights": [
+        "Rule tracked for you",
+        "Short-stay guidance",
+        "Document review"
+      ],
+      "relatedDestinations": [
+        "singapore",
+        "thailand",
+        "vietnam",
+        "sri-lanka"
+      ]
+    },
+    {
+      "slug": "indonesia",
+      "country": "Indonesia",
+      "flag": "",
+      "iso_code": "id",
+      "lat": -8.34,
+      "lng": 115.09,
+      "imageUrl": "",
+      "visaTypes": [
+        {
+          "type": "tourist",
+          "required": true,
+          "indicativeFee": 0,
+          "processingTime": "Confirmed at consultation",
+          "validity": "Confirmed at consultation",
+          "validityShort": "See details",
+          "notes": "Indicative guidance only. We verify the current rule before you apply.",
+          "maximumStay": "Confirmed at consultation",
+          "typicalProcessing": "Confirmed at consultation",
+          "purpose": "Tourism, family visits, short business trips",
+          "stayFor": "Short visits",
+          "entryRule": "Indian citizens can usually get an e-Visa on Arrival (e-VOA) for tourism, including Bali. Confirm the current fee and stay period with us.",
+          "govtFee": 0,
+          "vfsFee": 0,
+          "serviceFee": 0,
+          "documents": [
+            "Passport valid for at least 6 months, with blank pages",
+            "Recent passport-size photograph",
+            "Confirmed travel itinerary or flight plan (no need to buy tickets first)",
+            "Accommodation plan",
+            "Proof of funds, such as recent bank statements",
+            "Aadhaar or other ID proof"
+          ],
+          "whoCannotApply": [
+            "Passport not valid for the required period",
+            "Applicants with a previous visa refusal or overstay should speak to us first"
+          ],
+          "insuranceRequired": false,
+          "officialSourceUrl": "https://molina.imigrasi.go.id",
+          "lastVerified": "",
+          "steps": [
+            {
+              "title": "Free consultation to confirm the current entry rule",
+              "duration": "Same day"
+            },
+            {
+              "title": "Check passport validity and onward ticket needs",
+              "duration": "1 day"
+            },
+            {
+              "title": "Complete any pre-arrival registration, such as an arrival card",
+              "duration": "1 day"
+            },
+            {
+              "title": "Travel guidance before you fly",
+              "duration": "Before departure"
+            }
+          ],
+          "faqs": [
+            {
+              "question": "Do Indian citizens need a visa for Indonesia?",
+              "answer": "Indian citizens can usually get an e-Visa on Arrival (e-VOA) for tourism, including Bali. Confirm the current fee and stay period with us. Entry rules change, so we confirm the current position with you before you apply."
+            },
+            {
+              "question": "How much will it cost?",
+              "answer": "The government fee, any centre fee and our service fee are quoted to you in writing after a free consultation. Prices are not fixed on this website."
+            },
+            {
+              "question": "How do I pay?",
+              "answer": "Not on this website. After your consultation we share a payment request and you pay us directly. See our Pricing page."
+            },
+            {
+              "question": "Can I get a refund?",
+              "answer": "Yes, in full if we have not yet submitted your application. Once submitted, fees are not refundable. See our Refund Policy."
+            },
+            {
+              "question": "Can you guarantee approval?",
+              "answer": "No. Only the immigration authority decides. We help you prepare a complete and accurate application."
+            }
+          ]
+        }
+      ],
+      "highlights": [
+        "Bali and beyond",
+        "e-VOA guidance",
+        "Arrival form reminders"
+      ],
+      "relatedDestinations": [
+        "singapore",
+        "malaysia",
+        "thailand",
+        "vietnam"
+      ]
+    },
+    {
       "slug": "japan",
       "country": "Japan",
-      "flag": "🇯🇵",
+      "flag": "",
+      "iso_code": "jp",
+      "lat": 35.68,
+      "lng": 139.69,
       "imageUrl": "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=800&q=70",
       "visaTypes": [
         {
           "type": "tourist",
           "required": true,
-          "indicativeFee": 90,
-          "processingTime": "5 working days",
-          "validity": "Up to 90 days per visit",
-          "notes": "Visa exemption applies to some nationalities. Check before you travel.",
-          "maximumStay": "Up to 90 days",
-          "typicalProcessing": "1 to 4 weeks",
-          "purpose": "Tourism, visiting family and friends, short business trips",
-          "stayFor": "Short-term visits, tourism, and leisure",
+          "indicativeFee": 0,
+          "processingTime": "Confirmed at consultation",
+          "validity": "Confirmed at consultation",
+          "validityShort": "See details",
+          "notes": "Indicative guidance only. We verify the current rule before you apply.",
+          "maximumStay": "Confirmed at consultation",
+          "typicalProcessing": "Confirmed at consultation",
+          "purpose": "Tourism, family visits, short business trips",
+          "stayFor": "Short visits",
+          "entryRule": "Indian citizens need a Japan visa. Applications go through the embassy or authorised agencies, and an e-visa is available for eligible applicants.",
+          "govtFee": 0,
+          "vfsFee": 0,
+          "serviceFee": 0,
+          "documents": [
+            "Passport valid for at least 6 months, with blank pages",
+            "Recent passport-size photograph",
+            "Confirmed travel itinerary or flight plan (no need to buy tickets first)",
+            "Accommodation plan",
+            "Proof of funds, such as recent bank statements",
+            "Aadhaar or other ID proof"
+          ],
+          "whoCannotApply": [
+            "Passport not valid for the required period",
+            "Applicants with a previous visa refusal or overstay should speak to us first"
+          ],
+          "insuranceRequired": false,
+          "officialSourceUrl": "https://www.in.emb-japan.go.jp",
+          "lastVerified": "",
           "steps": [
             {
-              "title": "Submit application",
-              "duration": "1 week"
+              "title": "Free eligibility check and consultation",
+              "duration": "Same day"
             },
             {
-              "title": "Biometrics and interview",
-              "duration": "2 days"
+              "title": "Document checklist and review",
+              "duration": "2 to 5 days"
             },
             {
-              "title": "Decision",
-              "duration": "2 to 4 weeks"
+              "title": "Submit application and book biometrics or appointment",
+              "duration": "Depends on slot availability"
+            },
+            {
+              "title": "Biometrics or interview where required",
+              "duration": "Appointment day"
+            },
+            {
+              "title": "Decision and passport return",
+              "duration": "Varies by embassy"
             }
           ],
           "faqs": [
             {
-              "question": "Do I need a visa?",
-              "answer": "Most travelers require a visa, but some nationalities may be visa-exempt."
+              "question": "Do Indian citizens need a visa for Japan?",
+              "answer": "Indian citizens need a Japan visa. Applications go through the embassy or authorised agencies, and an e-visa is available for eligible applicants. Entry rules change, so we confirm the current position with you before you apply."
             },
             {
-              "question": "How long does it take?",
-              "answer": "Processing typically takes 1 to 4 weeks."
+              "question": "How much will it cost?",
+              "answer": "The government fee, any centre fee and our service fee are quoted to you in writing after a free consultation. Prices are not fixed on this website."
             },
             {
-              "question": "Can I extend my stay?",
-              "answer": "Extensions may be possible. Apply before your current visa expires."
+              "question": "How do I pay?",
+              "answer": "Not on this website. After your consultation we share a payment request and you pay us directly. See our Pricing page."
             },
             {
-              "question": "What documents are required?",
-              "answer": "Passport, photos, proof of funds, and supporting documents specific to your visa type."
+              "question": "Can I get a refund?",
+              "answer": "Yes, in full if we have not yet submitted your application. Once submitted, fees are not refundable. See our Refund Policy."
             },
             {
-              "question": "Can I apply online?",
-              "answer": "Most applications can be submitted online through the official government portal."
-            }
-          ]
-        },
-        {
-          "type": "student",
-          "required": true,
-          "indicativeFee": 90,
-          "processingTime": "1 to 3 months, including certificate of eligibility",
-          "validity": "Length of course, up to 4 years",
-          "notes": "The school applies for a certificate of eligibility on your behalf.",
-          "maximumStay": "Length of course plus 2 months",
-          "typicalProcessing": "4 to 8 weeks",
-          "purpose": "Study at a recognized educational institution",
-          "stayFor": "Length of course",
-          "steps": [
-            {
-              "title": "Get acceptance letter",
-              "duration": "2 to 4 weeks"
-            },
-            {
-              "title": "Submit visa application",
-              "duration": "1 week"
-            },
-            {
-              "title": "Decision",
-              "duration": "4 to 8 weeks"
-            }
-          ],
-          "faqs": [
-            {
-              "question": "Do I need a visa?",
-              "answer": "Most international students require a student visa."
-            },
-            {
-              "question": "Can I work while studying?",
-              "answer": "Work rights vary by country and visa type."
-            },
-            {
-              "question": "Can I bring family?",
-              "answer": "Some student visas allow dependent family members."
-            },
-            {
-              "question": "What documents are required?",
-              "answer": "Passport, photos, proof of funds, and supporting documents specific to your visa type."
-            },
-            {
-              "question": "Can I apply online?",
-              "answer": "Most applications can be submitted online through the official government portal."
-            }
-          ]
-        },
-        {
-          "type": "work",
-          "required": true,
-          "indicativeFee": 90,
-          "processingTime": "1 to 3 months",
-          "validity": "Up to 5 years depending on category",
-          "notes": "Work visas are category specific and need a qualifying job offer.",
-          "maximumStay": "Up to 3 years, renewable",
-          "typicalProcessing": "1 to 3 months",
-          "purpose": "Employment with a local employer",
-          "stayFor": "Length of employment contract",
-          "steps": [
-            {
-              "title": "Get job offer",
-              "duration": "Varies"
-            },
-            {
-              "title": "Submit visa application",
-              "duration": "1 week"
-            },
-            {
-              "title": "Decision",
-              "duration": "1 to 3 months"
-            }
-          ],
-          "faqs": [
-            {
-              "question": "Do I need a visa?",
-              "answer": "Most employment requires a work visa or permit."
-            },
-            {
-              "question": "Can I bring family?",
-              "answer": "Some work visas allow dependent family members."
-            },
-            {
-              "question": "Can I change employers?",
-              "answer": "Changing employers may require a new visa application."
-            },
-            {
-              "question": "What documents are required?",
-              "answer": "Passport, photos, proof of funds, and supporting documents specific to your visa type."
-            },
-            {
-              "question": "Can I apply online?",
-              "answer": "Most applications can be submitted online through the official government portal."
+              "question": "Can you guarantee approval?",
+              "answer": "No. Only the immigration authority decides. We help you prepare a complete and accurate application."
             }
           ]
         }
       ],
       "highlights": [
-        "Ancient temples and hyper-modern cities",
-        "Meticulously planned transport and culture",
-        "Season-driven beauty and cuisine"
+        "Itinerary and funds review",
+        "Embassy-ready file",
+        "Appointment guidance"
       ],
       "relatedDestinations": [
-        "korea",
-        "china"
+        "singapore",
+        "schengen-area",
+        "united-kingdom",
+        "vietnam"
       ]
     },
     {
-      "_comment": "sample data, verify before launch",
-      "slug": "india",
-      "country": "India",
-      "flag": "🇮🇳",
-      "imageUrl": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=800&q=70",
+      "slug": "schengen-area",
+      "country": "Schengen Area",
+      "flag": "",
+      "iso_code": "eu",
+      "lat": 48.86,
+      "lng": 2.35,
+      "imageUrl": "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=800&q=70",
       "visaTypes": [
         {
           "type": "tourist",
           "required": true,
-          "indicativeFee": 70,
-          "processingTime": "3 to 5 working days for e-Visa",
-          "validity": "Up to 1 year, multiple entry, depending on eligibility",
-          "notes": "Most applications are made online. Passport validity requirements apply.",
-          "maximumStay": "Up to 90 days",
-          "typicalProcessing": "1 to 4 weeks",
-          "purpose": "Tourism, visiting family and friends, short business trips",
-          "stayFor": "Short-term visits, tourism, and leisure",
+          "indicativeFee": 0,
+          "processingTime": "Confirmed at consultation",
+          "validity": "Confirmed at consultation",
+          "validityShort": "See details",
+          "notes": "Indicative guidance only. We verify the current rule before you apply.",
+          "maximumStay": "Confirmed at consultation",
+          "typicalProcessing": "Confirmed at consultation",
+          "purpose": "Tourism, family visits, short business trips",
+          "stayFor": "Short visits",
+          "entryRule": "Indian citizens need a Schengen visa, applied through the embassy or its visa application centre of the country you will spend most time in.",
+          "govtFee": 0,
+          "vfsFee": 0,
+          "serviceFee": 0,
+          "documents": [
+            "Passport valid for at least 6 months, with blank pages",
+            "Recent passport-size photograph",
+            "Confirmed travel itinerary or flight plan (no need to buy tickets first)",
+            "Accommodation plan",
+            "Proof of funds, such as recent bank statements",
+            "Aadhaar or other ID proof"
+          ],
+          "whoCannotApply": [
+            "Passport not valid for the required period",
+            "Applicants with a previous visa refusal or overstay should speak to us first"
+          ],
+          "insuranceRequired": true,
+          "officialSourceUrl": "https://www.schengenvisainfo.com",
+          "lastVerified": "",
           "steps": [
             {
-              "title": "Submit application",
-              "duration": "1 week"
+              "title": "Free eligibility check and consultation",
+              "duration": "Same day"
             },
             {
-              "title": "Biometrics and interview",
-              "duration": "2 days"
+              "title": "Document checklist and review",
+              "duration": "2 to 5 days"
             },
             {
-              "title": "Decision",
-              "duration": "2 to 4 weeks"
+              "title": "Submit application and book biometrics or appointment",
+              "duration": "Depends on slot availability"
+            },
+            {
+              "title": "Biometrics or interview where required",
+              "duration": "Appointment day"
+            },
+            {
+              "title": "Decision and passport return",
+              "duration": "Varies by embassy"
             }
           ],
           "faqs": [
             {
-              "question": "Do I need a visa?",
-              "answer": "Most travelers require a visa, but some nationalities may be visa-exempt."
+              "question": "Do Indian citizens need a visa for Schengen Area?",
+              "answer": "Indian citizens need a Schengen visa, applied through the embassy or its visa application centre of the country you will spend most time in. Entry rules change, so we confirm the current position with you before you apply."
             },
             {
-              "question": "How long does it take?",
-              "answer": "Processing typically takes 1 to 4 weeks."
+              "question": "How much will it cost?",
+              "answer": "The government fee, any centre fee and our service fee are quoted to you in writing after a free consultation. Prices are not fixed on this website."
             },
             {
-              "question": "Can I extend my stay?",
-              "answer": "Extensions may be possible. Apply before your current visa expires."
+              "question": "How do I pay?",
+              "answer": "Not on this website. After your consultation we share a payment request and you pay us directly. See our Pricing page."
             },
             {
-              "question": "What documents are required?",
-              "answer": "Passport, photos, proof of funds, and supporting documents specific to your visa type."
+              "question": "Can I get a refund?",
+              "answer": "Yes, in full if we have not yet submitted your application. Once submitted, fees are not refundable. See our Refund Policy."
             },
             {
-              "question": "Can I apply online?",
-              "answer": "Most applications can be submitted online through the official government portal."
+              "question": "Can you guarantee approval?",
+              "answer": "No. Only the immigration authority decides. We help you prepare a complete and accurate application."
             }
           ]
         },
         {
           "type": "student",
           "required": true,
-          "indicativeFee": 110,
-          "processingTime": "2 to 6 weeks",
-          "validity": "Length of course, up to 5 years",
-          "notes": "Requires an admission letter from a recognised institution.",
-          "maximumStay": "Length of course plus 2 months",
-          "typicalProcessing": "4 to 8 weeks",
-          "purpose": "Study at a recognized educational institution",
-          "stayFor": "Length of course",
+          "indicativeFee": 0,
+          "processingTime": "Confirmed at consultation",
+          "validity": "Confirmed at consultation",
+          "validityShort": "See details",
+          "notes": "Study visas depend on your profile and the destination rules. Book a consultation for an honest assessment.",
+          "maximumStay": "Confirmed at consultation",
+          "typicalProcessing": "Confirmed at consultation",
+          "purpose": "Study at a recognised institution",
+          "stayFor": "Confirmed at consultation",
+          "entryRule": "Embassy or consulate application",
+          "govtFee": 0,
+          "vfsFee": 0,
+          "serviceFee": 0,
+          "documents": [
+            "Valid passport",
+            "Photographs as per the embassy specification",
+            "Supporting documents specific to this visa type (we share a checklist)"
+          ],
+          "whoCannotApply": [
+            "Eligibility depends on the destination. We tell you plainly if we cannot help."
+          ],
+          "insuranceRequired": false,
+          "officialSourceUrl": "",
+          "lastVerified": "",
           "steps": [
             {
-              "title": "Get acceptance letter",
-              "duration": "2 to 4 weeks"
+              "title": "Free eligibility check and consultation",
+              "duration": "Same day"
             },
             {
-              "title": "Submit visa application",
-              "duration": "1 week"
+              "title": "Document checklist and review",
+              "duration": "2 to 5 days"
             },
             {
-              "title": "Decision",
-              "duration": "4 to 8 weeks"
+              "title": "Submit application and book biometrics or appointment",
+              "duration": "Depends on slot availability"
+            },
+            {
+              "title": "Biometrics or interview where required",
+              "duration": "Appointment day"
+            },
+            {
+              "title": "Decision and passport return",
+              "duration": "Varies by embassy"
             }
           ],
           "faqs": [
             {
-              "question": "Do I need a visa?",
-              "answer": "Most international students require a student visa."
+              "question": "Do Indian citizens need a visa for Schengen Area?",
+              "answer": "A visa is needed for this purpose. Entry rules change, so we confirm the current position with you before you apply."
             },
             {
-              "question": "Can I work while studying?",
-              "answer": "Work rights vary by country and visa type."
+              "question": "How much will it cost?",
+              "answer": "The government fee, any centre fee and our service fee are quoted to you in writing after a free consultation. Prices are not fixed on this website."
             },
             {
-              "question": "Can I bring family?",
-              "answer": "Some student visas allow dependent family members."
+              "question": "How do I pay?",
+              "answer": "Not on this website. After your consultation we share a payment request and you pay us directly. See our Pricing page."
             },
             {
-              "question": "What documents are required?",
-              "answer": "Passport, photos, proof of funds, and supporting documents specific to your visa type."
+              "question": "Can I get a refund?",
+              "answer": "Yes, in full if we have not yet submitted your application. Once submitted, fees are not refundable. See our Refund Policy."
             },
             {
-              "question": "Can I apply online?",
-              "answer": "Most applications can be submitted online through the official government portal."
+              "question": "Can you guarantee approval?",
+              "answer": "No. Only the immigration authority decides. We help you prepare a complete and accurate application."
             }
           ]
         },
         {
           "type": "work",
           "required": true,
-          "indicativeFee": 330,
-          "processingTime": "4 to 8 weeks",
-          "validity": "Length of employment contract, up to 5 years",
-          "notes": "Requires a job offer and approval from the relevant authority.",
-          "maximumStay": "Up to 3 years, renewable",
-          "typicalProcessing": "1 to 3 months",
+          "indicativeFee": 0,
+          "processingTime": "Confirmed at consultation",
+          "validity": "Confirmed at consultation",
+          "validityShort": "See details",
+          "notes": "Work visas depend on your profile and the destination rules. Book a consultation for an honest assessment.",
+          "maximumStay": "Confirmed at consultation",
+          "typicalProcessing": "Confirmed at consultation",
           "purpose": "Employment with a local employer",
-          "stayFor": "Length of employment contract",
+          "stayFor": "Confirmed at consultation",
+          "entryRule": "Embassy or consulate application",
+          "govtFee": 0,
+          "vfsFee": 0,
+          "serviceFee": 0,
+          "documents": [
+            "Valid passport",
+            "Photographs as per the embassy specification",
+            "Supporting documents specific to this visa type (we share a checklist)"
+          ],
+          "whoCannotApply": [
+            "Eligibility depends on the destination. We tell you plainly if we cannot help."
+          ],
+          "insuranceRequired": false,
+          "officialSourceUrl": "",
+          "lastVerified": "",
           "steps": [
             {
-              "title": "Get job offer",
-              "duration": "Varies"
+              "title": "Free eligibility check and consultation",
+              "duration": "Same day"
             },
             {
-              "title": "Submit visa application",
-              "duration": "1 week"
+              "title": "Document checklist and review",
+              "duration": "2 to 5 days"
             },
             {
-              "title": "Decision",
-              "duration": "1 to 3 months"
+              "title": "Submit application and book biometrics or appointment",
+              "duration": "Depends on slot availability"
+            },
+            {
+              "title": "Biometrics or interview where required",
+              "duration": "Appointment day"
+            },
+            {
+              "title": "Decision and passport return",
+              "duration": "Varies by embassy"
             }
           ],
           "faqs": [
             {
-              "question": "Do I need a visa?",
-              "answer": "Most employment requires a work visa or permit."
+              "question": "Do Indian citizens need a visa for Schengen Area?",
+              "answer": "A visa is needed for this purpose. Entry rules change, so we confirm the current position with you before you apply."
             },
             {
-              "question": "Can I bring family?",
-              "answer": "Some work visas allow dependent family members."
+              "question": "How much will it cost?",
+              "answer": "The government fee, any centre fee and our service fee are quoted to you in writing after a free consultation. Prices are not fixed on this website."
             },
             {
-              "question": "Can I change employers?",
-              "answer": "Changing employers may require a new visa application."
+              "question": "How do I pay?",
+              "answer": "Not on this website. After your consultation we share a payment request and you pay us directly. See our Pricing page."
             },
             {
-              "question": "What documents are required?",
-              "answer": "Passport, photos, proof of funds, and supporting documents specific to your visa type."
+              "question": "Can I get a refund?",
+              "answer": "Yes, in full if we have not yet submitted your application. Once submitted, fees are not refundable. See our Refund Policy."
             },
             {
-              "question": "Can I apply online?",
-              "answer": "Most applications can be submitted online through the official government portal."
+              "question": "Can you guarantee approval?",
+              "answer": "No. Only the immigration authority decides. We help you prepare a complete and accurate application."
+            }
+          ]
+        },
+        {
+          "type": "family",
+          "required": true,
+          "indicativeFee": 0,
+          "processingTime": "Confirmed at consultation",
+          "validity": "Confirmed at consultation",
+          "validityShort": "See details",
+          "notes": "Family and dependants visas depend on your profile and the destination rules. Book a consultation for an honest assessment.",
+          "maximumStay": "Confirmed at consultation",
+          "typicalProcessing": "Confirmed at consultation",
+          "purpose": "Joining or visiting family members",
+          "stayFor": "Confirmed at consultation",
+          "entryRule": "Embassy or consulate application",
+          "govtFee": 0,
+          "vfsFee": 0,
+          "serviceFee": 0,
+          "documents": [
+            "Valid passport",
+            "Photographs as per the embassy specification",
+            "Supporting documents specific to this visa type (we share a checklist)"
+          ],
+          "whoCannotApply": [
+            "Eligibility depends on the destination. We tell you plainly if we cannot help."
+          ],
+          "insuranceRequired": false,
+          "officialSourceUrl": "",
+          "lastVerified": "",
+          "steps": [
+            {
+              "title": "Free eligibility check and consultation",
+              "duration": "Same day"
+            },
+            {
+              "title": "Document checklist and review",
+              "duration": "2 to 5 days"
+            },
+            {
+              "title": "Submit application and book biometrics or appointment",
+              "duration": "Depends on slot availability"
+            },
+            {
+              "title": "Biometrics or interview where required",
+              "duration": "Appointment day"
+            },
+            {
+              "title": "Decision and passport return",
+              "duration": "Varies by embassy"
+            }
+          ],
+          "faqs": [
+            {
+              "question": "Do Indian citizens need a visa for Schengen Area?",
+              "answer": "A visa is needed for this purpose. Entry rules change, so we confirm the current position with you before you apply."
+            },
+            {
+              "question": "How much will it cost?",
+              "answer": "The government fee, any centre fee and our service fee are quoted to you in writing after a free consultation. Prices are not fixed on this website."
+            },
+            {
+              "question": "How do I pay?",
+              "answer": "Not on this website. After your consultation we share a payment request and you pay us directly. See our Pricing page."
+            },
+            {
+              "question": "Can I get a refund?",
+              "answer": "Yes, in full if we have not yet submitted your application. Once submitted, fees are not refundable. See our Refund Policy."
+            },
+            {
+              "question": "Can you guarantee approval?",
+              "answer": "No. Only the immigration authority decides. We help you prepare a complete and accurate application."
             }
           ]
         }
       ],
       "highlights": [
-        "Rich heritage and vibrant festivals",
-        "Diverse landscapes from Himalayas to coasts",
-        "Culinary capital and spiritual heritage"
+        "Itinerary and insurance review",
+        "Appointment guidance",
+        "Complete file checks"
       ],
       "relatedDestinations": [
-        "thailand",
-        "china"
+        "united-kingdom",
+        "turkey",
+        "uae",
+        "japan"
+      ]
+    },
+    {
+      "slug": "united-kingdom",
+      "country": "United Kingdom",
+      "flag": "",
+      "iso_code": "gb",
+      "lat": 51.51,
+      "lng": -0.13,
+      "imageUrl": "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=800&q=70",
+      "visaTypes": [
+        {
+          "type": "tourist",
+          "required": true,
+          "indicativeFee": 0,
+          "processingTime": "Confirmed at consultation",
+          "validity": "Confirmed at consultation",
+          "validityShort": "See details",
+          "notes": "Indicative guidance only. We verify the current rule before you apply.",
+          "maximumStay": "Confirmed at consultation",
+          "typicalProcessing": "Confirmed at consultation",
+          "purpose": "Tourism, family visits, short business trips",
+          "stayFor": "Short visits",
+          "entryRule": "Indian citizens need a UK Standard Visitor visa, applied for online with biometrics at a visa application centre.",
+          "govtFee": 0,
+          "vfsFee": 0,
+          "serviceFee": 0,
+          "documents": [
+            "Passport valid for at least 6 months, with blank pages",
+            "Recent passport-size photograph",
+            "Confirmed travel itinerary or flight plan (no need to buy tickets first)",
+            "Accommodation plan",
+            "Proof of funds, such as recent bank statements",
+            "Aadhaar or other ID proof"
+          ],
+          "whoCannotApply": [
+            "Passport not valid for the required period",
+            "Applicants with a previous visa refusal or overstay should speak to us first"
+          ],
+          "insuranceRequired": false,
+          "officialSourceUrl": "https://www.gov.uk/standard-visitor",
+          "lastVerified": "",
+          "steps": [
+            {
+              "title": "Free eligibility check and consultation",
+              "duration": "Same day"
+            },
+            {
+              "title": "Document checklist and review",
+              "duration": "2 to 5 days"
+            },
+            {
+              "title": "Submit application and book biometrics or appointment",
+              "duration": "Depends on slot availability"
+            },
+            {
+              "title": "Biometrics or interview where required",
+              "duration": "Appointment day"
+            },
+            {
+              "title": "Decision and passport return",
+              "duration": "Varies by embassy"
+            }
+          ],
+          "faqs": [
+            {
+              "question": "Do Indian citizens need a visa for United Kingdom?",
+              "answer": "Indian citizens need a UK Standard Visitor visa, applied for online with biometrics at a visa application centre. Entry rules change, so we confirm the current position with you before you apply."
+            },
+            {
+              "question": "How much will it cost?",
+              "answer": "The government fee, any centre fee and our service fee are quoted to you in writing after a free consultation. Prices are not fixed on this website."
+            },
+            {
+              "question": "How do I pay?",
+              "answer": "Not on this website. After your consultation we share a payment request and you pay us directly. See our Pricing page."
+            },
+            {
+              "question": "Can I get a refund?",
+              "answer": "Yes, in full if we have not yet submitted your application. Once submitted, fees are not refundable. See our Refund Policy."
+            },
+            {
+              "question": "Can you guarantee approval?",
+              "answer": "No. Only the immigration authority decides. We help you prepare a complete and accurate application."
+            }
+          ]
+        },
+        {
+          "type": "student",
+          "required": true,
+          "indicativeFee": 0,
+          "processingTime": "Confirmed at consultation",
+          "validity": "Confirmed at consultation",
+          "validityShort": "See details",
+          "notes": "Study visas depend on your profile and the destination rules. Book a consultation for an honest assessment.",
+          "maximumStay": "Confirmed at consultation",
+          "typicalProcessing": "Confirmed at consultation",
+          "purpose": "Study at a recognised institution",
+          "stayFor": "Confirmed at consultation",
+          "entryRule": "Embassy or consulate application",
+          "govtFee": 0,
+          "vfsFee": 0,
+          "serviceFee": 0,
+          "documents": [
+            "Valid passport",
+            "Photographs as per the embassy specification",
+            "Supporting documents specific to this visa type (we share a checklist)"
+          ],
+          "whoCannotApply": [
+            "Eligibility depends on the destination. We tell you plainly if we cannot help."
+          ],
+          "insuranceRequired": false,
+          "officialSourceUrl": "",
+          "lastVerified": "",
+          "steps": [
+            {
+              "title": "Free eligibility check and consultation",
+              "duration": "Same day"
+            },
+            {
+              "title": "Document checklist and review",
+              "duration": "2 to 5 days"
+            },
+            {
+              "title": "Submit application and book biometrics or appointment",
+              "duration": "Depends on slot availability"
+            },
+            {
+              "title": "Biometrics or interview where required",
+              "duration": "Appointment day"
+            },
+            {
+              "title": "Decision and passport return",
+              "duration": "Varies by embassy"
+            }
+          ],
+          "faqs": [
+            {
+              "question": "Do Indian citizens need a visa for United Kingdom?",
+              "answer": "A visa is needed for this purpose. Entry rules change, so we confirm the current position with you before you apply."
+            },
+            {
+              "question": "How much will it cost?",
+              "answer": "The government fee, any centre fee and our service fee are quoted to you in writing after a free consultation. Prices are not fixed on this website."
+            },
+            {
+              "question": "How do I pay?",
+              "answer": "Not on this website. After your consultation we share a payment request and you pay us directly. See our Pricing page."
+            },
+            {
+              "question": "Can I get a refund?",
+              "answer": "Yes, in full if we have not yet submitted your application. Once submitted, fees are not refundable. See our Refund Policy."
+            },
+            {
+              "question": "Can you guarantee approval?",
+              "answer": "No. Only the immigration authority decides. We help you prepare a complete and accurate application."
+            }
+          ]
+        },
+        {
+          "type": "work",
+          "required": true,
+          "indicativeFee": 0,
+          "processingTime": "Confirmed at consultation",
+          "validity": "Confirmed at consultation",
+          "validityShort": "See details",
+          "notes": "Work visas depend on your profile and the destination rules. Book a consultation for an honest assessment.",
+          "maximumStay": "Confirmed at consultation",
+          "typicalProcessing": "Confirmed at consultation",
+          "purpose": "Employment with a local employer",
+          "stayFor": "Confirmed at consultation",
+          "entryRule": "Embassy or consulate application",
+          "govtFee": 0,
+          "vfsFee": 0,
+          "serviceFee": 0,
+          "documents": [
+            "Valid passport",
+            "Photographs as per the embassy specification",
+            "Supporting documents specific to this visa type (we share a checklist)"
+          ],
+          "whoCannotApply": [
+            "Eligibility depends on the destination. We tell you plainly if we cannot help."
+          ],
+          "insuranceRequired": false,
+          "officialSourceUrl": "",
+          "lastVerified": "",
+          "steps": [
+            {
+              "title": "Free eligibility check and consultation",
+              "duration": "Same day"
+            },
+            {
+              "title": "Document checklist and review",
+              "duration": "2 to 5 days"
+            },
+            {
+              "title": "Submit application and book biometrics or appointment",
+              "duration": "Depends on slot availability"
+            },
+            {
+              "title": "Biometrics or interview where required",
+              "duration": "Appointment day"
+            },
+            {
+              "title": "Decision and passport return",
+              "duration": "Varies by embassy"
+            }
+          ],
+          "faqs": [
+            {
+              "question": "Do Indian citizens need a visa for United Kingdom?",
+              "answer": "A visa is needed for this purpose. Entry rules change, so we confirm the current position with you before you apply."
+            },
+            {
+              "question": "How much will it cost?",
+              "answer": "The government fee, any centre fee and our service fee are quoted to you in writing after a free consultation. Prices are not fixed on this website."
+            },
+            {
+              "question": "How do I pay?",
+              "answer": "Not on this website. After your consultation we share a payment request and you pay us directly. See our Pricing page."
+            },
+            {
+              "question": "Can I get a refund?",
+              "answer": "Yes, in full if we have not yet submitted your application. Once submitted, fees are not refundable. See our Refund Policy."
+            },
+            {
+              "question": "Can you guarantee approval?",
+              "answer": "No. Only the immigration authority decides. We help you prepare a complete and accurate application."
+            }
+          ]
+        },
+        {
+          "type": "family",
+          "required": true,
+          "indicativeFee": 0,
+          "processingTime": "Confirmed at consultation",
+          "validity": "Confirmed at consultation",
+          "validityShort": "See details",
+          "notes": "Family and dependants visas depend on your profile and the destination rules. Book a consultation for an honest assessment.",
+          "maximumStay": "Confirmed at consultation",
+          "typicalProcessing": "Confirmed at consultation",
+          "purpose": "Joining or visiting family members",
+          "stayFor": "Confirmed at consultation",
+          "entryRule": "Embassy or consulate application",
+          "govtFee": 0,
+          "vfsFee": 0,
+          "serviceFee": 0,
+          "documents": [
+            "Valid passport",
+            "Photographs as per the embassy specification",
+            "Supporting documents specific to this visa type (we share a checklist)"
+          ],
+          "whoCannotApply": [
+            "Eligibility depends on the destination. We tell you plainly if we cannot help."
+          ],
+          "insuranceRequired": false,
+          "officialSourceUrl": "",
+          "lastVerified": "",
+          "steps": [
+            {
+              "title": "Free eligibility check and consultation",
+              "duration": "Same day"
+            },
+            {
+              "title": "Document checklist and review",
+              "duration": "2 to 5 days"
+            },
+            {
+              "title": "Submit application and book biometrics or appointment",
+              "duration": "Depends on slot availability"
+            },
+            {
+              "title": "Biometrics or interview where required",
+              "duration": "Appointment day"
+            },
+            {
+              "title": "Decision and passport return",
+              "duration": "Varies by embassy"
+            }
+          ],
+          "faqs": [
+            {
+              "question": "Do Indian citizens need a visa for United Kingdom?",
+              "answer": "A visa is needed for this purpose. Entry rules change, so we confirm the current position with you before you apply."
+            },
+            {
+              "question": "How much will it cost?",
+              "answer": "The government fee, any centre fee and our service fee are quoted to you in writing after a free consultation. Prices are not fixed on this website."
+            },
+            {
+              "question": "How do I pay?",
+              "answer": "Not on this website. After your consultation we share a payment request and you pay us directly. See our Pricing page."
+            },
+            {
+              "question": "Can I get a refund?",
+              "answer": "Yes, in full if we have not yet submitted your application. Once submitted, fees are not refundable. See our Refund Policy."
+            },
+            {
+              "question": "Can you guarantee approval?",
+              "answer": "No. Only the immigration authority decides. We help you prepare a complete and accurate application."
+            }
+          ]
+        }
+      ],
+      "highlights": [
+        "Online application support",
+        "Biometric guidance",
+        "Complete file checks"
+      ],
+      "relatedDestinations": [
+        "schengen-area",
+        "united-states",
+        "canada",
+        "uae"
+      ]
+    },
+    {
+      "slug": "united-states",
+      "country": "United States",
+      "flag": "",
+      "iso_code": "us",
+      "lat": 38.9,
+      "lng": -77.04,
+      "imageUrl": "https://images.unsplash.com/photo-1576606970009-7ddc4229ced7?q=80&w=800&auto=format&fit=crop",
+      "visaTypes": [
+        {
+          "type": "tourist",
+          "required": true,
+          "indicativeFee": 0,
+          "processingTime": "Confirmed at consultation",
+          "validity": "Confirmed at consultation",
+          "validityShort": "See details",
+          "notes": "Indicative guidance only. We verify the current rule before you apply.",
+          "maximumStay": "Confirmed at consultation",
+          "typicalProcessing": "Confirmed at consultation",
+          "purpose": "Tourism, family visits, short business trips",
+          "stayFor": "Short visits",
+          "entryRule": "Indian citizens need a B1/B2 visitor visa with a DS-160 form and an interview at a US consulate.",
+          "govtFee": 0,
+          "vfsFee": 0,
+          "serviceFee": 0,
+          "documents": [
+            "Passport valid for at least 6 months, with blank pages",
+            "Recent passport-size photograph",
+            "Confirmed travel itinerary or flight plan (no need to buy tickets first)",
+            "Accommodation plan",
+            "Proof of funds, such as recent bank statements",
+            "Aadhaar or other ID proof"
+          ],
+          "whoCannotApply": [
+            "Passport not valid for the required period",
+            "Applicants with a previous visa refusal or overstay should speak to us first"
+          ],
+          "insuranceRequired": false,
+          "officialSourceUrl": "https://travel.state.gov",
+          "lastVerified": "",
+          "steps": [
+            {
+              "title": "Free eligibility check and consultation",
+              "duration": "Same day"
+            },
+            {
+              "title": "Document checklist and review",
+              "duration": "2 to 5 days"
+            },
+            {
+              "title": "Submit application and book biometrics or appointment",
+              "duration": "Depends on slot availability"
+            },
+            {
+              "title": "Biometrics or interview where required",
+              "duration": "Appointment day"
+            },
+            {
+              "title": "Decision and passport return",
+              "duration": "Varies by embassy"
+            }
+          ],
+          "faqs": [
+            {
+              "question": "Do Indian citizens need a visa for United States?",
+              "answer": "Indian citizens need a B1/B2 visitor visa with a DS-160 form and an interview at a US consulate. Entry rules change, so we confirm the current position with you before you apply."
+            },
+            {
+              "question": "How much will it cost?",
+              "answer": "The government fee, any centre fee and our service fee are quoted to you in writing after a free consultation. Prices are not fixed on this website."
+            },
+            {
+              "question": "How do I pay?",
+              "answer": "Not on this website. After your consultation we share a payment request and you pay us directly. See our Pricing page."
+            },
+            {
+              "question": "Can I get a refund?",
+              "answer": "Yes, in full if we have not yet submitted your application. Once submitted, fees are not refundable. See our Refund Policy."
+            },
+            {
+              "question": "Can you guarantee approval?",
+              "answer": "No. Only the immigration authority decides. We help you prepare a complete and accurate application."
+            }
+          ]
+        },
+        {
+          "type": "student",
+          "required": true,
+          "indicativeFee": 0,
+          "processingTime": "Confirmed at consultation",
+          "validity": "Confirmed at consultation",
+          "validityShort": "See details",
+          "notes": "Study visas depend on your profile and the destination rules. Book a consultation for an honest assessment.",
+          "maximumStay": "Confirmed at consultation",
+          "typicalProcessing": "Confirmed at consultation",
+          "purpose": "Study at a recognised institution",
+          "stayFor": "Confirmed at consultation",
+          "entryRule": "Embassy or consulate application",
+          "govtFee": 0,
+          "vfsFee": 0,
+          "serviceFee": 0,
+          "documents": [
+            "Valid passport",
+            "Photographs as per the embassy specification",
+            "Supporting documents specific to this visa type (we share a checklist)"
+          ],
+          "whoCannotApply": [
+            "Eligibility depends on the destination. We tell you plainly if we cannot help."
+          ],
+          "insuranceRequired": false,
+          "officialSourceUrl": "",
+          "lastVerified": "",
+          "steps": [
+            {
+              "title": "Free eligibility check and consultation",
+              "duration": "Same day"
+            },
+            {
+              "title": "Document checklist and review",
+              "duration": "2 to 5 days"
+            },
+            {
+              "title": "Submit application and book biometrics or appointment",
+              "duration": "Depends on slot availability"
+            },
+            {
+              "title": "Biometrics or interview where required",
+              "duration": "Appointment day"
+            },
+            {
+              "title": "Decision and passport return",
+              "duration": "Varies by embassy"
+            }
+          ],
+          "faqs": [
+            {
+              "question": "Do Indian citizens need a visa for United States?",
+              "answer": "A visa is needed for this purpose. Entry rules change, so we confirm the current position with you before you apply."
+            },
+            {
+              "question": "How much will it cost?",
+              "answer": "The government fee, any centre fee and our service fee are quoted to you in writing after a free consultation. Prices are not fixed on this website."
+            },
+            {
+              "question": "How do I pay?",
+              "answer": "Not on this website. After your consultation we share a payment request and you pay us directly. See our Pricing page."
+            },
+            {
+              "question": "Can I get a refund?",
+              "answer": "Yes, in full if we have not yet submitted your application. Once submitted, fees are not refundable. See our Refund Policy."
+            },
+            {
+              "question": "Can you guarantee approval?",
+              "answer": "No. Only the immigration authority decides. We help you prepare a complete and accurate application."
+            }
+          ]
+        },
+        {
+          "type": "work",
+          "required": true,
+          "indicativeFee": 0,
+          "processingTime": "Confirmed at consultation",
+          "validity": "Confirmed at consultation",
+          "validityShort": "See details",
+          "notes": "Work visas depend on your profile and the destination rules. Book a consultation for an honest assessment.",
+          "maximumStay": "Confirmed at consultation",
+          "typicalProcessing": "Confirmed at consultation",
+          "purpose": "Employment with a local employer",
+          "stayFor": "Confirmed at consultation",
+          "entryRule": "Embassy or consulate application",
+          "govtFee": 0,
+          "vfsFee": 0,
+          "serviceFee": 0,
+          "documents": [
+            "Valid passport",
+            "Photographs as per the embassy specification",
+            "Supporting documents specific to this visa type (we share a checklist)"
+          ],
+          "whoCannotApply": [
+            "Eligibility depends on the destination. We tell you plainly if we cannot help."
+          ],
+          "insuranceRequired": false,
+          "officialSourceUrl": "",
+          "lastVerified": "",
+          "steps": [
+            {
+              "title": "Free eligibility check and consultation",
+              "duration": "Same day"
+            },
+            {
+              "title": "Document checklist and review",
+              "duration": "2 to 5 days"
+            },
+            {
+              "title": "Submit application and book biometrics or appointment",
+              "duration": "Depends on slot availability"
+            },
+            {
+              "title": "Biometrics or interview where required",
+              "duration": "Appointment day"
+            },
+            {
+              "title": "Decision and passport return",
+              "duration": "Varies by embassy"
+            }
+          ],
+          "faqs": [
+            {
+              "question": "Do Indian citizens need a visa for United States?",
+              "answer": "A visa is needed for this purpose. Entry rules change, so we confirm the current position with you before you apply."
+            },
+            {
+              "question": "How much will it cost?",
+              "answer": "The government fee, any centre fee and our service fee are quoted to you in writing after a free consultation. Prices are not fixed on this website."
+            },
+            {
+              "question": "How do I pay?",
+              "answer": "Not on this website. After your consultation we share a payment request and you pay us directly. See our Pricing page."
+            },
+            {
+              "question": "Can I get a refund?",
+              "answer": "Yes, in full if we have not yet submitted your application. Once submitted, fees are not refundable. See our Refund Policy."
+            },
+            {
+              "question": "Can you guarantee approval?",
+              "answer": "No. Only the immigration authority decides. We help you prepare a complete and accurate application."
+            }
+          ]
+        },
+        {
+          "type": "family",
+          "required": true,
+          "indicativeFee": 0,
+          "processingTime": "Confirmed at consultation",
+          "validity": "Confirmed at consultation",
+          "validityShort": "See details",
+          "notes": "Family and dependants visas depend on your profile and the destination rules. Book a consultation for an honest assessment.",
+          "maximumStay": "Confirmed at consultation",
+          "typicalProcessing": "Confirmed at consultation",
+          "purpose": "Joining or visiting family members",
+          "stayFor": "Confirmed at consultation",
+          "entryRule": "Embassy or consulate application",
+          "govtFee": 0,
+          "vfsFee": 0,
+          "serviceFee": 0,
+          "documents": [
+            "Valid passport",
+            "Photographs as per the embassy specification",
+            "Supporting documents specific to this visa type (we share a checklist)"
+          ],
+          "whoCannotApply": [
+            "Eligibility depends on the destination. We tell you plainly if we cannot help."
+          ],
+          "insuranceRequired": false,
+          "officialSourceUrl": "",
+          "lastVerified": "",
+          "steps": [
+            {
+              "title": "Free eligibility check and consultation",
+              "duration": "Same day"
+            },
+            {
+              "title": "Document checklist and review",
+              "duration": "2 to 5 days"
+            },
+            {
+              "title": "Submit application and book biometrics or appointment",
+              "duration": "Depends on slot availability"
+            },
+            {
+              "title": "Biometrics or interview where required",
+              "duration": "Appointment day"
+            },
+            {
+              "title": "Decision and passport return",
+              "duration": "Varies by embassy"
+            }
+          ],
+          "faqs": [
+            {
+              "question": "Do Indian citizens need a visa for United States?",
+              "answer": "A visa is needed for this purpose. Entry rules change, so we confirm the current position with you before you apply."
+            },
+            {
+              "question": "How much will it cost?",
+              "answer": "The government fee, any centre fee and our service fee are quoted to you in writing after a free consultation. Prices are not fixed on this website."
+            },
+            {
+              "question": "How do I pay?",
+              "answer": "Not on this website. After your consultation we share a payment request and you pay us directly. See our Pricing page."
+            },
+            {
+              "question": "Can I get a refund?",
+              "answer": "Yes, in full if we have not yet submitted your application. Once submitted, fees are not refundable. See our Refund Policy."
+            },
+            {
+              "question": "Can you guarantee approval?",
+              "answer": "No. Only the immigration authority decides. We help you prepare a complete and accurate application."
+            }
+          ]
+        }
+      ],
+      "highlights": [
+        "DS-160 form help",
+        "Interview preparation guidance",
+        "Honest assessment"
+      ],
+      "relatedDestinations": [
+        "canada",
+        "united-kingdom",
+        "schengen-area",
+        "australia"
+      ]
+    },
+    {
+      "slug": "canada",
+      "country": "Canada",
+      "flag": "",
+      "iso_code": "ca",
+      "lat": 45.42,
+      "lng": -75.7,
+      "imageUrl": "https://images.unsplash.com/photo-1517935706615-2717063c2225?w=800&q=70",
+      "visaTypes": [
+        {
+          "type": "tourist",
+          "required": true,
+          "indicativeFee": 0,
+          "processingTime": "Confirmed at consultation",
+          "validity": "Confirmed at consultation",
+          "validityShort": "See details",
+          "notes": "Indicative guidance only. We verify the current rule before you apply.",
+          "maximumStay": "Confirmed at consultation",
+          "typicalProcessing": "Confirmed at consultation",
+          "purpose": "Tourism, family visits, short business trips",
+          "stayFor": "Short visits",
+          "entryRule": "Indian citizens need a Canadian visitor visa (TRV), applied for online with biometrics.",
+          "govtFee": 0,
+          "vfsFee": 0,
+          "serviceFee": 0,
+          "documents": [
+            "Passport valid for at least 6 months, with blank pages",
+            "Recent passport-size photograph",
+            "Confirmed travel itinerary or flight plan (no need to buy tickets first)",
+            "Accommodation plan",
+            "Proof of funds, such as recent bank statements",
+            "Aadhaar or other ID proof"
+          ],
+          "whoCannotApply": [
+            "Passport not valid for the required period",
+            "Applicants with a previous visa refusal or overstay should speak to us first"
+          ],
+          "insuranceRequired": false,
+          "officialSourceUrl": "https://www.canada.ca/en/immigration-refugees-citizenship.html",
+          "lastVerified": "",
+          "steps": [
+            {
+              "title": "Free eligibility check and consultation",
+              "duration": "Same day"
+            },
+            {
+              "title": "Document checklist and review",
+              "duration": "2 to 5 days"
+            },
+            {
+              "title": "Submit application and book biometrics or appointment",
+              "duration": "Depends on slot availability"
+            },
+            {
+              "title": "Biometrics or interview where required",
+              "duration": "Appointment day"
+            },
+            {
+              "title": "Decision and passport return",
+              "duration": "Varies by embassy"
+            }
+          ],
+          "faqs": [
+            {
+              "question": "Do Indian citizens need a visa for Canada?",
+              "answer": "Indian citizens need a Canadian visitor visa (TRV), applied for online with biometrics. Entry rules change, so we confirm the current position with you before you apply."
+            },
+            {
+              "question": "How much will it cost?",
+              "answer": "The government fee, any centre fee and our service fee are quoted to you in writing after a free consultation. Prices are not fixed on this website."
+            },
+            {
+              "question": "How do I pay?",
+              "answer": "Not on this website. After your consultation we share a payment request and you pay us directly. See our Pricing page."
+            },
+            {
+              "question": "Can I get a refund?",
+              "answer": "Yes, in full if we have not yet submitted your application. Once submitted, fees are not refundable. See our Refund Policy."
+            },
+            {
+              "question": "Can you guarantee approval?",
+              "answer": "No. Only the immigration authority decides. We help you prepare a complete and accurate application."
+            }
+          ]
+        },
+        {
+          "type": "student",
+          "required": true,
+          "indicativeFee": 0,
+          "processingTime": "Confirmed at consultation",
+          "validity": "Confirmed at consultation",
+          "validityShort": "See details",
+          "notes": "Study visas depend on your profile and the destination rules. Book a consultation for an honest assessment.",
+          "maximumStay": "Confirmed at consultation",
+          "typicalProcessing": "Confirmed at consultation",
+          "purpose": "Study at a recognised institution",
+          "stayFor": "Confirmed at consultation",
+          "entryRule": "Embassy or consulate application",
+          "govtFee": 0,
+          "vfsFee": 0,
+          "serviceFee": 0,
+          "documents": [
+            "Valid passport",
+            "Photographs as per the embassy specification",
+            "Supporting documents specific to this visa type (we share a checklist)"
+          ],
+          "whoCannotApply": [
+            "Eligibility depends on the destination. We tell you plainly if we cannot help."
+          ],
+          "insuranceRequired": false,
+          "officialSourceUrl": "",
+          "lastVerified": "",
+          "steps": [
+            {
+              "title": "Free eligibility check and consultation",
+              "duration": "Same day"
+            },
+            {
+              "title": "Document checklist and review",
+              "duration": "2 to 5 days"
+            },
+            {
+              "title": "Submit application and book biometrics or appointment",
+              "duration": "Depends on slot availability"
+            },
+            {
+              "title": "Biometrics or interview where required",
+              "duration": "Appointment day"
+            },
+            {
+              "title": "Decision and passport return",
+              "duration": "Varies by embassy"
+            }
+          ],
+          "faqs": [
+            {
+              "question": "Do Indian citizens need a visa for Canada?",
+              "answer": "A visa is needed for this purpose. Entry rules change, so we confirm the current position with you before you apply."
+            },
+            {
+              "question": "How much will it cost?",
+              "answer": "The government fee, any centre fee and our service fee are quoted to you in writing after a free consultation. Prices are not fixed on this website."
+            },
+            {
+              "question": "How do I pay?",
+              "answer": "Not on this website. After your consultation we share a payment request and you pay us directly. See our Pricing page."
+            },
+            {
+              "question": "Can I get a refund?",
+              "answer": "Yes, in full if we have not yet submitted your application. Once submitted, fees are not refundable. See our Refund Policy."
+            },
+            {
+              "question": "Can you guarantee approval?",
+              "answer": "No. Only the immigration authority decides. We help you prepare a complete and accurate application."
+            }
+          ]
+        },
+        {
+          "type": "work",
+          "required": true,
+          "indicativeFee": 0,
+          "processingTime": "Confirmed at consultation",
+          "validity": "Confirmed at consultation",
+          "validityShort": "See details",
+          "notes": "Work visas depend on your profile and the destination rules. Book a consultation for an honest assessment.",
+          "maximumStay": "Confirmed at consultation",
+          "typicalProcessing": "Confirmed at consultation",
+          "purpose": "Employment with a local employer",
+          "stayFor": "Confirmed at consultation",
+          "entryRule": "Embassy or consulate application",
+          "govtFee": 0,
+          "vfsFee": 0,
+          "serviceFee": 0,
+          "documents": [
+            "Valid passport",
+            "Photographs as per the embassy specification",
+            "Supporting documents specific to this visa type (we share a checklist)"
+          ],
+          "whoCannotApply": [
+            "Eligibility depends on the destination. We tell you plainly if we cannot help."
+          ],
+          "insuranceRequired": false,
+          "officialSourceUrl": "",
+          "lastVerified": "",
+          "steps": [
+            {
+              "title": "Free eligibility check and consultation",
+              "duration": "Same day"
+            },
+            {
+              "title": "Document checklist and review",
+              "duration": "2 to 5 days"
+            },
+            {
+              "title": "Submit application and book biometrics or appointment",
+              "duration": "Depends on slot availability"
+            },
+            {
+              "title": "Biometrics or interview where required",
+              "duration": "Appointment day"
+            },
+            {
+              "title": "Decision and passport return",
+              "duration": "Varies by embassy"
+            }
+          ],
+          "faqs": [
+            {
+              "question": "Do Indian citizens need a visa for Canada?",
+              "answer": "A visa is needed for this purpose. Entry rules change, so we confirm the current position with you before you apply."
+            },
+            {
+              "question": "How much will it cost?",
+              "answer": "The government fee, any centre fee and our service fee are quoted to you in writing after a free consultation. Prices are not fixed on this website."
+            },
+            {
+              "question": "How do I pay?",
+              "answer": "Not on this website. After your consultation we share a payment request and you pay us directly. See our Pricing page."
+            },
+            {
+              "question": "Can I get a refund?",
+              "answer": "Yes, in full if we have not yet submitted your application. Once submitted, fees are not refundable. See our Refund Policy."
+            },
+            {
+              "question": "Can you guarantee approval?",
+              "answer": "No. Only the immigration authority decides. We help you prepare a complete and accurate application."
+            }
+          ]
+        },
+        {
+          "type": "family",
+          "required": true,
+          "indicativeFee": 0,
+          "processingTime": "Confirmed at consultation",
+          "validity": "Confirmed at consultation",
+          "validityShort": "See details",
+          "notes": "Family and dependants visas depend on your profile and the destination rules. Book a consultation for an honest assessment.",
+          "maximumStay": "Confirmed at consultation",
+          "typicalProcessing": "Confirmed at consultation",
+          "purpose": "Joining or visiting family members",
+          "stayFor": "Confirmed at consultation",
+          "entryRule": "Embassy or consulate application",
+          "govtFee": 0,
+          "vfsFee": 0,
+          "serviceFee": 0,
+          "documents": [
+            "Valid passport",
+            "Photographs as per the embassy specification",
+            "Supporting documents specific to this visa type (we share a checklist)"
+          ],
+          "whoCannotApply": [
+            "Eligibility depends on the destination. We tell you plainly if we cannot help."
+          ],
+          "insuranceRequired": false,
+          "officialSourceUrl": "",
+          "lastVerified": "",
+          "steps": [
+            {
+              "title": "Free eligibility check and consultation",
+              "duration": "Same day"
+            },
+            {
+              "title": "Document checklist and review",
+              "duration": "2 to 5 days"
+            },
+            {
+              "title": "Submit application and book biometrics or appointment",
+              "duration": "Depends on slot availability"
+            },
+            {
+              "title": "Biometrics or interview where required",
+              "duration": "Appointment day"
+            },
+            {
+              "title": "Decision and passport return",
+              "duration": "Varies by embassy"
+            }
+          ],
+          "faqs": [
+            {
+              "question": "Do Indian citizens need a visa for Canada?",
+              "answer": "A visa is needed for this purpose. Entry rules change, so we confirm the current position with you before you apply."
+            },
+            {
+              "question": "How much will it cost?",
+              "answer": "The government fee, any centre fee and our service fee are quoted to you in writing after a free consultation. Prices are not fixed on this website."
+            },
+            {
+              "question": "How do I pay?",
+              "answer": "Not on this website. After your consultation we share a payment request and you pay us directly. See our Pricing page."
+            },
+            {
+              "question": "Can I get a refund?",
+              "answer": "Yes, in full if we have not yet submitted your application. Once submitted, fees are not refundable. See our Refund Policy."
+            },
+            {
+              "question": "Can you guarantee approval?",
+              "answer": "No. Only the immigration authority decides. We help you prepare a complete and accurate application."
+            }
+          ]
+        }
+      ],
+      "highlights": [
+        "Online application support",
+        "Biometric guidance",
+        "Complete file checks"
+      ],
+      "relatedDestinations": [
+        "united-states",
+        "united-kingdom",
+        "australia",
+        "new-zealand"
+      ]
+    },
+    {
+      "slug": "australia",
+      "country": "Australia",
+      "flag": "",
+      "iso_code": "au",
+      "lat": -35.28,
+      "lng": 149.13,
+      "imageUrl": "https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?w=800&q=70",
+      "visaTypes": [
+        {
+          "type": "tourist",
+          "required": true,
+          "indicativeFee": 0,
+          "processingTime": "Confirmed at consultation",
+          "validity": "Confirmed at consultation",
+          "validityShort": "See details",
+          "notes": "Indicative guidance only. We verify the current rule before you apply.",
+          "maximumStay": "Confirmed at consultation",
+          "typicalProcessing": "Confirmed at consultation",
+          "purpose": "Tourism, family visits, short business trips",
+          "stayFor": "Short visits",
+          "entryRule": "Indian citizens need an Australian Visitor visa (subclass 600), applied for online through ImmiAccount.",
+          "govtFee": 0,
+          "vfsFee": 0,
+          "serviceFee": 0,
+          "documents": [
+            "Passport valid for at least 6 months, with blank pages",
+            "Recent passport-size photograph",
+            "Confirmed travel itinerary or flight plan (no need to buy tickets first)",
+            "Accommodation plan",
+            "Proof of funds, such as recent bank statements",
+            "Aadhaar or other ID proof"
+          ],
+          "whoCannotApply": [
+            "Passport not valid for the required period",
+            "Applicants with a previous visa refusal or overstay should speak to us first"
+          ],
+          "insuranceRequired": false,
+          "officialSourceUrl": "https://immi.homeaffairs.gov.au",
+          "lastVerified": "",
+          "steps": [
+            {
+              "title": "Free eligibility check and consultation",
+              "duration": "Same day"
+            },
+            {
+              "title": "Document checklist and review",
+              "duration": "2 to 5 days"
+            },
+            {
+              "title": "Submit application and book biometrics or appointment",
+              "duration": "Depends on slot availability"
+            },
+            {
+              "title": "Biometrics or interview where required",
+              "duration": "Appointment day"
+            },
+            {
+              "title": "Decision and passport return",
+              "duration": "Varies by embassy"
+            }
+          ],
+          "faqs": [
+            {
+              "question": "Do Indian citizens need a visa for Australia?",
+              "answer": "Indian citizens need an Australian Visitor visa (subclass 600), applied for online through ImmiAccount. Entry rules change, so we confirm the current position with you before you apply."
+            },
+            {
+              "question": "How much will it cost?",
+              "answer": "The government fee, any centre fee and our service fee are quoted to you in writing after a free consultation. Prices are not fixed on this website."
+            },
+            {
+              "question": "How do I pay?",
+              "answer": "Not on this website. After your consultation we share a payment request and you pay us directly. See our Pricing page."
+            },
+            {
+              "question": "Can I get a refund?",
+              "answer": "Yes, in full if we have not yet submitted your application. Once submitted, fees are not refundable. See our Refund Policy."
+            },
+            {
+              "question": "Can you guarantee approval?",
+              "answer": "No. Only the immigration authority decides. We help you prepare a complete and accurate application."
+            }
+          ]
+        },
+        {
+          "type": "student",
+          "required": true,
+          "indicativeFee": 0,
+          "processingTime": "Confirmed at consultation",
+          "validity": "Confirmed at consultation",
+          "validityShort": "See details",
+          "notes": "Study visas depend on your profile and the destination rules. Book a consultation for an honest assessment.",
+          "maximumStay": "Confirmed at consultation",
+          "typicalProcessing": "Confirmed at consultation",
+          "purpose": "Study at a recognised institution",
+          "stayFor": "Confirmed at consultation",
+          "entryRule": "Embassy or consulate application",
+          "govtFee": 0,
+          "vfsFee": 0,
+          "serviceFee": 0,
+          "documents": [
+            "Valid passport",
+            "Photographs as per the embassy specification",
+            "Supporting documents specific to this visa type (we share a checklist)"
+          ],
+          "whoCannotApply": [
+            "Eligibility depends on the destination. We tell you plainly if we cannot help."
+          ],
+          "insuranceRequired": false,
+          "officialSourceUrl": "",
+          "lastVerified": "",
+          "steps": [
+            {
+              "title": "Free eligibility check and consultation",
+              "duration": "Same day"
+            },
+            {
+              "title": "Document checklist and review",
+              "duration": "2 to 5 days"
+            },
+            {
+              "title": "Submit application and book biometrics or appointment",
+              "duration": "Depends on slot availability"
+            },
+            {
+              "title": "Biometrics or interview where required",
+              "duration": "Appointment day"
+            },
+            {
+              "title": "Decision and passport return",
+              "duration": "Varies by embassy"
+            }
+          ],
+          "faqs": [
+            {
+              "question": "Do Indian citizens need a visa for Australia?",
+              "answer": "A visa is needed for this purpose. Entry rules change, so we confirm the current position with you before you apply."
+            },
+            {
+              "question": "How much will it cost?",
+              "answer": "The government fee, any centre fee and our service fee are quoted to you in writing after a free consultation. Prices are not fixed on this website."
+            },
+            {
+              "question": "How do I pay?",
+              "answer": "Not on this website. After your consultation we share a payment request and you pay us directly. See our Pricing page."
+            },
+            {
+              "question": "Can I get a refund?",
+              "answer": "Yes, in full if we have not yet submitted your application. Once submitted, fees are not refundable. See our Refund Policy."
+            },
+            {
+              "question": "Can you guarantee approval?",
+              "answer": "No. Only the immigration authority decides. We help you prepare a complete and accurate application."
+            }
+          ]
+        },
+        {
+          "type": "work",
+          "required": true,
+          "indicativeFee": 0,
+          "processingTime": "Confirmed at consultation",
+          "validity": "Confirmed at consultation",
+          "validityShort": "See details",
+          "notes": "Work visas depend on your profile and the destination rules. Book a consultation for an honest assessment.",
+          "maximumStay": "Confirmed at consultation",
+          "typicalProcessing": "Confirmed at consultation",
+          "purpose": "Employment with a local employer",
+          "stayFor": "Confirmed at consultation",
+          "entryRule": "Embassy or consulate application",
+          "govtFee": 0,
+          "vfsFee": 0,
+          "serviceFee": 0,
+          "documents": [
+            "Valid passport",
+            "Photographs as per the embassy specification",
+            "Supporting documents specific to this visa type (we share a checklist)"
+          ],
+          "whoCannotApply": [
+            "Eligibility depends on the destination. We tell you plainly if we cannot help."
+          ],
+          "insuranceRequired": false,
+          "officialSourceUrl": "",
+          "lastVerified": "",
+          "steps": [
+            {
+              "title": "Free eligibility check and consultation",
+              "duration": "Same day"
+            },
+            {
+              "title": "Document checklist and review",
+              "duration": "2 to 5 days"
+            },
+            {
+              "title": "Submit application and book biometrics or appointment",
+              "duration": "Depends on slot availability"
+            },
+            {
+              "title": "Biometrics or interview where required",
+              "duration": "Appointment day"
+            },
+            {
+              "title": "Decision and passport return",
+              "duration": "Varies by embassy"
+            }
+          ],
+          "faqs": [
+            {
+              "question": "Do Indian citizens need a visa for Australia?",
+              "answer": "A visa is needed for this purpose. Entry rules change, so we confirm the current position with you before you apply."
+            },
+            {
+              "question": "How much will it cost?",
+              "answer": "The government fee, any centre fee and our service fee are quoted to you in writing after a free consultation. Prices are not fixed on this website."
+            },
+            {
+              "question": "How do I pay?",
+              "answer": "Not on this website. After your consultation we share a payment request and you pay us directly. See our Pricing page."
+            },
+            {
+              "question": "Can I get a refund?",
+              "answer": "Yes, in full if we have not yet submitted your application. Once submitted, fees are not refundable. See our Refund Policy."
+            },
+            {
+              "question": "Can you guarantee approval?",
+              "answer": "No. Only the immigration authority decides. We help you prepare a complete and accurate application."
+            }
+          ]
+        },
+        {
+          "type": "family",
+          "required": true,
+          "indicativeFee": 0,
+          "processingTime": "Confirmed at consultation",
+          "validity": "Confirmed at consultation",
+          "validityShort": "See details",
+          "notes": "Family and dependants visas depend on your profile and the destination rules. Book a consultation for an honest assessment.",
+          "maximumStay": "Confirmed at consultation",
+          "typicalProcessing": "Confirmed at consultation",
+          "purpose": "Joining or visiting family members",
+          "stayFor": "Confirmed at consultation",
+          "entryRule": "Embassy or consulate application",
+          "govtFee": 0,
+          "vfsFee": 0,
+          "serviceFee": 0,
+          "documents": [
+            "Valid passport",
+            "Photographs as per the embassy specification",
+            "Supporting documents specific to this visa type (we share a checklist)"
+          ],
+          "whoCannotApply": [
+            "Eligibility depends on the destination. We tell you plainly if we cannot help."
+          ],
+          "insuranceRequired": false,
+          "officialSourceUrl": "",
+          "lastVerified": "",
+          "steps": [
+            {
+              "title": "Free eligibility check and consultation",
+              "duration": "Same day"
+            },
+            {
+              "title": "Document checklist and review",
+              "duration": "2 to 5 days"
+            },
+            {
+              "title": "Submit application and book biometrics or appointment",
+              "duration": "Depends on slot availability"
+            },
+            {
+              "title": "Biometrics or interview where required",
+              "duration": "Appointment day"
+            },
+            {
+              "title": "Decision and passport return",
+              "duration": "Varies by embassy"
+            }
+          ],
+          "faqs": [
+            {
+              "question": "Do Indian citizens need a visa for Australia?",
+              "answer": "A visa is needed for this purpose. Entry rules change, so we confirm the current position with you before you apply."
+            },
+            {
+              "question": "How much will it cost?",
+              "answer": "The government fee, any centre fee and our service fee are quoted to you in writing after a free consultation. Prices are not fixed on this website."
+            },
+            {
+              "question": "How do I pay?",
+              "answer": "Not on this website. After your consultation we share a payment request and you pay us directly. See our Pricing page."
+            },
+            {
+              "question": "Can I get a refund?",
+              "answer": "Yes, in full if we have not yet submitted your application. Once submitted, fees are not refundable. See our Refund Policy."
+            },
+            {
+              "question": "Can you guarantee approval?",
+              "answer": "No. Only the immigration authority decides. We help you prepare a complete and accurate application."
+            }
+          ]
+        }
+      ],
+      "highlights": [
+        "ImmiAccount support",
+        "Document review",
+        "Honest assessment"
+      ],
+      "relatedDestinations": [
+        "new-zealand",
+        "singapore",
+        "canada",
+        "united-kingdom"
+      ]
+    },
+    {
+      "slug": "new-zealand",
+      "country": "New Zealand",
+      "flag": "",
+      "iso_code": "nz",
+      "lat": -41.29,
+      "lng": 174.78,
+      "imageUrl": "https://images.unsplash.com/photo-1507699622108-4be3abd695ad?w=800&q=70",
+      "visaTypes": [
+        {
+          "type": "tourist",
+          "required": true,
+          "indicativeFee": 0,
+          "processingTime": "Confirmed at consultation",
+          "validity": "Confirmed at consultation",
+          "validityShort": "See details",
+          "notes": "Indicative guidance only. We verify the current rule before you apply.",
+          "maximumStay": "Confirmed at consultation",
+          "typicalProcessing": "Confirmed at consultation",
+          "purpose": "Tourism, family visits, short business trips",
+          "stayFor": "Short visits",
+          "entryRule": "Indian citizens need a New Zealand Visitor visa, applied for online.",
+          "govtFee": 0,
+          "vfsFee": 0,
+          "serviceFee": 0,
+          "documents": [
+            "Passport valid for at least 6 months, with blank pages",
+            "Recent passport-size photograph",
+            "Confirmed travel itinerary or flight plan (no need to buy tickets first)",
+            "Accommodation plan",
+            "Proof of funds, such as recent bank statements",
+            "Aadhaar or other ID proof"
+          ],
+          "whoCannotApply": [
+            "Passport not valid for the required period",
+            "Applicants with a previous visa refusal or overstay should speak to us first"
+          ],
+          "insuranceRequired": false,
+          "officialSourceUrl": "https://www.immigration.govt.nz",
+          "lastVerified": "",
+          "steps": [
+            {
+              "title": "Free eligibility check and consultation",
+              "duration": "Same day"
+            },
+            {
+              "title": "Document checklist and review",
+              "duration": "2 to 5 days"
+            },
+            {
+              "title": "Submit application and book biometrics or appointment",
+              "duration": "Depends on slot availability"
+            },
+            {
+              "title": "Biometrics or interview where required",
+              "duration": "Appointment day"
+            },
+            {
+              "title": "Decision and passport return",
+              "duration": "Varies by embassy"
+            }
+          ],
+          "faqs": [
+            {
+              "question": "Do Indian citizens need a visa for New Zealand?",
+              "answer": "Indian citizens need a New Zealand Visitor visa, applied for online. Entry rules change, so we confirm the current position with you before you apply."
+            },
+            {
+              "question": "How much will it cost?",
+              "answer": "The government fee, any centre fee and our service fee are quoted to you in writing after a free consultation. Prices are not fixed on this website."
+            },
+            {
+              "question": "How do I pay?",
+              "answer": "Not on this website. After your consultation we share a payment request and you pay us directly. See our Pricing page."
+            },
+            {
+              "question": "Can I get a refund?",
+              "answer": "Yes, in full if we have not yet submitted your application. Once submitted, fees are not refundable. See our Refund Policy."
+            },
+            {
+              "question": "Can you guarantee approval?",
+              "answer": "No. Only the immigration authority decides. We help you prepare a complete and accurate application."
+            }
+          ]
+        },
+        {
+          "type": "student",
+          "required": true,
+          "indicativeFee": 0,
+          "processingTime": "Confirmed at consultation",
+          "validity": "Confirmed at consultation",
+          "validityShort": "See details",
+          "notes": "Study visas depend on your profile and the destination rules. Book a consultation for an honest assessment.",
+          "maximumStay": "Confirmed at consultation",
+          "typicalProcessing": "Confirmed at consultation",
+          "purpose": "Study at a recognised institution",
+          "stayFor": "Confirmed at consultation",
+          "entryRule": "Embassy or consulate application",
+          "govtFee": 0,
+          "vfsFee": 0,
+          "serviceFee": 0,
+          "documents": [
+            "Valid passport",
+            "Photographs as per the embassy specification",
+            "Supporting documents specific to this visa type (we share a checklist)"
+          ],
+          "whoCannotApply": [
+            "Eligibility depends on the destination. We tell you plainly if we cannot help."
+          ],
+          "insuranceRequired": false,
+          "officialSourceUrl": "",
+          "lastVerified": "",
+          "steps": [
+            {
+              "title": "Free eligibility check and consultation",
+              "duration": "Same day"
+            },
+            {
+              "title": "Document checklist and review",
+              "duration": "2 to 5 days"
+            },
+            {
+              "title": "Submit application and book biometrics or appointment",
+              "duration": "Depends on slot availability"
+            },
+            {
+              "title": "Biometrics or interview where required",
+              "duration": "Appointment day"
+            },
+            {
+              "title": "Decision and passport return",
+              "duration": "Varies by embassy"
+            }
+          ],
+          "faqs": [
+            {
+              "question": "Do Indian citizens need a visa for New Zealand?",
+              "answer": "A visa is needed for this purpose. Entry rules change, so we confirm the current position with you before you apply."
+            },
+            {
+              "question": "How much will it cost?",
+              "answer": "The government fee, any centre fee and our service fee are quoted to you in writing after a free consultation. Prices are not fixed on this website."
+            },
+            {
+              "question": "How do I pay?",
+              "answer": "Not on this website. After your consultation we share a payment request and you pay us directly. See our Pricing page."
+            },
+            {
+              "question": "Can I get a refund?",
+              "answer": "Yes, in full if we have not yet submitted your application. Once submitted, fees are not refundable. See our Refund Policy."
+            },
+            {
+              "question": "Can you guarantee approval?",
+              "answer": "No. Only the immigration authority decides. We help you prepare a complete and accurate application."
+            }
+          ]
+        },
+        {
+          "type": "work",
+          "required": true,
+          "indicativeFee": 0,
+          "processingTime": "Confirmed at consultation",
+          "validity": "Confirmed at consultation",
+          "validityShort": "See details",
+          "notes": "Work visas depend on your profile and the destination rules. Book a consultation for an honest assessment.",
+          "maximumStay": "Confirmed at consultation",
+          "typicalProcessing": "Confirmed at consultation",
+          "purpose": "Employment with a local employer",
+          "stayFor": "Confirmed at consultation",
+          "entryRule": "Embassy or consulate application",
+          "govtFee": 0,
+          "vfsFee": 0,
+          "serviceFee": 0,
+          "documents": [
+            "Valid passport",
+            "Photographs as per the embassy specification",
+            "Supporting documents specific to this visa type (we share a checklist)"
+          ],
+          "whoCannotApply": [
+            "Eligibility depends on the destination. We tell you plainly if we cannot help."
+          ],
+          "insuranceRequired": false,
+          "officialSourceUrl": "",
+          "lastVerified": "",
+          "steps": [
+            {
+              "title": "Free eligibility check and consultation",
+              "duration": "Same day"
+            },
+            {
+              "title": "Document checklist and review",
+              "duration": "2 to 5 days"
+            },
+            {
+              "title": "Submit application and book biometrics or appointment",
+              "duration": "Depends on slot availability"
+            },
+            {
+              "title": "Biometrics or interview where required",
+              "duration": "Appointment day"
+            },
+            {
+              "title": "Decision and passport return",
+              "duration": "Varies by embassy"
+            }
+          ],
+          "faqs": [
+            {
+              "question": "Do Indian citizens need a visa for New Zealand?",
+              "answer": "A visa is needed for this purpose. Entry rules change, so we confirm the current position with you before you apply."
+            },
+            {
+              "question": "How much will it cost?",
+              "answer": "The government fee, any centre fee and our service fee are quoted to you in writing after a free consultation. Prices are not fixed on this website."
+            },
+            {
+              "question": "How do I pay?",
+              "answer": "Not on this website. After your consultation we share a payment request and you pay us directly. See our Pricing page."
+            },
+            {
+              "question": "Can I get a refund?",
+              "answer": "Yes, in full if we have not yet submitted your application. Once submitted, fees are not refundable. See our Refund Policy."
+            },
+            {
+              "question": "Can you guarantee approval?",
+              "answer": "No. Only the immigration authority decides. We help you prepare a complete and accurate application."
+            }
+          ]
+        },
+        {
+          "type": "family",
+          "required": true,
+          "indicativeFee": 0,
+          "processingTime": "Confirmed at consultation",
+          "validity": "Confirmed at consultation",
+          "validityShort": "See details",
+          "notes": "Family and dependants visas depend on your profile and the destination rules. Book a consultation for an honest assessment.",
+          "maximumStay": "Confirmed at consultation",
+          "typicalProcessing": "Confirmed at consultation",
+          "purpose": "Joining or visiting family members",
+          "stayFor": "Confirmed at consultation",
+          "entryRule": "Embassy or consulate application",
+          "govtFee": 0,
+          "vfsFee": 0,
+          "serviceFee": 0,
+          "documents": [
+            "Valid passport",
+            "Photographs as per the embassy specification",
+            "Supporting documents specific to this visa type (we share a checklist)"
+          ],
+          "whoCannotApply": [
+            "Eligibility depends on the destination. We tell you plainly if we cannot help."
+          ],
+          "insuranceRequired": false,
+          "officialSourceUrl": "",
+          "lastVerified": "",
+          "steps": [
+            {
+              "title": "Free eligibility check and consultation",
+              "duration": "Same day"
+            },
+            {
+              "title": "Document checklist and review",
+              "duration": "2 to 5 days"
+            },
+            {
+              "title": "Submit application and book biometrics or appointment",
+              "duration": "Depends on slot availability"
+            },
+            {
+              "title": "Biometrics or interview where required",
+              "duration": "Appointment day"
+            },
+            {
+              "title": "Decision and passport return",
+              "duration": "Varies by embassy"
+            }
+          ],
+          "faqs": [
+            {
+              "question": "Do Indian citizens need a visa for New Zealand?",
+              "answer": "A visa is needed for this purpose. Entry rules change, so we confirm the current position with you before you apply."
+            },
+            {
+              "question": "How much will it cost?",
+              "answer": "The government fee, any centre fee and our service fee are quoted to you in writing after a free consultation. Prices are not fixed on this website."
+            },
+            {
+              "question": "How do I pay?",
+              "answer": "Not on this website. After your consultation we share a payment request and you pay us directly. See our Pricing page."
+            },
+            {
+              "question": "Can I get a refund?",
+              "answer": "Yes, in full if we have not yet submitted your application. Once submitted, fees are not refundable. See our Refund Policy."
+            },
+            {
+              "question": "Can you guarantee approval?",
+              "answer": "No. Only the immigration authority decides. We help you prepare a complete and accurate application."
+            }
+          ]
+        }
+      ],
+      "highlights": [
+        "Online application support",
+        "Document review",
+        "Honest assessment"
+      ],
+      "relatedDestinations": [
+        "australia",
+        "singapore",
+        "canada",
+        "united-kingdom"
       ]
     }
   ]

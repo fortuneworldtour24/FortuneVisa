@@ -39,7 +39,7 @@
     "imageAlt": "{{country}} यात्रा गंतव्य",
     "type": "प्रकार",
     "valid": "वैधता",
-    "fees": "शुल्क (AUD)",
+    "fees": "शुल्क (INR)",
     "processing": "सामान्य प्रसंस्करण"
   },
   "destinations": {
@@ -56,4 +56,3 @@
     }
   }
 }
-
